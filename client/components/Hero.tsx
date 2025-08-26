@@ -54,8 +54,8 @@ export const Hero = () => {
             <img
               src={botPath}
               alt="Animated AI assistant character"
-              className="absolute top-[calc(40.5%+2mm)] sm:top-[calc(42.5%+2mm)] md:top-[calc(52.5%+2mm)] lg:top-[calc(53.5%+2mm)] left-[56%] sm:left-[58%] md:left-[59%] transform -translate-x-1/2 -translate-y-1/2 w-[44%] sm:w-[45%] md:w-[46%] h-auto animate-float-slow"
-              style={{ top: 'calc(40.5% + 2.0mm)', left: 'calc(56% + 1.0mm)' }}
+              className="absolute top-[calc(40.5%+2mm)] sm:top-[calc(42.5%+2mm)] md:top-[calc(52.5%+4mm)] lg:top-[calc(53.5%+4mm)] left-[56%] sm:left-[58%] md:left-[calc(59%+2mm)] lg:left-[calc(59%+2mm)] transform -translate-x-1/2 -translate-y-1/2 w-[44%] sm:w-[45%] md:w-[46%] h-auto animate-float-slow"
+              style={{ top: 'calc(40.5% + 2.0mm)', left: 'calc(56% + 3.0mm)' }}
             />
           </div>
         </div>
