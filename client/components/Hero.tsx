@@ -55,6 +55,7 @@ export const Hero = () => {
               src={botPath}
               alt="Animated AI assistant character"
               className="absolute top-[38.5%] sm:top-[40.5%] md:top-[41.5%] lg:top-[42.5%] left-[55%] sm:left-[57%] md:left-[58%] transform -translate-x-1/2 -translate-y-1/2 w-[44%] sm:w-[45%] md:w-[46%] h-auto animate-float-slow"
+              style={{ top: 'calc(38.5% + 2mm)' }}
             />
           </div>
         </div>
@@ -73,15 +74,19 @@ export const Hero = () => {
         </header>
 
         {/* Feature Cards and CTA - 4 column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 xl:gap-8" role="list" aria-label="Business results statistics">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 lg:gap-4" role="list" aria-label="Business results statistics">
           {/* Card 1 - 30% */}
-          <article className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-            <div className="mb-6">
-              <span
-                className="block text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
-              >
-                30%
-              </span>
+          <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
+            <div className="mb-6 flex justify-start w-full">
+              <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
+                <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
+                  <span
+                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                  >
+                    30%
+                  </span>
+                </div>
+              </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
               Increased sales rates
@@ -92,13 +97,17 @@ export const Hero = () => {
           </article>
 
           {/* Card 2 - 80% */}
-          <article className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-            <div className="mb-6">
-              <span
-                className="block text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
-              >
-                80%
-              </span>
+          <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
+            <div className="mb-6 flex justify-start w-full">
+              <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
+                <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
+                  <span
+                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                  >
+                    80%
+                  </span>
+                </div>
+              </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
               Cutoff manual and repetitive work
@@ -109,13 +118,17 @@ export const Hero = () => {
           </article>
 
           {/* Card 3 - 40% */}
-          <article className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-            <div className="mb-6">
-              <span
-                className="block text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
-              >
-                40%
-              </span>
+          <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
+            <div className="mb-6 flex justify-start w-full">
+              <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
+                <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
+                  <span
+                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                  >
+                    40%
+                  </span>
+                </div>
+              </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
               Leverage your cost savings
@@ -126,7 +139,7 @@ export const Hero = () => {
           </article>
 
           {/* CTA Card */}
-          <aside className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
+          <aside style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30 }} className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-4 sm:mb-6 lg:mb-8 leading-snug tracking-tight">
               See how your Business can achieve these results
             </h3>

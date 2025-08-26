@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { LearningMaterialSection } from "@/components/LearningMaterialSection";
 
 export const Techniques = () => {
   // For assets in the public directory, we should use the Vite base URL
@@ -13,14 +14,24 @@ export const Techniques = () => {
       
       {/* Hero Section */}
       <main role="main" id="main-content">
-        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="hero-heading">
+        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden py-8 md:py-12 lg:py-16 xl:py-20" aria-labelledby="hero-heading">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ 
+              backgroundImage: `url(${baseUrl}assets/images/techniques-hero-image.jpg)`,
+              backgroundPosition: 'right center'
+            }}
+            aria-hidden="true"
+          />
+          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[300px] sm:min-h-[400px] lg:min-h-[450px]">
               {/* Left Content */}
-              <div className="flex flex-col justify-center space-y-6 lg:space-y-8 xl:space-y-12">
+              <div className="flex flex-col justify-center space-y-4 md:space-y-5 lg:space-y-6">
                 {/* Title */}
                 <header>
-                  <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                  <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold font-poppins leading-tight tracking-tight">
                     <span className="bg-gradient-to-r from-[#181C4C] to-[#717493] bg-clip-text text-transparent">
                       Practical
                     </span>
@@ -33,7 +44,7 @@ export const Techniques = () => {
 
                 {/* Subtitle */}
                 <div>
-                  <p className="text-[#313131] text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-tight max-w-2xl">
+                  <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-xl">
                     Master the Art of Crafting Effective Prompts
                   </p>
                 </div>
@@ -41,7 +52,7 @@ export const Techniques = () => {
                 {/* Button */}
                 <div>
                   <Button 
-                    className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-6 sm:px-8 md:px-10 lg:px-12 py-3 lg:py-4 rounded-[32px] sm:rounded-[40px] lg:rounded-[53px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-18"
+                    className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-5 sm:px-6 md:px-8 lg:px-10 py-2.5 lg:py-3 rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] text-xs sm:text-sm md:text-base lg:text-lg font-normal h-10 sm:h-12 md:h-14 lg:h-16"
                     aria-label="Download prompt engineering learning material"
                   >
                     Download material
@@ -49,91 +60,84 @@ export const Techniques = () => {
                 </div>
               </div>
 
-              {/* Right Image */}
-              <div className="flex justify-center lg:justify-end items-center">
-                <img
-                  src={`${baseUrl}assets/images/techniques-hero-image.jpg`}
-                  alt=""
-                  className="w-full h-auto object-contain"
-                  aria-hidden="true"
-                />
-              </div>
+              {/* Right Side - Empty Space */}
+              <div className="hidden lg:block"></div>
             </div>
           </div>
         </section>
 
         {/* The Core Techniques Section */}
-        <section className="bg-gradient-to-b from-[#FEFEFE] to-[#FBFBFB] py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="core-techniques-heading">
+        <section className="bg-gradient-to-b from-[#FEFEFE] to-[#FBFBFB] py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24" aria-labelledby="core-techniques-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="mb-12 lg:mb-16">
-              <h2 id="core-techniques-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
+            <header className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center">
+              <h2 id="core-techniques-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-3 sm:mb-4">
                 <span className="text-ethos-gray">The </span>
                 <span className="text-ethos-purple">Core techniques</span>
               </h2>
               
-              <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-5xl">
+              <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-2xl mx-auto">
                 Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
               </p>
             </header>
 
             {/* Four Technique Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12" role="list" aria-label="Core prompt engineering techniques">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6" role="list" aria-label="Core prompt engineering techniques">
               {/* Role Setting */}
-              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Role Setting
                 </h3>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Give the AI a specific role to guide its responses.
                 </p>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   Roles help set expectations and context for the interaction.
                 </p>
               </article>
 
               {/* Context Providing */}
-              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Context Providing
                 </h3>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Set the background and requirements clearly.
                 </p>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   More context leads to more relevant responses.
                 </p>
               </article>
 
               {/* Task Breakdown */}
-              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Task Breakdown
                 </h3>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Split complex requests into clear steps.
                 </p>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   Breaking down tasks improves clarity and quality.
                 </p>
               </article>
 
               {/* Output Formatting */}
-              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Output Formatting
                 </h3>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Specify how you want the response structured.
                 </p>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   Clear formats make responses more useful and actionable.
                 </p>
               </article>
@@ -188,146 +192,135 @@ export const Techniques = () => {
           </div>
 
           {/* Main content with three columns: Best Practices | Image | Common Pitfalls */}
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
-            {/* Best Practices Card */}
-            <div className="relative flex justify-center xl:justify-end">
-              <svg
-                className="w-full max-w-[688px] h-auto"
-                viewBox="0 0 688 796"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 725V71C0 31.7878 31.7877 0 71 0H224.231C244.585 0 263.959 8.73503 277.436 23.9874L369.938 128.674C383.415 143.926 402.79 152.661 423.144 152.661H617C656.212 152.661 688 184.449 688 223.661V725C688 764.212 656.212 796 617 796H71C31.7878 796 0 764.212 0 725Z"
-                  fill="#6D6AED"
+          <div className="mb-12 lg:mb-16 relative">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(300px,1fr)_auto_minmax(300px,1fr)] gap-8 sm:gap-10 md:gap-12 lg:gap-1 xl:gap-2 items-center justify-items-center min-h-[480px] md:min-h-[450px] lg:min-h-[500px]">
+              
+              {/* Left Card - Best Practices - Purple */}
+              <div className="relative order-2 lg:order-1 group w-full lg:max-w-md xl:max-w-lg mx-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-6">
+                {/* Background Shape */}
+                <div 
+                  className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                  style={{ background: '#6D6AED' }}
                 />
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="64"
-                  fontWeight="500"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="123" y="253.4">Best Practices</tspan>
-                </text>
-                <rect x="79" y="370" width="536" height="368" rx="54" fill="#9F9DF3"/>
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="25"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="152" y="430.25">Instead of "make it better," say </tspan>
-                  <tspan x="152" y="461.25">"improve the performance by </tspan>
-                  <tspan x="152" y="492.25">reducing database calls"</tspan>
-                </text>
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="25"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="152" y="557.25">Include relevant background </tspan>
-                  <tspan x="152" y="588.25">information and constraints</tspan>
-                </text>
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="25"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="152" y="653.25">Show what good output looks like </tspan>
-                  <tspan x="152" y="684.25">with concrete examples</tspan>
-                </text>
-                <circle cx="119" cy="427" r="16" fill="#7900E3"/>
-                <circle cx="119" cy="549" r="16" fill="#7900E3"/>
-                <circle cx="119" cy="647" r="16" fill="#7900E3"/>
-                <path d="M79 515.5H613.001" stroke="white"/>
-                <path d="M79 615.5H613.001" stroke="white"/>
-              </svg>
-            </div>
+                
+                {/* Content */}
+                <div className="relative z-10 p-6 sm:p-6 lg:p-8 xl:p-10 min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] flex flex-col justify-center">
+                  <h3 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight mb-4 sm:mb-6 lg:mb-8 text-center">
+                    Best Practices
+                  </h3>
+                  
+                  <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+                    <div className="flex items-start gap-2 sm:gap-3 group/item">
+                      <div 
+                        className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1 transition-transform duration-200 group-hover/item:scale-110"
+                        style={{ background: '#7900E3' }}
+                        role="presentation"
+                        aria-hidden="true"
+                      />
+                      <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                        Instead of "make it better," say "improve the performance by reducing database calls"
+                      </p>
+                    </div>
+                    
+                    <div className="h-px bg-white/20 my-2 sm:my-3 transition-opacity duration-300 hover:bg-white/40" />
+                    
+                    <div className="flex items-start gap-3 sm:gap-4 group/item">
+                      <div 
+                        className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1.5 transition-transform duration-200 group-hover/item:scale-110"
+                        style={{ background: '#7900E3' }}
+                        role="presentation"
+                        aria-hidden="true"
+                      />
+                      <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                        Include relevant background information and constraints
+                      </p>
+                    </div>
+                    
+                    <div className="h-px bg-white/20 my-2 sm:my-3 transition-opacity duration-300 hover:bg-white/40" />
+                    
+                    <div className="flex items-start gap-3 sm:gap-4 group/item">
+                      <div 
+                        className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1.5 transition-transform duration-200 group-hover/item:scale-110"
+                        style={{ background: '#7900E3' }}
+                        role="presentation"
+                        aria-hidden="true"
+                      />
+                      <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                        Show what good output looks like with concrete examples
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            {/* Center Image */}
-            <div className="flex justify-center order-3 xl:order-2">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/9a911d75162403557beac2155006e70e2b647c95?width=1922"
-                alt="Best practices illustration"
-                className="w-full h-auto object-contain"
-              />
-            </div>
-
-            {/* Common Pitfalls Card */}
-            <div className="relative flex justify-center xl:justify-start order-2 xl:order-3">
-              <svg
-                className="w-full max-w-[686px] h-auto"
-                viewBox="0 0 686 796"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M686 725V71C686 31.7878 654.212 0 615 0H462.575C442.186 0 422.781 8.76562 409.302 24.0642L317.205 128.597C303.726 143.895 284.321 152.661 263.932 152.661H71C31.7878 152.661 0 184.449 0 223.661V725C0 764.212 31.7878 796 71 796H615C654.212 796 686 764.212 686 725Z"
-                  fill="#2E3D88"
+              {/* Center Image */}
+              <div className="order-1 lg:order-2 flex justify-center items-center w-full max-w-[400px] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[640px] xl:max-w-[720px] mx-auto">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/9a911d75162403557beac2155006e70e2b647c95?width=1922"
+                  alt="Best practices illustration"
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                  role="img"
                 />
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="64"
-                  fontWeight="500"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="95" y="253.4">Common Pitfalls</tspan>
-                </text>
-                <rect x="86" y="370" width="536" height="368" rx="54" fill="#6B7EDD"/>
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="25"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="159" y="430.25">"Make it good" vs "Optimize the </tspan>
-                  <tspan x="159" y="461.25">function for readability and </tspan>
-                  <tspan x="159" y="492.25">performance"</tspan>
-                </text>
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="25"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="159" y="557.25">Break complex tasks into smaller, </tspan>
-                  <tspan x="159" y="588.25">manageable prompts</tspan>
-                </text>
-                <text
-                  fill="white"
-                  xmlSpace="preserve"
-                  style={{ whiteSpace: 'pre' }}
-                  fontFamily="Poppins"
-                  fontSize="25"
-                  letterSpacing="-0.03em"
-                >
-                  <tspan x="159" y="653.25">Always provide necessary </tspan>
-                  <tspan x="159" y="684.25">background, even if it seems obvious</tspan>
-                </text>
-                <circle cx="119" cy="427" r="16" fill="#7900E3"/>
-                <circle cx="119" cy="549" r="16" fill="#7900E3"/>
-                <circle cx="119" cy="647" r="16" fill="#7900E3"/>
-                <path d="M86 515.5H620.001" stroke="white"/>
-                <path d="M86 615.5H620.001" stroke="white"/>
-              </svg>
+              </div>
+
+              {/* Right Card - Common Pitfalls - Dark Blue */}
+              <div className="relative order-3 lg:order-3 group w-full lg:max-w-md xl:max-w-lg mx-auto -mr-2 sm:-mr-3 md:-mr-4 lg:-mr-6">
+                {/* Background Shape */}
+                <div 
+                  className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                  style={{ background: '#2E3D88' }}
+                />
+                
+                {/* Content */}
+                <div className="relative z-10 p-6 sm:p-6 lg:p-8 xl:p-10 min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] flex flex-col justify-center">
+                  <h3 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight mb-4 sm:mb-6 lg:mb-8 text-center">
+                    Common Pitfalls
+                  </h3>
+                  
+                  <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+                    <div className="flex items-start gap-2 sm:gap-3 group/item">
+                      <div 
+                        className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1 transition-transform duration-200 group-hover/item:scale-110"
+                        style={{ background: '#7900E3' }}
+                        role="presentation"
+                        aria-hidden="true"
+                      />
+                      <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                        "Make it good" vs "Optimize the function for readability and performance"
+                      </p>
+                    </div>
+                    
+                    <div className="h-px bg-white/20 my-2 sm:my-3 transition-opacity duration-300 hover:bg-white/40" />
+                    
+                    <div className="flex items-start gap-3 sm:gap-4 group/item">
+                      <div 
+                        className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1.5 transition-transform duration-200 group-hover/item:scale-110"
+                        style={{ background: '#7900E3' }}
+                        role="presentation"
+                        aria-hidden="true"
+                      />
+                      <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                        Break complex tasks into smaller, manageable prompts
+                      </p>
+                    </div>
+                    
+                    <div className="h-px bg-white/20 my-2 sm:my-3 transition-opacity duration-300 hover:bg-white/40" />
+                    
+                    <div className="flex items-start gap-3 sm:gap-4 group/item">
+                      <div 
+                        className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1.5 transition-transform duration-200 group-hover/item:scale-110"
+                        style={{ background: '#7900E3' }}
+                        role="presentation"
+                        aria-hidden="true"
+                      />
+                      <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                        Always provide necessary background, even if it seems obvious
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -529,7 +522,7 @@ export const Techniques = () => {
                   <div className="flex items-start gap-4">
                     <div className="w-6 h-6 rotate-90 flex-shrink-0 mt-1">
                       <svg viewBox="0 0 15 17" fill="none">
-                        <path d="M13.3047 6.05739C15.3047 7.21209 15.3047 10.0988 13.3047 11.2535L4.82149 16.1513C2.82149 17.306 0.321495 15.8626 0.321495 13.5532V3.75769C0.321495 1.44828 2.8215 0.00491142 4.8215 1.15961L13.3047 6.05739Z" fill="url(#paint0_linear_589_22)"/>
+                        <path d="M13.3047 6.05739C15.3047 7.21209 15.3047 10.0988 13.3047 11.2535L4.82149 15.8351C2.82149 16.9893 0.321495 15.5459 0.321495 13.2367V3.73382C0.321495 1.42466 2.8215 0.00491142 4.8215 1.15961L13.3047 6.05739Z" fill="url(#paint0_linear_589_22)"/>
                         <defs>
                           <linearGradient id="paint0_linear_589_22" x1="6.14923" y1="-3" x2="6.14923" y2="20.3109" gradientUnits="userSpaceOnUse">
                             <stop stopColor="#FFD5AC"/>
@@ -649,37 +642,7 @@ export const Techniques = () => {
           </div>
         </div>
       </section>
-      {/* Banner Section */}
-      <section className="bg-ethos-navy py-16 lg:py-20 xl:py-32 relative overflow-hidden">
-        {/* Background Image - Direct child of section */}
-        <div className="absolute inset-0 pointer-events-none flex justify-end">
-          <img
-            src={`${baseUrl}assets/images/techniques/technique-7083aca9f6f513559fd873fcf0f7869fbbeeac1b.jpg`}
-            alt="Banner background"
-            className="h-full w-auto max-w-none object-contain object-right"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 xl:px-20 relative">
-
-          <div className="relative z-10 max-w-7xl">
-            <p className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.13] tracking-[-1.92px] mb-8 lg:mb-12">
-              Are you keen to learn ?
-            </p>
-            
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.13] tracking-[-4.05px] bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent mb-8 lg:mb-12">
-              Download the free learning material
-            </h2>
-            
-            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal max-w-7xl mb-12 lg:mb-16">
-              This learning material is for the beginners who are keen to learn more with examples which what we have discussed.
-            </p>
-            
-            <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 lg:px-12 xl:px-16 py-3 lg:py-4 xl:py-6 rounded-[56px] text-base sm:text-lg md:text-xl lg:text-2xl font-normal h-auto">
-              Download Now
-            </Button>
-          </div>
-        </div>
-      </section>
+      <LearningMaterialSection baseUrl={baseUrl} />
 
       <Footer />
       </main>

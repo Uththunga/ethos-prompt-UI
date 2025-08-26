@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { LearningMaterialSection } from "@/components/LearningMaterialSection";
 
 export const Basics = () => {
   // For assets in the public directory, we should use the Vite base URL
@@ -47,9 +48,9 @@ export const Basics = () => {
               {/* Download Button */}
               <Button 
                 className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 sm:px-10 md:px-12 lg:px-16 py-3 lg:py-4 rounded-[32px] sm:rounded-[40px] lg:rounded-[53px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-[64px] w-full max-w-sm sm:max-w-md lg:max-w-lg"
-                aria-label="Download learning material about AI prompting"
+                aria-label="Download learning materials about AI prompting"
               >
-                Download material
+                Download Materials
               </Button>
             </div>
           </div>
@@ -146,59 +147,7 @@ export const Basics = () => {
               Large Language Models are AI systems trained by processing vast amounts of text from the internet.
             </p>
 
-            {/* L-L-M Breakdown Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 xl:gap-12 mt-8 lg:mt-12">
-              {/* Large Card */}
-              <div className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center">
-                <div className="flex items-start gap-8 lg:gap-12">
-                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-bold leading-none tracking-[-3.84px] bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]">
-                    L
-                  </div>
-                  <div className="flex-1 pt-4">
-                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
-                      Large
-                    </h4>
-                    <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
-                      Vast knowledge bank - like having read millions of books!
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Language Card */}
-              <div className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center">
-                <div className="flex items-start gap-8 lg:gap-12">
-                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-bold leading-none tracking-[-3.84px] bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]">
-                    L
-                  </div>
-                  <div className="flex-1 pt-4">
-                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
-                      Language
-                    </h4>
-                    <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
-                      Speaks and understands human languages!
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Model Card */}
-              <div className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center">
-                <div className="flex items-start gap-8 lg:gap-12">
-                  <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-bold leading-none tracking-[-3.84px] bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]">
-                    M
-                  </div>
-                  <div className="flex-1 pt-4">
-                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
-                      Model
-                    </h4>
-                    <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
-                      The intelligent part that processes patterns and thinks!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* REMOVED DUPLICATE L-L-M Breakdown Cards */}
           </div>
         </section>
 
@@ -271,7 +220,7 @@ export const Basics = () => {
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
                   <span className="text-ethos-gray">What Is an </span>
-                  <span className="text-ethos-purple">Fine tuning ?</span>
+                  <span className="text-ethos-purple">Fine tuning?</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
                   This is where the "M" (Model) in LLM truly comes to life! While pre-training provides vast knowledge, fine-tuning transforms this raw knowledge into sophisticated thinking and decision-making abilities - it's like transforming a medical student who has memorized textbooks into a skilled doctor who can diagnose and treat patients effectively.
@@ -282,7 +231,7 @@ export const Basics = () => {
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
                   <span className="text-ethos-gray">What Is an </span>
-                  <span className="text-ethos-purple">Prompting ?</span>
+                  <span className="text-ethos-purple">Prompting?</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
                   This is where the second "L" (Language) in LLM comes to life! Prompting is like having a conversation with a highly knowledgeable assistant - you communicate your needs in plain language, and the AI understands and responds accordingly.
@@ -293,42 +242,7 @@ export const Basics = () => {
         </div>
       </section>
 
-      {/* Download Learning Material Section */}
-      <section className="bg-ethos-navy py-16 md:py-20 lg:py-24 xl:py-28 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
-            {/* Left side - Content */}
-            <div className="space-y-8 lg:space-y-12">
-              <div className="space-y-6 lg:space-y-8">
-                <h4 className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal leading-tight tracking-tight">
-                  Are you keen to learn ?
-                </h4>
-                
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent">
-                  Download the free learning material
-                </h2>
-              </div>
-              
-              <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-normal">
-                This learning material is for the beginners who are keen to learn more with examples which what we have discussed.
-              </p>
-              
-              <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-6 sm:px-8 md:px-10 lg:px-12 py-3 lg:py-4 rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-[70px] w-full max-w-xs sm:max-w-sm lg:max-w-md">
-                Download Now
-              </Button>
-            </div>
-
-            {/* Right side - Image */}
-            <div className="relative flex justify-center">
-              <img
-                src={`${baseUrl}assets/images/basics/Image1.png`}
-                alt="AI learning interface with futuristic design"
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <LearningMaterialSection baseUrl={baseUrl} />
 
       <Footer />
       </main>

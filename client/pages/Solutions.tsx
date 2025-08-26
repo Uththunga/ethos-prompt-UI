@@ -50,61 +50,61 @@ export const Solutions = () => {
             {/* Left Column - Content */}
             <div className="space-y-4 sm:space-y-6 lg:space-y-8">
               <header>
-                <h2 id="ethosprompt-help-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight">
+                <h2 id="ethosprompt-help-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight">
                   <span className="block text-ethos-gray">How EthosPrompt</span>
                   <span className="text-ethos-purple">can help your Business</span>
                 </h2>
               </header>
-              <p className="text-ethos-gray text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+              <p className="text-ethos-gray text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
                 At EthosPrompt, we make artificial intelligence simple and useful for businesses. Our job is to help you save time, cut costs, and grow faster by creating smart tools that work for you. We build AI agents, automation systems, and intelligent apps that connect with over 600 popular business tools like CRMs, emails, and databases. Whether you want to improve customer service, speed up daily tasks, or upgrade your website, we provide solutions that fit your goals and scale as you grow.
               </p>
 
               <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-                <h2 className="text-ethos-gray text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium">
+                <h2 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
                   Our Services
                 </h2>
                 <div className="space-y-3 sm:space-y-4 lg:space-y-6 text-ethos-gray">
                   <div className="space-y-2">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-medium leading-snug">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
                       Custom AI Agents
                     </h3>
-                    <p className="text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+                    <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
                       AI assistants built for your business—helping with customer support, sales, learning, and more.
                     </p>
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-medium leading-snug">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
                       Automation & App Connections
                     </h3>
-                    <p className="text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+                    <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
                       Connect AI to your everyday apps (emails, CRMs, calendars, etc.) to handle routine tasks automatically.
                     </p>
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-medium leading-snug">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
                       Prompt Management
                     </h3>
-                    <p className="text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+                    <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
                       Simple systems to organize and manage your AI prompts—so your team gets better, faster results.
                     </p>
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-medium leading-snug">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
                       AI Web & Mobile Apps
                     </h3>
-                    <p className="text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+                    <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
                       Smart websites and mobile apps that personalize content, create designs, and interact with users in real time.
                     </p>
                   </div>
 
                   <div className="space-y-2">
-                    <h3 className="text-base sm:text-lg lg:text-xl font-medium leading-snug">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
                       Website Upgrades & Automation
                     </h3>
-                    <p className="text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
+                    <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
                       Give your website a new look, better user experience, and built-in automation to save time and improve customer satisfaction.
                     </p>
                   </div>
