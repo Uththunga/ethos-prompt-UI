@@ -29,7 +29,7 @@ export const Basics = () => {
             <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16 lg:pb-20">
               {/* Main Title */}
               <header className="max-w-5xl mb-12 lg:mb-16">
-                <h1 id="hero-heading" className="font-semibold font-poppins text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-tight">
+                <h1 id="hero-heading" className="font-semibold font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight">
                   <span className="bg-gradient-to-r from-[#181C4C] via-[#717493] to-[#717493] bg-clip-text text-transparent">
                     The Story of 
                   </span>
@@ -40,7 +40,7 @@ export const Basics = () => {
               
               {/* Description */}
               <div className="max-w-4xl mb-12 lg:mb-16">
-                <p className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-tight">
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
                   Explore how artificial intelligence learns to communicate like humans in this engaging, interactive journey that unpacks machine learning, language models, and the evolving relationship between AI and natural conversation.
                 </p>
               </div>
@@ -61,12 +61,12 @@ export const Basics = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Section Title */}
             <header className="text-center mb-12 lg:mb-16">
-              <h2 id="ai-to-llm-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
+              <h2 id="ai-to-llm-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
                 <span className="text-ethos-gray">From Ai to </span>
                 <span className="text-ethos-purple">Large Language Model (LLM)</span>
               </h2>
               
-              <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-6xl mx-auto">
+              <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-6xl mx-auto">
                 You might know these as "AI" tools, but we'll call them "LLMs" (Large Language Models). Why? Because that's exactly what they are - large models that understand and generate human language. Understanding LLMs is crucial because prompt engineering is all about effectively communicating with these models - the better you understand how they work, the more effectively you can craft your prompts.
               </p>
             </header>
@@ -78,7 +78,7 @@ export const Basics = () => {
                 <span className="text-ethos-purple">LLM Really?</span>
               </h3>
               
-              <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight text-center mx-auto mb-12 lg:mb-16">
+              <p className="text-[#313131] text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-tight text-center mx-auto mb-12 lg:mb-16">
                 Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
               </p>
 
@@ -91,10 +91,10 @@ export const Basics = () => {
                       L
                     </div>
                     <div className="flex-1 pt-4">
-                      <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
+                      <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
                         Large
                       </h4>
-                      <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                      <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-normal tracking-tight">
                         Vast knowledge bank - like having read millions of books!
                       </p>
                     </div>
@@ -108,10 +108,10 @@ export const Basics = () => {
                       L
                     </div>
                     <div className="flex-1 pt-4">
-                      <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
+                      <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
                         Language
                       </h4>
-                      <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                      <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-normal tracking-tight">
                         Speaks and understands human languages!
                       </p>
                     </div>
@@ -125,10 +125,10 @@ export const Basics = () => {
                       M
                     </div>
                     <div className="flex-1 pt-4">
-                      <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
+                      <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
                         Model
                       </h4>
-                      <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                      <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-normal tracking-tight">
                         The intelligent part that processes patterns and thinks!
                       </p>
                     </div>
@@ -143,7 +143,7 @@ export const Basics = () => {
         <section className="bg-white py-8 md:py-12 lg:py-16" aria-labelledby="llm-description-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 id="llm-description-heading" className="sr-only">What is a Large Language Model?</h3>
-            <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-5xl mx-auto">
+            <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-5xl mx-auto">
               Large Language Models are AI systems trained by processing vast amounts of text from the internet.
             </p>
 
