@@ -140,6 +140,42 @@
   opacity: 0;
 }
 
+/* Mobile Performance Optimizations */
+@media (max-width: 768px) {
+  /* Reduce animation complexity on mobile for better performance */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Optimize touch interactions */
+  button, [role="button"], input[type="submit"] {
+    touch-action: manipulation;
+  }
+  
+  /* Prevent horizontal scrolling on mobile */
+  html, body {
+    overflow-x: hidden;
+  }
+}
+
+/* Reduced Motion Support for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-float-slow,
+  .animate-float-mole {
+    animation: none !important;
+  }
+}
+
 /* Design System Custom Properties */
 :root {
   /* Animation durations */

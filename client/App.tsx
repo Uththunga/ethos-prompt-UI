@@ -18,12 +18,15 @@ import { Contact } from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
+// Determine basename based on environment
+const basename = import.meta.env.DEV ? '/' : '/ethos-prompt-UI';
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/solutions" element={<Solutions />} />

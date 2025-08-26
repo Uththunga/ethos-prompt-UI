@@ -12,18 +12,26 @@ export const Hero = () => {
       animation: float 4s ease-in-out infinite;
     }
   `;
+  
+  // For assets in the public directory, we should use the Vite base URL
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  const group282Path = `${baseUrl}assets/images/Group 282.png`;
+  const botPath = `${baseUrl}assets/images/bot.png`;
+  
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: animationStyle }} />
     
-    <div
+    <main
       className="relative w-full overflow-hidden min-h-screen bg-white"
+      role="main"
+      id="main-content"
     >
       {/* Main Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20">
         {/* Hero Banner */}
-        <div className="text-center mb-4 -mt-2">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+        <section className="text-center mb-4 -mt-2" aria-labelledby="hero-heading">
+          <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
               Transform your Business
             </span>
@@ -33,19 +41,19 @@ export const Hero = () => {
             </span>
             <span className="text-ethos-purple">AI Agents</span>
           </h1>
-        </div>
+        </section>
 
         {/* Hero Image with Overlay */}
-        <div className="relative flex justify-center -mt-4">
+        <div className="relative flex justify-center -mt-4" role="img" aria-label="AI Agent interface demonstration">
           <div className="relative">
             <img
-              src="/assets/images/Group 282.png"
-              alt="AI Agent Interface"
+              src={group282Path}
+              alt="Interactive AI agent dashboard interface showing workflow automation"
               className="w-full h-auto object-contain"
             />
             <img
-              src="/assets/images/bot.png"
-              alt="AI Bot"
+              src={botPath}
+              alt="Animated AI assistant character"
               className="absolute top-[38.5%] sm:top-[40.5%] md:top-[41.5%] lg:top-[42.5%] left-[55%] sm:left-[57%] md:left-[58%] transform -translate-x-1/2 -translate-y-1/2 w-[44%] sm:w-[45%] md:w-[46%] h-auto animate-float-slow"
             />
           </div>
@@ -53,85 +61,88 @@ export const Hero = () => {
       </div>
 
       {/* Proven Results Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 mt-16">
+      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 mt-16" aria-labelledby="results-heading">
         {/* Section Header */}
-        <div className="mb-12 md:mb-16 lg:mb-20">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-snug tracking-tight">
+        <header className="mb-12 md:mb-16 lg:mb-20">
+          <h2 id="results-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-snug tracking-tight">
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
               Proven results for{" "}
             </span>
             <span className="text-ethos-purple">Your Business</span>
           </h2>
-        </div>
+        </header>
 
         {/* Feature Cards and CTA - 4 column layout */}
-        {/* Feature Cards and CTA - 4 column layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6 xl:gap-8" role="list" aria-label="Business results statistics">
           {/* Card 1 - 30% */}
-          <div className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[40px] sm:rounded-[50px] lg:rounded-[57px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
+          <article className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
             <div className="mb-6">
               <span
-                className="block text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                className="block text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
               >
                 30%
               </span>
             </div>
-            <h3 className="text-ethos-gray text-lg md:text-xl lg:text-2xl font-normal mb-4 leading-snug tracking-tight">
+            <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
               Increased sales rates
             </h3>
-            <p className="text-ethos-gray text-base md:text-lg font-normal leading-relaxed tracking-tight">
+            <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
               Ai can ensures automatic task handling, scheduling optimizing lead to customer conversations
             </p>
-          </div>
+          </article>
 
           {/* Card 2 - 80% */}
-          <div className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[40px] sm:rounded-[50px] lg:rounded-[57px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
+          <article className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
             <div className="mb-6">
               <span
-                className="block text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                className="block text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
               >
                 80%
               </span>
             </div>
-            <h3 className="text-ethos-gray text-lg md:text-xl lg:text-2xl font-normal mb-4 leading-snug tracking-tight">
+            <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
               Cutoff manual and repetitive work
             </h3>
-            <p className="text-ethos-gray text-base md:text-lg font-normal leading-relaxed tracking-tight">
+            <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
               AI agents can massively reducing manual and repetitive work.
             </p>
-          </div>
+          </article>
 
           {/* Card 3 - 40% */}
-          <div className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[40px] sm:rounded-[50px] lg:rounded-[57px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
+          <article className="bg-gradient-to-br from-white via-white to-gray-200 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-lg shadow-purple-200 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
             <div className="mb-6">
               <span
-                className="block text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                className="block text-center text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
               >
                 40%
               </span>
             </div>
-            <h3 className="text-ethos-gray text-lg md:text-xl lg:text-2xl font-normal mb-4 leading-snug tracking-tight">
+            <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
               Leverage your cost savings
             </h3>
-            <p className="text-ethos-gray text-base md:text-lg font-normal leading-relaxed tracking-tight">
+            <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
               Increased sales, lowering your overheads will provide significant cost savings on your Business
             </p>
-          </div>
+          </article>
 
           {/* CTA Card */}
-          <div className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
-            <h3 className="text-ethos-gray text-lg md:text-xl lg:text-2xl font-medium mb-6 sm:mb-8 lg:mb-10 leading-snug tracking-tight">
+          <aside className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
+            <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-4 sm:mb-6 lg:mb-8 leading-snug tracking-tight">
               See how your Business can achieve these results
             </h3>
             <div className="w-full flex justify-center">
-              <Button variant="cta" size="cta">
+              <Button 
+                variant="cta" 
+                size="cta"
+                aria-label="Schedule consultation to discuss business results"
+              >
                 Talk to Expert
               </Button>
             </div>
-          </div>
+          </aside>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
     </>
   );
 };

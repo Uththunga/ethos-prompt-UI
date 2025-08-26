@@ -4,7 +4,7 @@ import { NAV_ITEMS } from '../constants/navItems';
 import { NavItem } from '../types/navigation';
 
 // Constants
-const MOBILE_BREAKPOINT = 1024; // lg breakpoint
+const MOBILE_BREAKPOINT = 768; // md breakpoint - matches useIsMobile hook
 
 /**
  * Main Navigation component with responsive design and accessibility features
@@ -14,6 +14,10 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
+  
+  // For assets in the public directory, we should use the Vite base URL
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  const ethosBrainPath = `${baseUrl}assets/images/ethosbrain.svg`;
   
   // Refs
   const navRef = useRef<HTMLDivElement>(null);
@@ -135,7 +139,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
   })), [isActive]);
 
   return (
-    <header className={`relative ${className}`}>
+    <header className={`relative ${className}`} role="banner">
       {/* Skip to main content link - Only visible when focused */}
       <a
         href="#main-content"
@@ -152,26 +156,27 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
             <Link
               to="/"
               className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-ethos-purple focus-visible:ring-offset-2 rounded transition-transform hover:scale-105"
-              aria-label="Home"
+              aria-label="EthosPrompt Home"
               onClick={(e) => handleNavigation(e, '/')}
             >
               <div className="flex items-center" aria-hidden="true">
                 <img
-                  src="/assets/images/ethosbrain.svg"
+                  src={ethosBrainPath}
                   alt=""
                   className="w-5 h-5 md:w-6 md:h-6 transition-all duration-200"
                 />
               </div>
-              <span className="text-ethos-navy text-lg sm:text-xl md:text-xl lg:text-2xl font-bold font-poppins">
+              <h1 className="text-ethos-navy text-base sm:text-lg md:text-xl lg:text-2xl font-bold font-poppins">
                 EthosPrompt
-              </span>
+              </h1>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav 
-            className="hidden lg:flex items-center justify-center flex-1 mx-12" 
+            className="hidden md:flex items-center justify-center flex-1 mx-12" 
             aria-label="Main navigation"
+            role="navigation"
           >
             <ul className="flex items-center justify-center gap-6 xl:gap-8">
               {navItems.map((item, index) => (
@@ -180,7 +185,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
                     to={item.path}
                     className="text-sm md:text-base lg:text-base font-semibold px-3 py-2 rounded-md transition-all duration-200 text-ethos-navy hover:text-ethos-navy/80 hover:bg-gray-50"
                     aria-current={item.isActive ? 'page' : undefined}
-                    aria-label={item.ariaLabel || item.label}
+                    aria-label={item.ariaLabel || `Navigate to ${item.label}`}
                     onKeyDown={(e) => handleKeyDown(e, index)}
                     tabIndex={0}
                     id={item.key}
@@ -202,7 +207,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
           
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden z-20">
+          <div className="md:hidden z-20">
             <button
               ref={menuButtonRef}
               className="p-2 -mr-2 rounded-md text-ethos-navy hover:text-ethos-purple focus:outline-none focus:ring-2 focus:ring-ethos-purple focus:ring-offset-2 transition-colors"
@@ -245,7 +250,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 z-30 transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 z-30 transition-opacity duration-300 ${
           isMobileMenuOpen 
             ? 'opacity-100 visible bg-black/30 backdrop-blur-sm' 
             : 'opacity-0 invisible pointer-events-none'
@@ -267,7 +272,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
         >
           <div className="h-full flex flex-col overflow-y-auto">
             <div className="px-6 py-4 border-b border-gray-100">
-              <h2 className="text-lg font-medium text-ethos-navy">Menu</h2>
+              <h2 className="text-base sm:text-lg font-medium text-ethos-navy">Menu</h2>
             </div>
             
             <nav 
@@ -278,7 +283,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
                 <Link
                   key={item.key}
                   to={item.path}
-                  className={`block px-4 py-3 rounded-lg transition-colors text-sm md:text-base text-ethos-navy ${
+                  className={`block px-4 py-3 rounded-lg transition-colors text-sm sm:text-base md:text-lg text-ethos-navy ${
                     item.isActive
                       ? 'bg-ethos-purple/10 font-semibold'
                       : 'hover:bg-gray-50'

@@ -4,115 +4,120 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export const PromptingGuide = () => {
+  // For assets in the public directory, we should use the Vite base URL
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-white to-[#FEFEFE] relative overflow-hidden min-h-screen py-16 lg:py-20">
-        <div className="max-w-5xl mx-auto relative h-full px-4 sm:px-6 lg:px-8">
-          {/* Title Text - positioned at the top */}
-          <div className="text-center mb-8 lg:mb-12">
-            <h1 className="font-semibold font-poppins leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-              <div className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent mb-2 sm:mb-3 lg:mb-4">
-                Master the art of
-              </div>
-              <div className="text-ethos-purple">
-                AI Communication
-              </div>
-            </h1>
-          </div>
-
-          {/* Hero Image - positioned below the title */}
-          <div className="flex justify-center mb-8 lg:mb-12">
-            <img
-              src="/assets/images/ai-communication-illustration.jpg"
-              alt="AI Communication illustration showing various AI interface elements"
-              className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] h-auto object-contain"
-            />
-          </div>
-
-          {/* Subtitle - positioned at bottom */}
-          <div className="text-center">
-            <p className="text-ethos-gray font-normal leading-relaxed text-sm sm:text-base lg:text-lg xl:text-xl max-w-4xl mx-auto">
-              Unlock the full potential of AI models by learning how to craft effective prompts. Turn your ideas into powerful results.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Journey Section */}
-      <section className="bg-gradient-to-b from-[#FEFEFE] via-[#FEFEFE] to-[#E8E8E8] py-12 lg:py-16 xl:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <div className="space-y-1 sm:space-y-2">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight">
-                <span className="text-ethos-gray">Your Journey to Becoming a </span>
-                <span className="text-ethos-purple">Prompt Expert</span>
-              </h2>
-            </div>
-          </div>
-
-          {/* Three Step Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 mb-12 lg:mb-16">
-            {/* Step 1 */}
-            <div className="bg-white rounded-[40px] lg:rounded-[50px] p-6 lg:p-8 xl:p-10 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[280px] lg:min-h-[300px] flex flex-col justify-center">
-              <div className="flex items-start gap-6 lg:gap-8">
-                <div className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-none bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]">
-                  1
+      <main role="main" id="main-content">
+        <section className="bg-gradient-to-b from-white to-[#FEFEFE] relative overflow-hidden py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="hero-heading">
+          <div className="max-w-7xl mx-auto relative h-full px-4 sm:px-6 lg:px-8">
+            {/* Title Text - positioned at the top */}
+            <header className="text-center mb-8 lg:mb-12">
+              <h1 id="hero-heading" className="font-semibold font-poppins leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                <div className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent mb-2 sm:mb-3 lg:mb-4">
+                  Master the art of
                 </div>
-                <div className="flex-1 pt-2">
-                  <h3 className="text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-4 lg:mb-6">
-                    Understand the basics
-                  </h3>
-                  <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                    Learn the core principles of how AI interprets your requests.
-                  </p>
+                <div className="text-ethos-purple">
+                  AI Communication
                 </div>
-              </div>
+              </h1>
+            </header>
+
+            {/* Hero Image - positioned below the title */}
+            <div className="flex justify-center mb-8 lg:mb-12">
+              <img
+                src={`${baseUrl}assets/images/ai-communication-illustration.jpg`}
+                alt=""
+                className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] h-auto object-contain"
+                aria-hidden="true"
+              />
             </div>
 
-            {/* Step 2 */}
-            <div className="bg-white rounded-[40px] lg:rounded-[50px] p-6 lg:p-8 xl:p-10 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[280px] lg:min-h-[300px] flex flex-col justify-center">
-              <div className="flex items-start gap-6 lg:gap-8">
-                <div className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-none bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]">
-                  2
-                </div>
-                <div className="flex-1 pt-2">
-                  <h3 className="text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-4 lg:mb-6">
-                    Master advanced techniques
-                  </h3>
-                  <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                    Explore methods like zero-shot, few-shot, and chain-of-thought
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="bg-white rounded-[40px] lg:rounded-[50px] p-6 lg:p-8 xl:p-10 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[280px] lg:min-h-[300px] flex flex-col justify-center">
-              <div className="flex items-start gap-6 lg:gap-8">
-                <div className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-none bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]">
-                  3
-                </div>
-                <div className="flex-1 pt-2">
-                  <h3 className="text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-4 lg:mb-6">
-                    Apply and innovate
-                  </h3>
-                  <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                    Use your skills to solve complex problems and create amazing things.
-                  </p>
-                </div>
-              </div>
+            {/* Subtitle - positioned at bottom */}
+            <div className="text-center">
+              <p className="text-ethos-gray font-normal leading-relaxed text-sm sm:text-base lg:text-lg xl:text-xl max-w-4xl mx-auto">
+                Unlock the full potential of AI models by learning how to craft effective prompts. Turn your ideas into powerful results.
+              </p>
             </div>
           </div>
+        </section>
+
+        {/* Journey Section */}
+        <section className="bg-gradient-to-b from-[#FEFEFE] via-[#FEFEFE] to-[#E8E8E8] py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="journey-heading">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header className="text-center mb-12 lg:mb-16">
+              <div className="space-y-1 sm:space-y-2">
+                <h2 id="journey-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight">
+                  <span className="text-ethos-gray">Your Journey to Becoming a </span>
+                  <span className="text-ethos-purple">Prompt Expert</span>
+                </h2>
+              </div>
+            </header>
+
+            {/* Three Step Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 xl:gap-10 mb-12 lg:mb-16" role="list" aria-label="Learning journey steps">
+              {/* Step 1 */}
+              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 lg:p-8 xl:p-10 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center" role="listitem">
+                <div className="flex items-start gap-6 lg:gap-8">
+                  <div className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-none bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]" aria-hidden="true">
+                    1
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+                      Understand the basics
+                    </h3>
+                    <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
+                      Learn the core principles of how AI interprets your requests.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              {/* Step 2 */}
+              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 lg:p-8 xl:p-10 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center" role="listitem">
+                <div className="flex items-start gap-6 lg:gap-8">
+                  <div className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-none bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]" aria-hidden="true">
+                    2
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+                      Master advanced techniques
+                    </h3>
+                    <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
+                      Explore methods like zero-shot, few-shot, and chain-of-thought
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              {/* Step 3 */}
+              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 lg:p-8 xl:p-10 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center" role="listitem">
+                <div className="flex items-start gap-6 lg:gap-8">
+                  <div className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-none bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]" aria-hidden="true">
+                    3
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+                      Apply and innovate
+                    </h3>
+                    <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
+                      Use your skills to solve complex problems and create amazing things.
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
 
           {/* What is Prompting Section */}
           <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center mb-12 lg:mb-16">
             {/* Background Image Layer - positioned on the right */}
             <div className="absolute right-0 top-0 bottom-0 w-3/5 flex justify-center items-center pointer-events-none opacity-60 lg:opacity-70">
               <img
-                src="/assets/images/prompting-illustration.jpg"
+                src={`${baseUrl}assets/images/prompting-illustration.jpg`}
                 alt="Prompting illustration background"
                 className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[750px] xl:max-w-[850px] h-auto object-contain"
               />
@@ -153,8 +158,8 @@ export const PromptingGuide = () => {
       </section>
 
       {/* AI vs Human Conversation Section */}
-      <section className="bg-gray-100 py-12 lg:py-16 xl:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-gray-100 py-16 md:py-20 lg:py-24 xl:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight">
               <span className="text-ethos-gray">AI vs. Human </span>
@@ -164,7 +169,7 @@ export const PromptingGuide = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-10">
             {/* Talking to Human */}
-            <div className="bg-white rounded-[40px] lg:rounded-[50px] p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[400px] lg:min-h-[450px] flex flex-col justify-center">
+            <div className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center">
               <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-center mb-6 lg:mb-8">
                 <span className="text-ethos-gray">Talking to a </span>
                 <span className="text-ethos-purple">Human</span>
@@ -182,7 +187,7 @@ export const PromptingGuide = () => {
             </div>
 
             {/* Talking to AI */}
-            <div className="bg-white rounded-[40px] lg:rounded-[50px] p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[400px] lg:min-h-[450px] flex flex-col justify-center">
+            <div className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center">
               <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-center mb-6 lg:mb-8">
                 <span className="text-ethos-gray">Talking to an </span>
                 <span className="text-ethos-purple">AI</span>
@@ -208,7 +213,7 @@ export const PromptingGuide = () => {
           {/* Background Grid */}
           <div className="absolute inset-0 flex justify-end items-center pointer-events-none opacity-30">
             <img
-              src="/assets/images/background-grid-pattern.png"
+              src={`${baseUrl}assets/images/background-grid-pattern.png`}
               alt="Background grid pattern"
               className="w-full max-w-[400px] lg:max-w-[500px] xl:max-w-[600px] h-auto transform -rotate-90"
             />
@@ -217,9 +222,9 @@ export const PromptingGuide = () => {
           {/* Background Image Layer - positioned more to the right and bigger */}
           <div className="absolute right-0 top-0 bottom-0 w-3/5 flex justify-end items-center pointer-events-none">
             <img
-              src="/assets/images/prompting-guide/Group 226 1.png"
+              src={`${baseUrl}assets/images/prompting-guide/Group 226 1.png`}
               alt="AI prompt breakdown illustration background"
-              className="w-full max-w-[600px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1100px] h-auto object-contain"
+              className="w-full max-w-7xl h-auto object-contain"
             />
           </div>
 
@@ -299,7 +304,7 @@ export const PromptingGuide = () => {
         {/* Full-width background image */}
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
-            src="/assets/images/prompting-guide/Group 216.png"
+            src={`${baseUrl}assets/images/prompting-guide/Group 216.png`}
             alt="Learning journey background illustration"
             className="w-full h-full object-cover"
           />
@@ -367,6 +372,7 @@ export const PromptingGuide = () => {
       </section>
 
       <Footer />
+      </main>
     </div>
   );
 };

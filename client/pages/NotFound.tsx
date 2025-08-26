@@ -1,5 +1,6 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,15 +13,33 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50" role="main" id="main-content">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="space-y-6 lg:space-y-8" aria-labelledby="error-heading">
+          {/* 404 Number */}
+          <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-ethos-purple" aria-hidden="true">
+            404
+          </div>
+          
+          {/* Error Message */}
+          <h1 id="error-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-ethos-navy mb-4 lg:mb-6">
+            Oops! Page not found
+          </h1>
+          
+          {/* Description */}
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-ethos-gray leading-relaxed mb-6 lg:mb-8">
+            The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+          </p>
+          
+          {/* Action Button */}
+          <Link to="/" aria-label="Return to home page">
+            <Button variant="cta" size="cta">
+              Return to Home
+            </Button>
+          </Link>
+        </section>
       </div>
-    </div>
+    </main>
   );
 };
 

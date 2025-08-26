@@ -49,6 +49,7 @@ export const SectionContainer: React.FC<SectionContainerProps> = ({
       className={`w-full ${getPaddingClasses()} ${className}`}
       style={getBackgroundClasses()}
       id={id}
+      aria-label={id ? `Section: ${id}` : 'Content section'}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {children}
@@ -79,7 +80,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   const alignmentClasses = alignment === 'center' ? 'text-center' : 'text-left';
   
   return (
-    <div className={`mb-12 md:mb-16 lg:mb-20 ${alignmentClasses} ${className}`}>
+    <header className={`mb-12 md:mb-16 lg:mb-20 ${alignmentClasses} ${className}`}>
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-snug tracking-tight mb-3 lg:mb-4">
         <span style={{ color: '#0F1345' }}>{title}</span>
         {titleAccent && (
@@ -94,7 +95,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           {subtitle}
         </p>
       )}
-    </div>
+    </header>
   );
 };
 

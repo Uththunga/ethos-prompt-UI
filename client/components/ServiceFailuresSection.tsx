@@ -2,6 +2,10 @@ import { memo } from 'react';
 import { Button } from '@/components/ui/button';
 
 export const ServiceFailuresSection = () => {
+  // For assets in the public directory, we should use the Vite base URL
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  const aiImagePath = `${baseUrl}assets/images/ai 2.png`;
+  
   return (
     <section 
       className="w-full py-16 md:py-20 lg:py-24 xl:py-28" 
@@ -14,7 +18,7 @@ export const ServiceFailuresSection = () => {
         <div className="mb-8 md:mb-10 lg:mb-12 text-left">
           <h2 
             id="service-failures-title"
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.13] tracking-[-0.03em] max-w-[1495px]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.13] tracking-[-0.03em] max-w-7xl"
           >
             <span style={{ color: '#0F1345' }}>
               Stop losing your Clients and Money
@@ -33,17 +37,17 @@ export const ServiceFailuresSection = () => {
             <div className="relative order-2 lg:order-1 group w-full lg:max-w-md xl:max-w-lg mx-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-6">
               {/* Background Shape */}
               <div 
-                className="absolute inset-0 rounded-[40px] sm:rounded-[50px] lg:rounded-[57px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
                 style={{ background: '#6D6AED' }}
               />
               
               {/* Content */}
-              <div className="relative z-10 p-6 sm:p-6 lg:p-8 xl:p-10">
-                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-[1.13] tracking-[-0.03em] mb-3 sm:mb-4 lg:mb-6">
+              <div className="relative z-10 p-6 sm:p-6 lg:p-8 xl:p-10 min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] flex flex-col justify-center">
+                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight mb-4 sm:mb-6 lg:mb-8 text-center">
                   Our AI agents are ideal for
                 </h3>
                 
-                <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                <div className="space-y-4 sm:space-y-5 lg:space-y-6">
                   <div className="flex items-start gap-2 sm:gap-3 group/item">
                     <div 
                       className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1 transition-transform duration-200 group-hover/item:scale-110"
@@ -51,35 +55,35 @@ export const ServiceFailuresSection = () => {
                       role="presentation"
                       aria-hidden="true"
                     />
-                    <p className="text-white text-xs sm:text-sm lg:text-base leading-[1.24] tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                    <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
                       High employee turnover & low commitment issues
                     </p>
                   </div>
                   
-                  <div className="h-px bg-white/30 transition-opacity duration-300 hover:bg-white/50" />
+                  <div className="h-px bg-white/20 my-2 sm:my-3 transition-opacity duration-300 hover:bg-white/40" />
                   
-                  <div className="flex items-start gap-2 sm:gap-3 group/item">
+                  <div className="flex items-start gap-3 sm:gap-4 group/item">
                     <div 
-                      className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1 transition-transform duration-200 group-hover/item:scale-110"
+                      className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1.5 transition-transform duration-200 group-hover/item:scale-110"
                       style={{ background: '#7900E3' }}
                       role="presentation"
                       aria-hidden="true"
                     />
-                    <p className="text-white text-xs sm:text-sm lg:text-base leading-[1.24] tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                    <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
                       Want to scale sales without extra workload
                     </p>
                   </div>
                   
-                  <div className="h-px bg-white/30 transition-opacity duration-300 hover:bg-white/50" />
+                  <div className="h-px bg-white/20 my-2 sm:my-3 transition-opacity duration-300 hover:bg-white/40" />
                   
-                  <div className="flex items-start gap-2 sm:gap-3 group/item">
+                  <div className="flex items-start gap-3 sm:gap-4 group/item">
                     <div 
-                      className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1 transition-transform duration-200 group-hover/item:scale-110"
+                      className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full flex-shrink-0 mt-1.5 transition-transform duration-200 group-hover/item:scale-110"
                       style={{ background: '#7900E3' }}
                       role="presentation"
                       aria-hidden="true"
                     />
-                    <p className="text-white text-xs sm:text-sm lg:text-base leading-[1.24] tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
+                    <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
                       Losing clients due to slow response times
                     </p>
                   </div>
@@ -90,7 +94,7 @@ export const ServiceFailuresSection = () => {
             {/* Center Image */}
             <div className="order-1 lg:order-2 flex justify-center items-center w-full max-w-[400px] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[640px] xl:max-w-[720px] mx-auto">
               <img
-                src="/assets/images/ai 2.png"
+                src={aiImagePath}
                 alt="Professional AI Agent Representative providing 24/7 customer service"
                 className="w-full h-auto object-contain"
                 loading="lazy"
@@ -102,19 +106,19 @@ export const ServiceFailuresSection = () => {
             <div className="relative order-3 lg:order-3 group w-full lg:max-w-md xl:max-w-lg mx-auto -mr-2 sm:-mr-3 md:-mr-4 lg:-mr-6">
               {/* Background Shape */}
               <div 
-                className="absolute inset-0 rounded-[40px] sm:rounded-[50px] lg:rounded-[57px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
+                className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
                 style={{ background: '#2E3D88' }}
               />
               
               {/* Content */}
-              <div className="relative z-10 p-4 sm:p-6 lg:p-8 xl:p-10 flex items-center min-h-[280px] sm:min-h-[320px] lg:min-h-[360px]">
-                <div className="w-full">
+              <div className="relative z-10 p-4 sm:p-6 lg:p-8 xl:p-10 flex items-center justify-center min-h-[200px] sm:min-h-[240px] lg:min-h-[280px]">
+                <div className="w-full text-center">
                   <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-[1.46] tracking-[-0.03em] transition-opacity duration-300 group-hover:opacity-95">
                     Our AI agents serve 24/7, responding quickly, professionally and accurately and ensure no client is forgotten
                   </p>
                   
                   {/* Subtle accent line */}
-                  <div className="mt-4 sm:mt-6 lg:mt-8">
+                  <div className="mt-4 sm:mt-6 lg:mt-8 flex justify-center">
                     <div className="w-10 sm:w-12 lg:w-16 h-1 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
@@ -124,13 +128,13 @@ export const ServiceFailuresSection = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center max-w-[1495px] mx-auto -mt-8">
-          <h3 
+        <footer className="text-center max-w-7xl mx-auto -mt-8">
+          <h2 
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.13] tracking-[-0.03em] mb-8 sm:mb-10 lg:mb-12" 
             style={{ color: '#484848' }}
           >
             See how it works in the real world
-          </h3>
+          </h2>
           <div className="flex justify-center">
             <Button
               variant="cta"
@@ -140,7 +144,7 @@ export const ServiceFailuresSection = () => {
               Schedule your Demo
             </Button>
           </div>
-        </div>
+        </footer>
         </div>
     </section>
   );

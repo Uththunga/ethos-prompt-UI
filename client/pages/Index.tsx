@@ -13,40 +13,28 @@ export default function Index() {
       {/* Navigation */}
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative">
+      <main id="main-content" role="main">
+        {/* Hero Section */}
         <Hero />
-      </section>
-      
-      {/* Service Failures Prevention */}
-      <section className="relative">
+        
+        {/* Service Failures Prevention */}
         <ServiceFailuresSection />
-      </section>
-      
-      {/* Ways We Can Help */}
-      <section className="relative">
+        
+        {/* Ways We Can Help */}
         <WaysWeCanHelp />
-      </section>
-      
-      {/* Prompt Management Banner */}
-      <section className="relative">
+        
+        {/* Prompt Management Banner */}
         <PromptManagementBanner />
-      </section>
-      
-      {/* Testimonials */}
-      <section className="relative">
+        
+        {/* Testimonials */}
         <Testimonials />
-      </section>
-      
-      {/* Call to Action */}
-      <section className="relative">
+        
+        {/* Call to Action */}
         <HeaderCTA />
-      </section>
+      </main>
       
       {/* Footer */}
-      <footer className="relative">
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }

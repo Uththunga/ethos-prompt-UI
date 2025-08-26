@@ -2,6 +2,22 @@ import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
+interface Testimonial {
+  name: string;
+  role: string;
+  rating: number;
+  text: string;
+}
+
+interface TestimonialCardProps {
+  testimonial: Testimonial;
+}
+
+interface ScrollingRowProps {
+  testimonials: Testimonial[];
+  direction?: 'left' | 'right';
+}
+
 const testimonials = [
     {
       name: "Amanda C.",
@@ -77,36 +93,32 @@ const StarIcon = () => (
     </svg>
   );
 
-const TestimonialCard = ({ testimonial }) => (
+const TestimonialCard = ({ testimonial }: TestimonialCardProps) => (
   <div
-    className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-sm lg:max-w-md xl:max-w-lg min-h-[240px] sm:min-h-[260px] md:min-h-[280px] lg:min-h-[300px] xl:min-h-[280px] rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] border border-white/20 p-4 sm:p-5 md:p-6 lg:p-7 mx-2 sm:mx-3 lg:mx-4 flex-shrink-0 transition-all duration-300 hover:scale-[1.02] focus-within:scale-[1.02]"
+    className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] xl:min-h-[280px] bg-gradient-to-b from-gray-50 to-gray-100 rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-5 md:p-6 lg:p-7 mx-2 sm:mx-3 lg:mx-4 flex-shrink-0 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] focus-within:scale-[1.02]"
     style={{
-      background: 'linear-gradient(180deg, #FEFEFE 0%, #F8F7F7 100%)',
-      boxShadow: '0 8px 32px rgba(116, 113, 224, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
+      boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25), inset -30px -30px 50px rgba(255, 255, 255, 0.7), inset 30px 30px 50px rgba(0, 39, 80, 0.05)",
       transform: 'translate3d(0, 0, 0)', // Hardware acceleration
       backfaceVisibility: 'hidden', // Performance optimization
     }}
-    role="article"
+    role="listitem"
     aria-label={`Testimonial from ${testimonial.name}`}
     tabIndex={0}
   >
     <div className="w-full h-full relative flex flex-col">
-      <blockquote className="text-xs sm:text-sm md:text-base lg:text-lg text-ethos-gray leading-relaxed flex-1 mb-3 sm:mb-4 md:mb-6 font-normal">
+      <blockquote className="text-xs sm:text-sm md:text-base lg:text-lg bg-gradient-to-r from-ethos-gray to-ethos-gray-lighter bg-clip-text text-transparent leading-relaxed flex-1 mb-3 sm:mb-4 md:mb-6 font-normal">
         "{testimonial.text}"
       </blockquote>
       <footer className="flex items-center justify-between pt-2 sm:pt-3 border-t border-gray-100">
         <div className="flex items-center">
           <div 
-            className="w-1 h-8 sm:h-10 mr-2 sm:mr-3 rounded-full"
-            style={{
-              background: 'linear-gradient(180deg, #D47CD9 0%, #7409C5 100%)'
-            }}
+            className="w-1 h-8 sm:h-10 mr-2 sm:mr-3 rounded-full bg-gradient-to-b from-[#D47CD9] to-ethos-purple"
           />
           <div>
-            <cite className="text-xs sm:text-sm md:text-base font-semibold text-ethos-navy not-italic">
+            <cite className="text-xs sm:text-sm md:text-base font-semibold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent not-italic">
               {testimonial.name}
             </cite>
-            <p className="text-[10px] sm:text-xs md:text-sm text-ethos-gray-light mt-0.5 sm:mt-1">
+            <p className="text-xs sm:text-xs md:text-sm bg-gradient-to-r from-ethos-gray to-ethos-gray-lighter bg-clip-text text-transparent mt-0.5 sm:mt-1">
               {testimonial.role}
             </p>
           </div>
@@ -124,11 +136,25 @@ const TestimonialCard = ({ testimonial }) => (
 
 
 
-const ScrollingRow = ({ testimonials, direction = 'left' }) => {
+const ScrollingRow = ({ testimonials, direction = 'left' }: ScrollingRowProps) => {
   const controls = useAnimationControls();
   const containerRef = useRef(null);
   const [width, setWidth] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  // Check for reduced motion preference
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+    
+    const handleChange = (e) => {
+      setPrefersReducedMotion(e.matches);
+    };
+    
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   useLayoutEffect(() => {
     if (containerRef.current) {
@@ -138,7 +164,7 @@ const ScrollingRow = ({ testimonials, direction = 'left' }) => {
   }, [testimonials]);
 
   useEffect(() => {
-    if (width === 0) return;
+    if (width === 0 || prefersReducedMotion) return;
     if (paused) {
       controls.stop();
       return;
@@ -148,10 +174,10 @@ const ScrollingRow = ({ testimonials, direction = 'left' }) => {
     const to = direction === 'left' ? -width : 0;
 
     controls.set({ x: from });
-    controls.start({
+    const animationPromise = controls.start({
       x: to,
       transition: {
-        duration: 80,
+        duration: 20,
         ease: 'linear',
         repeat: Infinity,
         repeatType: 'loop',
@@ -160,30 +186,51 @@ const ScrollingRow = ({ testimonials, direction = 'left' }) => {
 
     return () => {
       controls.stop();
+      animationPromise.then(() => {}).catch(() => {}); // Handle potential promise rejection
     };
-  }, [width, direction, paused, controls]);
+  }, [width, direction, paused, controls, prefersReducedMotion]);
 
-  // Enhanced hover and focus handlers for better accessibility
+  // Enhanced touch and interaction handlers for mobile
   const handleMouseEnter = () => setPaused(true);
   const handleMouseLeave = () => setPaused(false);
   const handleFocus = () => setPaused(true);
   const handleBlur = () => setPaused(false);
+  
+  // Optimized touch event handlers for mobile devices
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault(); // Prevent scroll interference
+    setPaused(true);
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    e.preventDefault();
+    setPaused(false);
+  };
+  
+  // Optimized click handler
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setPaused((p) => !p);
+  };
 
   return (
     <motion.div
-      className="flex cursor-pointer focus:outline-none focus:ring-2 focus:ring-ethos-purple/20 focus:ring-offset-2 rounded-lg"
+      className="flex cursor-pointer focus:outline-none focus:ring-2 focus:ring-ethos-purple/20 focus:ring-offset-2 rounded-lg touch-pan-x"
       ref={containerRef}
       animate={controls}
       style={{
-        willChange: 'transform', // Performance optimization
+        willChange: prefersReducedMotion ? 'auto' : 'transform',
+        transform: 'translate3d(0, 0, 0)', // Hardware acceleration
+        backfaceVisibility: 'hidden', // Performance optimization
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onFocus={handleFocus}
       onBlur={handleBlur}
-      onClick={() => setPaused((p) => !p)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onClick={handleClick}
       role="region"
-      aria-label={`Testimonials row scrolling ${direction}. Click to pause/resume animation.`}
+      aria-label={`Testimonials row scrolling ${direction}. ${prefersReducedMotion ? 'Animation disabled for accessibility.' : 'Click or touch to pause/resume animation.'}`}
       tabIndex={0}
     >
       {[...testimonials, ...testimonials].map((testimonial, index) => (
@@ -199,42 +246,41 @@ export const Testimonials = () => {
   const row3 = testimonials.slice(8, 11);
 
   return (
-    <div 
+    <section 
       className="w-full relative py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 overflow-hidden min-h-screen lg:min-h-[85vh] xl:min-h-[90vh] lg:flex lg:flex-col lg:justify-center"
       style={{
         background: 'linear-gradient(180deg, #FFF 60.69%, #DDD 100%)',
       }}
+      aria-labelledby="testimonials-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16 z-10">
-          <h2 className="font-medium text-center max-w-4xl mx-auto">
+        <header className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16 z-10">
+          <h2 id="testimonials-heading" className="font-medium text-center max-w-7xl mx-auto">
             <span 
-              className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight"
-              style={{ color: '#0F1345' }}
+              className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-navy"
             >
               Who uses it became
             </span>
             <span 
-              className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight"
-              style={{ color: '#7409C5' }}
+              className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-purple"
             >
               a fan of it
             </span>
           </h2>
-        </div>
+        </header>
 
-        <div className="relative w-full space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10" style={{ transform: 'translate3d(0, 0, 0)' }}>
+        <div className="relative w-full flex flex-col gap-4 md:gap-5 lg:gap-6 xl:gap-8" style={{ transform: 'translate3d(0, 0, 0)' }} role="list" aria-label="Customer testimonials">
           <ScrollingRow testimonials={row1} direction="left" />
           <ScrollingRow testimonials={row2} direction="right" />
           <ScrollingRow testimonials={row3} direction="left" />
         </div>
 
         <div className="text-center mt-8 sm:mt-10 md:mt-14 lg:mt-18 xl:mt-20">
-          <Button variant="cta" size="cta">
+          <Button variant="cta" size="cta" aria-label="Send feedback about our service">
             Send Feedback
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

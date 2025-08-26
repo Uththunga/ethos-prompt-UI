@@ -4,7 +4,7 @@ import { Footer } from './Footer';
 
 export const PageFooter = () => {
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white" role="contentinfo">
       <HeaderCTA />
       <Footer />
     </div>

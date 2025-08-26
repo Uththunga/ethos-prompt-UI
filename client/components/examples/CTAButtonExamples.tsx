@@ -18,11 +18,13 @@ import { Button } from '@/components/ui/button';
 
 export const CTAButtonExamples = () => {
   return (
-    <div className="p-8 space-y-8 bg-gray-50">
+    <main className="p-8 space-y-8 bg-gray-50" role="main" id="main-content">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
-          CTA Button Component Examples
-        </h1>
+        <header className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">
+            CTA Button Component Examples
+          </h1>
+        </header>
 
         {/* Basic CTA Button */}
         <section className="space-y-4 mb-8">
@@ -45,8 +47,8 @@ export const CTAButtonExamples = () => {
         </section>
 
         {/* Common CTA Text Variations */}
-        <section className="space-y-4 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800">
+        <section className="space-y-4 mb-8" aria-labelledby="variations-heading">
+          <h2 id="variations-heading" className="text-2xl font-semibold text-gray-800">
             Common CTA Text Variations
           </h2>
           <p className="text-gray-600">
@@ -74,8 +76,8 @@ export const CTAButtonExamples = () => {
         </section>
 
         {/* Custom Sizing */}
-        <section className="space-y-4 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-800">
+        <section className="space-y-4 mb-8" aria-labelledby="sizing-heading">
+          <h2 id="sizing-heading" className="text-2xl font-semibold text-gray-800">
             Custom Sizing (Advanced)
           </h2>
           <p className="text-gray-600">
@@ -188,7 +190,7 @@ export const CTAButtonExamples = () => {
           </div>
         </section>
       </div>
-    </div>
+    </main>
   );
 };
 

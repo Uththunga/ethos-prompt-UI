@@ -4,155 +4,163 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 export const Techniques = () => {
+  // For assets in the public directory, we should use the Vite base URL
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden min-h-[1094px] flex items-center">
-        <div className="max-w-[2560px] mx-auto px-6 lg:px-16 xl:px-20 relative w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[800px]">
-            {/* Left Content */}
-            <div className="flex flex-col justify-center space-y-6 lg:space-y-8 xl:space-y-12 lg:pr-8 xl:pr-12">
-              {/* Title */}
-              <div>
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-[135px] font-semibold font-poppins leading-[1.04] tracking-[-4.05px]">
-                  <span className="bg-gradient-to-r from-[#181C4C] to-[#717493] bg-clip-text text-transparent">
-                    Practical
-                  </span>
-                  <br />
-                  <span className="text-ethos-purple">
-                    Prompt Engineering
-                  </span>
-                </h1>
+      <main role="main" id="main-content">
+        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="hero-heading">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
+              {/* Left Content */}
+              <div className="flex flex-col justify-center space-y-6 lg:space-y-8 xl:space-y-12">
+                {/* Title */}
+                <header>
+                  <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                    <span className="bg-gradient-to-r from-[#181C4C] to-[#717493] bg-clip-text text-transparent">
+                      Practical
+                    </span>
+                    <br />
+                    <span className="text-ethos-purple">
+                      Prompt Engineering
+                    </span>
+                  </h1>
+                </header>
+
+                {/* Subtitle */}
+                <div>
+                  <p className="text-[#313131] text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-tight max-w-2xl">
+                    Master the Art of Crafting Effective Prompts
+                  </p>
+                </div>
+
+                {/* Button */}
+                <div>
+                  <Button 
+                    className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-6 sm:px-8 md:px-10 lg:px-12 py-3 lg:py-4 rounded-[32px] sm:rounded-[40px] lg:rounded-[53px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-18"
+                    aria-label="Download prompt engineering learning material"
+                  >
+                    Download material
+                  </Button>
+                </div>
               </div>
 
-              {/* Subtitle */}
-              <div>
-                <p className="text-[#313131] text-xl lg:text-2xl xl:text-[32px] font-normal leading-[1.66] tracking-[-0.96px] max-w-[666px]">
-                  Master the Art of Crafting Effective Prompts
+              {/* Right Image */}
+              <div className="flex justify-center lg:justify-end items-center">
+                <img
+                  src={`${baseUrl}assets/images/techniques-hero-image.jpg`}
+                  alt=""
+                  className="w-full h-auto object-contain"
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Core Techniques Section */}
+        <section className="bg-gradient-to-b from-[#FEFEFE] to-[#FBFBFB] py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="core-techniques-heading">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header className="mb-12 lg:mb-16">
+              <h2 id="core-techniques-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
+                <span className="text-ethos-gray">The </span>
+                <span className="text-ethos-purple">Core techniques</span>
+              </h2>
+              
+              <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-5xl">
+                Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
+              </p>
+            </header>
+
+            {/* Four Technique Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12" role="list" aria-label="Core prompt engineering techniques">
+              {/* Role Setting */}
+              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+                  Role Setting
+                </h3>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                  Give the AI a specific role to guide its responses.
                 </p>
-              </div>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                  Roles help set expectations and context for the interaction.
+                </p>
+              </article>
 
-              {/* Button */}
-              <div>
-                <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 lg:px-12 xl:px-16 py-3 lg:py-4 xl:py-[14px] rounded-[53px] text-lg lg:text-xl xl:text-[28px] font-normal h-auto w-fit">
-                  Download material
-                </Button>
-              </div>
-            </div>
+              {/* Context Providing */}
+              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+                  Context Providing
+                </h3>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                  Set the background and requirements clearly.
+                </p>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                  More context leads to more relevant responses.
+                </p>
+              </article>
 
-            {/* Right Image */}
-            <div className="flex justify-center lg:justify-end items-center">
-              <img
-                src="/assets/images/techniques-hero-image.jpg"
-                alt="Hero Image"
-                className="w-full max-w-[1771px] h-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+              {/* Task Breakdown */}
+              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+                  Task Breakdown
+                </h3>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                  Split complex requests into clear steps.
+                </p>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                  Breaking down tasks improves clarity and quality.
+                </p>
+              </article>
 
-      {/* The Core Techniques Section */}
-      <section className="bg-gradient-to-b from-[#FEFEFE] to-[#FBFBFB] py-16 lg:py-20 xl:py-28">
-        <div className="max-w-[2560px] mx-auto px-6 lg:px-16 xl:px-20">
-          <div className="mb-16 lg:mb-20">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[96px] font-medium leading-[1.11] tracking-[-2.88px] mb-8 lg:mb-12">
-              <span className="text-ethos-gray">The </span>
-              <span className="text-ethos-purple">Core techniques</span>
-            </h2>
-            
-            <p className="text-ethos-gray text-lg lg:text-xl xl:text-[32px] font-normal leading-[1.66] tracking-[-0.96px] max-w-[1979px]">
-              Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
-            </p>
-          </div>
-
-          {/* Four Technique Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-12 xl:gap-16">
-            {/* Role Setting */}
-            <div className="bg-white rounded-[50px] p-12 lg:p-16 xl:p-20 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[595px] flex flex-col justify-center items-center text-center">
-              <h3 className="text-4xl lg:text-5xl xl:text-[64px] font-medium leading-[1.1] tracking-[-1.92px] bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-8 lg:mb-12">
-                Role Setting
-              </h3>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px] mb-6">
-                Give the AI a specific role to guide its responses.
-              </p>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px]">
-                Roles help set expectations and context for the interaction.
-              </p>
-            </div>
-
-            {/* Context Providing */}
-            <div className="bg-white rounded-[50px] p-12 lg:p-16 xl:p-20 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[595px] flex flex-col justify-center items-center text-center">
-              <h3 className="text-4xl lg:text-5xl xl:text-[64px] font-medium leading-[1.1] tracking-[-1.92px] bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-8 lg:mb-12">
-                Context Providing
-              </h3>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px] mb-6">
-                Set the background and requirements clearly.
-              </p>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px]">
-                More context leads to more relevant responses.
-              </p>
-            </div>
-
-            {/* Task Breakdown */}
-            <div className="bg-white rounded-[50px] p-12 lg:p-16 xl:p-20 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[595px] flex flex-col justify-center items-center text-center">
-              <h3 className="text-4xl lg:text-5xl xl:text-[64px] font-medium leading-[1.1] tracking-[-1.92px] bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-8 lg:mb-12">
-                Task Breakdown
-              </h3>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px] mb-6">
-                Split complex requests into clear steps.
-              </p>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px]">
-                Breaking down tasks improves clarity and quality.
-              </p>
-            </div>
-
-            {/* Output Formatting */}
-            <div className="bg-white rounded-[50px] p-12 lg:p-16 xl:p-20 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[595px] flex flex-col justify-center items-center text-center">
-              <h3 className="text-4xl lg:text-5xl xl:text-[64px] font-medium leading-[1.1] tracking-[-1.92px] bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-8 lg:mb-12">
-                Output Formatting
-              </h3>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px] mb-6">
-                Specify how you want the response structured.
-              </p>
-              
-              <p className="text-ethos-gray text-lg lg:text-xl xl:text-[28px] font-normal leading-normal tracking-[-0.84px]">
-                Clear formats make responses more useful and actionable.
-              </p>
+              {/* Output Formatting */}
+              <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center items-center text-center" role="listitem">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-4 lg:mb-6">
+                  Output Formatting
+                </h3>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight mb-3 lg:mb-4">
+                  Specify how you want the response structured.
+                </p>
+                
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-normal tracking-tight">
+                  Clear formats make responses more useful and actionable.
+                </p>
+              </article>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Chain of Thoughts Section */}
-      <section className="bg-gradient-to-b from-white to-[#F1F1F1] py-16 lg:py-20 xl:py-28">
-        <div className="max-w-[2560px] mx-auto px-6 lg:px-16 xl:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+      <section className="bg-gradient-to-b from-white to-[#F1F1F1] py-16 md:py-20 lg:py-24 xl:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             <div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[96px] font-medium leading-[1.11] tracking-[-2.88px] mb-8 lg:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
                 <span className="text-ethos-gray">Chain of Thoughts </span>
                 <span className="text-ethos-purple">Prompting</span>
               </h2>
               
-              <div className="space-y-6 lg:space-y-8">
-                <p className="text-ethos-gray text-lg lg:text-xl xl:text-[32px] font-normal leading-[1.66] tracking-[-0.96px]">
+              <div className="space-y-4 lg:space-y-6">
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
                   Chain of Thought (CoT) is a powerful prompting technique used in artificial intelligence—particularly in large language models like ChatGPT—that encourages the model to generate step-by-step reasoning before reaching a final answer. Rather than responding immediately with a single, direct answer, the AI is prompted to "think out loud", breaking down the problem or question into logical steps. This method closely mirrors how humans solve complex problems by working through their thoughts in stages.
                 </p>
                 
-                <p className="text-ethos-gray text-lg lg:text-xl xl:text-[32px] font-normal leading-[1.66] tracking-[-0.96px]">
+                <p className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-[1.66] tracking-[-0.96px]">
                   CoT is especially useful in scenarios that require multi-step thinking, such as solving math equations, analyzing cause-and-effect relationships, making decisions based on multiple conditions, or answering questions that involve abstract or layered reasoning. By guiding the model to articulate its thought process, CoT significantly improves the accuracy, clarity, and reliability of responses.
                 </p>
                 
-                <p className="text-ethos-gray text-lg lg:text-xl xl:text-[32px] font-normal leading-[1.66] tracking-[-0.96px]">
+                <p className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-[1.66] tracking-[-0.96px]">
                   In essence, Chain of Thought transforms AI from a tool that simply provides answers into a system that can demonstrate reasoning, justify conclusions, and reveal the logic behind its outputs—making it not only more effective but also more trustworthy and interpretable in fields like education, research, customer service, and beyond.
                 </p>
               </div>
@@ -160,9 +168,9 @@ export const Techniques = () => {
             
             <div className="flex justify-center">
               <img
-                src="/assets/images/techniques/technique-33d3874838600fa90097bf09b02e6fa049405c93.jpg"
+                src={`${baseUrl}assets/images/techniques/technique-33d3874838600fa90097bf09b02e6fa049405c93.jpg`}
                 alt="Chain of Thoughts illustration"
-                className="w-full max-w-[971px] h-auto object-contain"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
@@ -170,17 +178,17 @@ export const Techniques = () => {
       </section>
 
       {/* Best Practices Section */}
-      <section className="bg-gradient-to-b from-[#F3F3F3] to-[#E8E8E8] py-16 lg:py-20 xl:py-28">
-        <div className="max-w-[2560px] mx-auto px-6 lg:px-16 xl:px-20">
-          <div className="text-center mb-16 lg:mb-20">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[96px] font-medium leading-[1.11] tracking-[-2.88px]">
+      <section className="bg-gradient-to-b from-[#F3F3F3] to-[#E8E8E8] py-16 md:py-20 lg:py-24 xl:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight">
               <span className="text-ethos-gray">Best Practices and </span>
               <span className="text-ethos-purple">Common Pitfalls</span>
             </h2>
           </div>
 
           {/* Main content with three columns: Best Practices | Image | Common Pitfalls */}
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 lg:gap-12 xl:gap-16 items-center mb-16 lg:mb-20">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
             {/* Best Practices Card */}
             <div className="relative flex justify-center xl:justify-end">
               <svg
@@ -252,7 +260,7 @@ export const Techniques = () => {
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/9a911d75162403557beac2155006e70e2b647c95?width=1922"
                 alt="Best practices illustration"
-                className="w-full max-w-[961px] h-auto object-contain"
+                className="w-full h-auto object-contain"
               />
             </div>
 
@@ -324,11 +332,11 @@ export const Techniques = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-ethos-gray text-4xl lg:text-5xl xl:text-[64px] font-normal leading-[1.13] tracking-[-1.92px] mb-8 lg:mb-12">
+            <p className="text-ethos-gray text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal leading-tight tracking-tight mb-6 lg:mb-8">
               Keen to learn more?
             </p>
 
-            <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-12 lg:px-16 xl:px-20 py-4 lg:py-5 xl:py-6 rounded-[53px] text-lg lg:text-xl xl:text-[28px] font-normal h-auto">
+            <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 sm:px-10 md:px-12 lg:px-16 py-3 lg:py-4 rounded-[32px] sm:rounded-[40px] lg:rounded-[53px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-18">
               Download Material
             </Button>
           </div>
@@ -336,16 +344,16 @@ export const Techniques = () => {
       </section>
 
       {/* Evaluation and Testing Section */}
-      <section className="bg-gradient-to-b from-[#E8E8E8] to-white relative overflow-hidden flex flex-col justify-center items-center -mt-px py-16 lg:py-20 xl:py-28">
-        <div className="max-w-[2560px] mx-auto px-6 lg:px-16 xl:px-20 relative w-full">
+      <section className="bg-gradient-to-b from-[#E8E8E8] to-white relative overflow-hidden py-16 md:py-20 lg:py-24 xl:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
           {/* Header Content */}
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[96px] font-medium leading-[1.11] tracking-[-2.88px] mb-6 lg:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
               <span className="text-ethos-gray">Evaluation and </span>
               <span className="text-ethos-purple">Testing</span>
             </h2>
 
-            <p className="text-ethos-gray text-lg lg:text-xl xl:text-[32px] font-normal leading-[1.66] tracking-[-0.96px] max-w-[2310px] mx-auto">
+            <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-5xl mx-auto">
               Just like software testing, prompt engineering requires systematic evaluation to ensure reliability and effectiveness.
             </p>
           </div>
@@ -355,7 +363,7 @@ export const Techniques = () => {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/900ba67d47669581982c85770c5b291186aa8f7d?width=4654"
               alt="Evaluation and Testing Process Diagram"
-              className="w-full max-w-[2327px] h-auto object-contain"
+              className="w-full h-auto object-contain"
             />
           </div>
 
@@ -646,27 +654,27 @@ export const Techniques = () => {
         {/* Background Image - Direct child of section */}
         <div className="absolute inset-0 pointer-events-none flex justify-end">
           <img
-            src="/assets/images/techniques/technique-7083aca9f6f513559fd873fcf0f7869fbbeeac1b.jpg"
+            src={`${baseUrl}assets/images/techniques/technique-7083aca9f6f513559fd873fcf0f7869fbbeeac1b.jpg`}
             alt="Banner background"
             className="h-full w-auto max-w-none object-contain object-right"
           />
         </div>
-        <div className="max-w-[2560px] mx-auto px-6 lg:px-16 xl:px-20 relative">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 xl:px-20 relative">
 
-          <div className="relative z-10 max-w-[1575px]">
-            <p className="text-white text-4xl lg:text-5xl xl:text-[64px] font-normal leading-[1.13] tracking-[-1.92px] mb-8 lg:mb-12">
+          <div className="relative z-10 max-w-7xl">
+            <p className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.13] tracking-[-1.92px] mb-8 lg:mb-12">
               Are you keen to learn ?
             </p>
             
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl xl:text-[135px] font-semibold leading-[1.13] tracking-[-4.05px] bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent mb-8 lg:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.13] tracking-[-4.05px] bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent mb-8 lg:mb-12">
               Download the free learning material
             </h2>
             
-            <p className="text-white text-lg lg:text-xl xl:text-[32px] font-normal leading-normal max-w-[1094px] mb-12 lg:mb-16">
+            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-normal max-w-7xl mb-12 lg:mb-16">
               This learning material is for the beginners who are keen to learn more with examples which what we have discussed.
             </p>
             
-            <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 lg:px-12 xl:px-16 py-3 lg:py-4 xl:py-[14px] rounded-[56px] text-lg lg:text-xl xl:text-[28px] font-normal h-auto">
+            <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 lg:px-12 xl:px-16 py-3 lg:py-4 xl:py-6 rounded-[56px] text-base sm:text-lg md:text-xl lg:text-2xl font-normal h-auto">
               Download Now
             </Button>
           </div>
@@ -674,6 +682,7 @@ export const Techniques = () => {
       </section>
 
       <Footer />
+      </main>
     </div>
   );
 };

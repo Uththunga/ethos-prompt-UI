@@ -23,7 +23,7 @@ export const BasePageLayout: React.FC<BasePageLayoutProps> = ({
   return (
     <div className={`min-h-screen bg-white ${className}`}>
       {showNavigation && <Navigation />}
-      <main id="main-content" role="main">
+      <main id="main-content" role="main" aria-label="Main content">
         {children}
       </main>
       {showFooter && <Footer />}
