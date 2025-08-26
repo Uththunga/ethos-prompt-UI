@@ -177,7 +177,7 @@ const ScrollingRow = ({ testimonials, direction = 'left' }: ScrollingRowProps) =
     const animationPromise = controls.start({
       x: to,
       transition: {
-        duration: 20,
+        duration: 40,
         ease: 'linear',
         repeat: Infinity,
         repeatType: 'loop',
