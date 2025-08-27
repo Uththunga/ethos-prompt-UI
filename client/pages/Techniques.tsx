@@ -26,17 +26,16 @@ export const Techniques = () => {
           />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[300px] sm:min-h-[400px] lg:min-h-[450px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[250px] sm:min-h-[300px] lg:min-h-[350px]">
               {/* Left Content */}
               <div className="flex flex-col justify-center space-y-4 md:space-y-5 lg:space-y-6">
                 {/* Title */}
                 <header>
-                  <h1 id="hero-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold font-poppins leading-tight tracking-tight">
-                    <span className="bg-gradient-to-r from-[#181C4C] to-[#717493] bg-clip-text text-transparent">
+                  <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                    <span className="block bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
                       Practical
                     </span>
-                    <br />
-                    <span className="text-ethos-purple">
+                    <span className="block text-ethos-purple">
                       Prompt Engineering
                     </span>
                   </h1>
@@ -60,8 +59,14 @@ export const Techniques = () => {
                 </div>
               </div>
 
-              {/* Right Side - Empty Space */}
-              <div className="hidden lg:block"></div>
+              {/* Right Side - Image */}
+              <div className="hidden lg:flex items-center justify-center">
+                <img 
+                  src="/assets/images/techniques/Group 205.png" 
+                  alt="Prompt Engineering Illustration"
+                  className="max-w-full h-auto object-contain"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -69,13 +74,13 @@ export const Techniques = () => {
         {/* The Core Techniques Section */}
         <section className="bg-gradient-to-b from-[#FEFEFE] to-[#FBFBFB] py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24" aria-labelledby="core-techniques-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center">
+            <header className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-left">
               <h2 id="core-techniques-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-3 sm:mb-4">
                 <span className="text-ethos-gray">The </span>
                 <span className="text-ethos-purple">Core techniques</span>
               </h2>
               
-              <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-2xl mx-auto">
+              <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-2xl text-left">
                 Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
               </p>
             </header>
@@ -155,16 +160,16 @@ export const Techniques = () => {
                 <span className="text-ethos-purple">Prompting</span>
               </h2>
               
-              <div className="space-y-4 lg:space-y-6">
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
+              <div className="space-y-4 lg:space-y-5">
+                <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
                   Chain of Thought (CoT) is a powerful prompting technique used in artificial intelligence—particularly in large language models like ChatGPT—that encourages the model to generate step-by-step reasoning before reaching a final answer. Rather than responding immediately with a single, direct answer, the AI is prompted to "think out loud", breaking down the problem or question into logical steps. This method closely mirrors how humans solve complex problems by working through their thoughts in stages.
                 </p>
                 
-                <p className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-[1.66] tracking-[-0.96px]">
+                <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
                   CoT is especially useful in scenarios that require multi-step thinking, such as solving math equations, analyzing cause-and-effect relationships, making decisions based on multiple conditions, or answering questions that involve abstract or layered reasoning. By guiding the model to articulate its thought process, CoT significantly improves the accuracy, clarity, and reliability of responses.
                 </p>
                 
-                <p className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-[1.66] tracking-[-0.96px]">
+                <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
                   In essence, Chain of Thought transforms AI from a tool that simply provides answers into a system that can demonstrate reasoning, justify conclusions, and reveal the logic behind its outputs—making it not only more effective but also more trustworthy and interpretable in fields like education, research, customer service, and beyond.
                 </p>
               </div>

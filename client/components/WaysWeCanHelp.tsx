@@ -69,10 +69,10 @@ export const WaysWeCanHelp = () => {
       <style dangerouslySetInnerHTML={{ __html: animationStyle }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Area */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 mb-16 md:mb-20 lg:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-8 lg:gap-12 mb-16 md:mb-20 lg:mb-24">
           {/* Left Side - AI Agent Image */}
           <div className="flex justify-start items-start relative">
-            <div className="relative -mt-16 sm:-mt-20 md:-mt-24 lg:-mt-32 -ml-4 sm:-ml-6 md:-ml-8 lg:-ml-12">
+            <div className="relative -mt-16 sm:-mt-20 md:-mt-24 lg:-mt-32 -ml-8 sm:-ml-12 md:-ml-16 lg:-ml-20">
               <img
                 src={moleImagePath}
                 alt="AI Agent"

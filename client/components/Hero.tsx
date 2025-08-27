@@ -65,7 +65,7 @@ export const Hero = () => {
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 mt-16" aria-labelledby="results-heading">
         {/* Section Header */}
         <header className="mb-12 md:mb-16 lg:mb-20">
-          <h2 id="results-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-snug tracking-tight">
+          <h2 id="results-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-snug tracking-tight">
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
               Proven results for{" "}
             </span>
@@ -81,7 +81,7 @@ export const Hero = () => {
               <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
                 <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
                   <span
-                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
                   >
                     30%
                   </span>
@@ -102,7 +102,7 @@ export const Hero = () => {
               <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
                 <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
                   <span
-                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
                   >
                     80%
                   </span>
@@ -123,7 +123,7 @@ export const Hero = () => {
               <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
                 <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
                   <span
-                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
+                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
                   >
                     40%
                   </span>
@@ -139,7 +139,7 @@ export const Hero = () => {
           </article>
 
           {/* CTA Card */}
-          <aside style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30 }} className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
+          <aside style={{ width: '100%', height: '100%', background: 'transparent', boxShadow: 'none', borderRadius: 30 }} className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-4 sm:mb-6 lg:mb-8 leading-snug tracking-tight">
               See how your Business can achieve these results
             </h3>

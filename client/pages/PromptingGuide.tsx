@@ -17,29 +17,31 @@ export const PromptingGuide = () => {
           <div className="max-w-7xl mx-auto relative h-full px-4 sm:px-6 lg:px-8">
             {/* Title Text - positioned at the top */}
             <header className="text-center">
-              <h1 id="hero-heading" className="font-semibold font-poppins leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                <div className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
+              <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
                   Master the art of
-                </div>
-                <div className="text-ethos-purple">
+                </span>
+                <br />
+                <span className="text-ethos-purple">
                   AI Communication
-                </div>
+                </span>
               </h1>
             </header>
 
             {/* Hero Image - positioned below the title */}
-            <div className="flex justify-center mb-8 lg:mb-12">
+            <div className="w-full max-w-7xl mx-auto mb-8 lg:mb-12 px-4 sm:px-6 -mt-12 sm:-mt-16">
               <img
                 src={`${baseUrl}assets/images/ai-communication-illustration.jpg`}
                 alt=""
-                className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] h-auto object-contain"
+                className="w-full h-auto object-contain"
+                style={{ maxHeight: '80vh', width: '100%' }}
                 aria-hidden="true"
               />
             </div>
 
             {/* Subtitle - positioned at bottom */}
             <div className="text-center">
-              <p className="text-ethos-gray font-normal leading-relaxed text-sm sm:text-base lg:text-lg xl:text-xl max-w-4xl mx-auto">
+              <p className="text-ethos-gray font-normal leading-relaxed text-sm sm:text-base lg:text-lg xl:text-xl w-full text-center whitespace-normal sm:whitespace-nowrap overflow-visible sm:overflow-hidden sm:text-ellipsis">
                 Unlock the full potential of AI models by learning how to craft effective prompts. Turn your ideas into powerful results.
               </p>
             </div>
@@ -113,7 +115,7 @@ export const PromptingGuide = () => {
             </div>
 
           {/* What is Prompting Section */}
-          <section className="py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="what-is-prompting-heading">
+          <section className="pt-16 md:pt-20 lg:pt-24 xl:pt-28 pb-8 md:pb-12 lg:pb-16" aria-labelledby="what-is-prompting-heading">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Responsive Grid Layout */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
@@ -136,13 +138,13 @@ export const PromptingGuide = () => {
                     <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
                       A great prompt is like a good recipe—it gives the AI all the right ingredients and steps to create something amazing for you.
                     </p>
-                  </div>
                   
-                  {/* CTA Button */}
-                  <div className="mt-6 md:mt-8 lg:mt-10">
-                    <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-6 lg:px-8 xl:px-10 py-3 lg:py-4 rounded-full text-sm lg:text-base xl:text-lg font-normal h-auto transition-colors duration-300">
-                      Go to Playground
-                    </Button>
+                    {/* CTA Button */}
+                    <div className="pt-6 md:pt-8 lg:pt-10">
+                      <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-6 lg:px-8 xl:px-10 py-3 lg:py-4 rounded-full text-sm lg:text-base xl:text-lg font-normal h-auto transition-colors duration-300">
+                        Go to Playground
+                      </Button>
+                    </div>
                   </div>
                 </div>
 

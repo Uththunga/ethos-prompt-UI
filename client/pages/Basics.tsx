@@ -29,8 +29,8 @@ export const Basics = () => {
             <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16 lg:pb-20">
               {/* Main Title */}
               <header className="max-w-5xl mb-12 lg:mb-16">
-                <h1 id="hero-heading" className="font-semibold font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-tight">
-                  <span className="bg-gradient-to-r from-[#181C4C] via-[#717493] to-[#717493] bg-clip-text text-transparent">
+                <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                  <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
                     The Story of 
                   </span>
                   <br />
@@ -47,7 +47,7 @@ export const Basics = () => {
               
               {/* Download Button */}
               <Button 
-                className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 sm:px-10 md:px-12 lg:px-16 py-3 lg:py-4 rounded-[32px] sm:rounded-[40px] lg:rounded-[53px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-[64px] w-full max-w-sm sm:max-w-md lg:max-w-lg"
+                className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-4 sm:px-6 md:px-8 lg:px-10 py-2 rounded-[28px] sm:rounded-[32px] lg:rounded-[40px] text-sm sm:text-sm md:text-base lg:text-base font-normal h-9 sm:h-10 md:h-11 lg:h-12 w-full max-w-[280px] mx-auto"
                 aria-label="Download learning materials about AI prompting"
               >
                 Download Materials
@@ -62,7 +62,7 @@ export const Basics = () => {
             {/* Section Title */}
             <header className="text-center mb-12 lg:mb-16">
               <h2 id="ai-to-llm-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
-                <span className="text-ethos-gray">From Ai to </span>
+                <span className="text-ethos-gray">From AI to </span>
                 <span className="text-ethos-purple">Large Language Model (LLM)</span>
               </h2>
               
@@ -71,10 +71,10 @@ export const Basics = () => {
               </p>
             </header>
 
-            {/* What Is an LLM Really? */}
+            {/* What is an LLM Really? */}
             <section className="mb-16 lg:mb-20" aria-labelledby="what-is-llm-heading">
               <h3 id="what-is-llm-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight text-center mb-6 lg:mb-8">
-                <span className="text-ethos-gray">What Is an </span>
+                <span className="text-ethos-gray">What is an </span>
                 <span className="text-ethos-purple">LLM Really?</span>
               </h3>
               
@@ -135,56 +135,66 @@ export const Basics = () => {
                   </div>
                 </article>
               </div>
-            </section>
-          </div>
-        </section>
-
-        {/* LLM Description Section */}
-        <section className="bg-white py-8 md:py-12 lg:py-16" aria-labelledby="llm-description-heading">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 id="llm-description-heading" className="sr-only">What is a Large Language Model?</h3>
             <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-5xl mx-auto">
               Large Language Models are AI systems trained by processing vast amounts of text from the internet.
             </p>
-
-            {/* REMOVED DUPLICATE L-L-M Breakdown Cards */}
+    
+          </div>
           </div>
         </section>
 
-      {/* 20+ LLMs Available Section */}
-      <section className="bg-white py-16 md:py-20 lg:py-24 xl:py-28 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Background LLM Logos */}
-          <div className="absolute left-0 top-0 w-full h-full pointer-events-none opacity-10">
-            <img
-              src={`${baseUrl}assets/images/basics/Image.png`}
-              alt="Collection of LLM logos and AI platforms"
-              className="w-full h-full object-cover"
-            />
-          </div>
+       
 
+      {/* 20+ LLMs Available Section */}
+      <section className="py-16 md:py-20 lg:py-24 xl:py-28 relative overflow-hidden" aria-labelledby="llms-available-heading">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={`${baseUrl}assets/images/basics/Image.png`}
+            alt=""
+            className="w-full h-full object-cover opacity-40"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto">
           {/* Content */}
-          <div className="relative z-10 text-center">
-            <div className="space-y-8 lg:space-y-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none tracking-tight text-black">
-                There are
-              </h2>
-              
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none tracking-tight text-ethos-purple">
-                20+ LLMs
+          <div className="relative z-10 px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center min-h-[300px] md:min-h-[350px] lg:min-h-[400px]">
+              {/* Left Column - App Logos Image */}
+              <div className="flex justify-center items-center">
+                <img
+                  src={`${baseUrl}assets/images/basics/App Logos.png`}
+                  alt="Collection of LLM logos and AI platforms"
+                  className="w-full h-auto max-w-[500px]"
+                />
               </div>
-              
-              <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-none tracking-tight text-black">
-                available
-              </h3>
-              
-              <p className="text-[#313131] text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-tight mb-6 lg:mb-8">
-                and the number will grow
-              </p>
-              
-              <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 sm:px-10 md:px-12 lg:px-16 py-3 lg:py-4 rounded-[32px] sm:rounded-[40px] lg:rounded-[53px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-[65px] w-full max-w-sm sm:max-w-md lg:max-w-lg">
-                Download Materials
-              </Button>
+
+              {/* Right Column - Content */}
+              <div className="space-y-3 sm:space-y-4 lg:space-y-6 lg:pl-8 xl:pl-16 text-center lg:text-left">
+                <header className="space-y-1 sm:space-y-2">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight text-ethos-purple">
+                    Integrate
+                  </h2>
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-black">
+                    20+ LLMs
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight text-black">
+                    Available
+                  </h3>
+                </header>
+                
+                <p className="text-gray-800 text-sm sm:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-4xl mx-auto lg:mx-0">
+                  EthosPrompt agents can seamlessly integrate with over 20+ leading language models to enhance your AI capabilities. From content generation to code assistance and beyond, access the right model for every task with a single click.
+                </p>
+
+                <div className="pt-2">
+                  <Button variant="cta" size="cta">
+                    Get Started Now
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -192,23 +202,14 @@ export const Basics = () => {
 
       {/* Pre-Training, Fine-Tuning, Prompting Section */}
       <section className="bg-gradient-to-t from-white to-[#E9EBEB] py-16 md:py-20 lg:py-24 xl:py-28 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
-            {/* Left side - AI Image */}
-            <div className="order-2 lg:order-1 flex justify-center">                 
-              <img
-                src={`${baseUrl}assets/images/basics/ChatGPT Image.png`}
-                alt="AI head with technological elements"
-                className="w-full h-auto"
-              />
-            </div>
-
-            {/* Right side - Content */}
-            <div className="order-1 lg:order-2 space-y-12 lg:space-y-16 xl:space-y-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-16 md:space-y-20 lg:space-y-24">
+            {/* Main Content */}
+            <div className="space-y-12 lg:space-y-16 xl:space-y-20 text-center">
               {/* Pre-Training */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What Is an </span>
+                  <span className="text-ethos-gray">What is an </span>
                   <span className="text-ethos-purple">Pre-Training?</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
@@ -219,7 +220,7 @@ export const Basics = () => {
               {/* Fine-Tuning */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What Is an </span>
+                  <span className="text-ethos-gray">What is an </span>
                   <span className="text-ethos-purple">Fine tuning?</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
@@ -230,7 +231,7 @@ export const Basics = () => {
               {/* Prompting */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What Is an </span>
+                  <span className="text-ethos-gray">What is </span>
                   <span className="text-ethos-purple">Prompting?</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">

@@ -16,7 +16,7 @@ export const Solutions = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Main Heading */}
           <header className="text-center mb-8 sm:mb-10 lg:mb-12">
-            <h1 id="solutions-heading" className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium leading-tight tracking-tight">
+            <h1 id="solutions-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
               <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
                 Solutions for a smarter
               </span>
@@ -26,7 +26,7 @@ export const Solutions = () => {
           </header>
 
           {/* AI Workflow Illustration */}
-          <div className="relative mb-6 lg:mb-8">
+          <div className="relative -mt-8 sm:-mt-10 lg:-mt-12">
             <img
               src={`${baseUrl}assets/images/ai-workflow-illustration.jpg`}
               alt="AI Workflow Illustration showing various AI tools and integrations"
