@@ -337,7 +337,7 @@ export const PromptingGuide = () => {
               {/* Learn the Basics Tile */}
               <article className="group" role="listitem">
                 <Link 
-                  to="/basics" 
+                  to={{ pathname: "/basics", hash: "#hero-heading" }} 
                   className="block transition-transform duration-300 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-ethos-purple focus:ring-offset-2 rounded-[24px] sm:rounded-[28px] lg:rounded-[32px]"
                   aria-label="Learn the basics of prompt engineering"
                 >
@@ -365,7 +365,7 @@ export const PromptingGuide = () => {
               {/* Explore Techniques Tile */}
               <article className="group" role="listitem">
                 <Link 
-                  to="/techniques" 
+                  to={{ pathname: "/techniques", hash: "#hero-heading" }} 
                   className="block transition-transform duration-300 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-ethos-purple focus:ring-offset-2 rounded-[24px] sm:rounded-[28px] lg:rounded-[32px]"
                   aria-label="Explore advanced prompt engineering techniques"
                 >

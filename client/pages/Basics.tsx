@@ -83,14 +83,14 @@ export const Basics = () => {
               </p>
 
               {/* L-L-M Breakdown Cards */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 xl:gap-12" role="list" aria-label="LLM component breakdown">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 xl:gap-8" role="list" aria-label="LLM component breakdown">
                 {/* Large Card */}
                 <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center" role="listitem">
-                  <div className="flex items-start gap-8 lg:gap-12">
+                  <div className="flex items-center gap-8 lg:gap-12">
                     <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-bold leading-none tracking-[-3.84px] bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]" aria-hidden="true">
                       L
                     </div>
-                    <div className="flex-1 pt-4">
+                    <div className="flex-1">
                       <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
                         Large
                       </h4>
@@ -103,11 +103,11 @@ export const Basics = () => {
 
                 {/* Language Card */}
                 <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center" role="listitem">
-                  <div className="flex items-start gap-8 lg:gap-12">
+                  <div className="flex items-center gap-8 lg:gap-12">
                     <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-bold leading-none tracking-[-3.84px] bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]" aria-hidden="true">
                       L
                     </div>
-                    <div className="flex-1 pt-4">
+                    <div className="flex-1">
                       <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
                         Language
                       </h4>
@@ -120,11 +120,11 @@ export const Basics = () => {
 
                 {/* Model Card */}
                 <article className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-6 lg:p-8 xl:p-10 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[200px] sm:min-h-[240px] lg:min-h-[280px] flex flex-col justify-center" role="listitem">
-                  <div className="flex items-start gap-8 lg:gap-12">
+                  <div className="flex items-center gap-8 lg:gap-12">
                     <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl font-bold leading-none tracking-[-3.84px] bg-gradient-to-b from-[#7A71DF] to-[#442785] bg-clip-text text-transparent drop-shadow-[0_18px_28.5px_rgba(0,0,0,0.25)]" aria-hidden="true">
                       M
                     </div>
-                    <div className="flex-1 pt-4">
+                    <div className="flex-1">
                       <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
                         Model
                       </h4>

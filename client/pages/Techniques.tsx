@@ -62,7 +62,7 @@ export const Techniques = () => {
               {/* Right Side - Image */}
               <div className="hidden lg:flex items-center justify-center">
                 <img 
-                  src="/assets/images/techniques/Group 205.png" 
+                  src={`${baseUrl}assets/images/techniques/Group 205.png`}
                   alt="Prompt Engineering Illustration"
                   className="max-w-full h-auto object-contain"
                 />
