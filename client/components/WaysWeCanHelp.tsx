@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from "react-router-dom";
 
 export const WaysWeCanHelp = () => {
   // Animation style for the floating effect
@@ -152,9 +153,11 @@ export const WaysWeCanHelp = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-12 md:mt-16 lg:mt-20">
-          <Button variant="cta" size="cta">
-            Read more
-          </Button>
+          <Link to="/solutions">
+            <Button variant="cta" size="cta">
+              Read more
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

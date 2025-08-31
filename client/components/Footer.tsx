@@ -66,8 +66,8 @@ export const Footer = () => {
             <ul className="space-y-3" role="list">
               <li><Link to="/solutions" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-sm md:text-base">Solutions</Link></li>
               <li><Link to="/prompt-library" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-sm md:text-base">Prompt Library</Link></li>
-              <li><Link to="/resources" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-sm md:text-base">Resources</Link></li>
-              <li><Link to="/blog" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-sm md:text-base">Blog</Link></li>
+              <li><Link to="/prompting-guide" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-sm md:text-base">Prompting Guide</Link></li>
+              <li><Link to="/contact" className="block text-gray-400 hover:text-white transition-colors text-xs sm:text-sm md:text-base">Contact Us</Link></li>
             </ul>
           </nav>
 

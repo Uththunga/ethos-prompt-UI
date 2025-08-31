@@ -104,7 +104,7 @@ export const PromptingGuide = () => {
                   </div>
                   <div className="flex-1 pt-1 sm:pt-2">
                     <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-2 sm:mb-3 lg:mb-6">
-                      Apply and innovate
+                      Transform Ideas into Reality
                     </h3>
                     <p className="text-ethos-gray text-xs sm:text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
                       Use your skills to solve complex problems and create amazing things.
@@ -215,12 +215,12 @@ export const PromptingGuide = () => {
       </section>
 
       {/* Let's Break Down a Prompt Section */}
-      <section className="bg-ethos-navy py-16 md:py-20 lg:py-24 xl:py-28" aria-labelledby="prompt-breakdown-heading">
+      <section className="bg-ethos-navy" aria-labelledby="prompt-breakdown-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Responsive Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-end">
-            {/* Text Content Column */}
-            <div className="order-2 lg:order-1">
+            {/* Text Content Column - Always on top on mobile, left on desktop */}
+            <div className="order-1 lg:order-1 my-12 lg:my-16">
               {/* Section Header - Left Aligned */}
               <header className="mb-8 md:mb-10 lg:mb-12">
                 <h2 id="prompt-breakdown-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent">
@@ -287,8 +287,8 @@ export const PromptingGuide = () => {
               </div>
             </div>
 
-            {/* Image Column */}
-            <div className="order-1 lg:order-2 relative h-full">
+            {/* Image Column - Always below text on mobile, right on desktop */}
+            <div className="order-2 lg:order-2 relative h-full min-h-[40vh] lg:min-h-[70vh] bg-gradient-to-br from-ethos-navy/50 via-ethos-navy/30 to-ethos-navy/10 rounded-2xl overflow-visible">
               {/* Background Grid Pattern */}
               <div className="absolute inset-0 flex justify-center items-center opacity-20 pointer-events-none">
                 <img
@@ -300,11 +300,11 @@ export const PromptingGuide = () => {
               </div>
               
               {/* Main Illustration */}
-              <div className="relative z-10 flex justify-center items-end h-full">
+              <div className="relative z-50 flex justify-center items-end h-full w-full p-0 overflow-visible">
                 <img
-                  src={`${baseUrl}assets/images/prompting-guide/Group 226 1.png`}
+                  src={`${baseUrl}assets/images/prompting-guide/Group%20281.png`}
                   alt="AI prompt breakdown illustration showing the components of effective prompting"
-                  className="w-full max-w-[400px] md:max-w-[500px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px] h-auto object-contain block"
+                  className="h-auto w-auto max-h-[50vh] max-w-[90vw] md:max-h-[60vh] md:max-w-[70vw] object-contain object-bottom"
                 />
               </div>
             </div>

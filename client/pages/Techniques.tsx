@@ -14,7 +14,7 @@ export const Techniques = () => {
       
       {/* Hero Section */}
       <main role="main" id="main-content">
-        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden py-8 md:py-12 lg:py-16 xl:py-20" aria-labelledby="hero-heading">
+        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden py-4 md:py-6 lg:py-8" aria-labelledby="hero-heading">
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
@@ -26,9 +26,9 @@ export const Techniques = () => {
           />
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[250px] sm:min-h-[300px] lg:min-h-[350px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5 items-center min-h-[150px] sm:min-h-[180px] lg:min-h-[220px]">
               {/* Left Content */}
-              <div className="flex flex-col justify-center space-y-4 md:space-y-5 lg:space-y-6">
+              <div className="flex flex-col justify-center space-y-3 md:space-y-4 lg:space-y-5">
                 {/* Title */}
                 <header>
                   <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
@@ -86,62 +86,54 @@ export const Techniques = () => {
             </header>
 
             {/* Four Technique Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6" role="list" aria-label="Core prompt engineering techniques">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 lg:gap-4" role="list" aria-label="Core prompt engineering techniques">
               {/* Role Setting */}
-              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Role Setting
                 </h3>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Give the AI a specific role to guide its responses.
                 </p>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   Roles help set expectations and context for the interaction.
                 </p>
               </article>
 
               {/* Context Providing */}
-              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Context Providing
                 </h3>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Set the background and requirements clearly.
                 </p>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   More context leads to more relevant responses.
                 </p>
               </article>
 
               {/* Task Breakdown */}
-              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Task Breakdown
                 </h3>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Split complex requests into clear steps.
                 </p>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   Breaking down tasks improves clarity and quality.
                 </p>
               </article>
 
               {/* Output Formatting */}
-              <article className="bg-white rounded-xl sm:rounded-2xl md:rounded-[24px] p-4 sm:p-5 md:p-6 flex flex-col justify-center items-center text-center shadow-[10px_10px_15px_0_rgba(0,39,80,0.05)_inset,-10px_-10px_15px_0_rgba(255,255,255,0.70)_inset,0_1px_1px_0_rgba(0,0,0,0.1)] min-h-[180px] sm:min-h-[220px] md:min-h-[260px] lg:min-h-[300px] transition-all duration-300 hover:shadow-[15px_15px_20px_0_rgba(0,39,80,0.07)_inset,-15px_-15px_20px_0_rgba(255,255,255,0.80)_inset,0_2px_2px_0_rgba(0,0,0,0.15)] group" role="listitem">
+              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
                   Output Formatting
                 </h3>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
                   Specify how you want the response structured.
                 </p>
-                
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
                   Clear formats make responses more useful and actionable.
                 </p>
@@ -151,7 +143,7 @@ export const Techniques = () => {
         </section>
 
       {/* Chain of Thoughts Section */}
-      <section className="bg-gradient-to-b from-white to-[#F1F1F1] py-16 md:py-20 lg:py-24 xl:py-28">
+      <section className="bg-gradient-to-b from-white to-[#F1F1F1] pt-8 md:pt-12 lg:pt-16 pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             <div>
@@ -201,7 +193,7 @@ export const Techniques = () => {
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(300px,1fr)_auto_minmax(300px,1fr)] gap-8 sm:gap-10 md:gap-12 lg:gap-1 xl:gap-2 items-center justify-items-center min-h-[480px] md:min-h-[450px] lg:min-h-[500px]">
               
               {/* Left Card - Best Practices - Purple */}
-              <div className="relative order-2 lg:order-1 group w-full lg:max-w-md xl:max-w-lg mx-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-6">
+              <div className="relative order-2 lg:order-1 group w-full max-w-md xl:max-w-lg mx-auto lg:-ml-6 px-4 sm:px-6 lg:px-0">
                 {/* Background Shape */}
                 <div 
                   className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
@@ -259,9 +251,9 @@ export const Techniques = () => {
               </div>
 
               {/* Center Image */}
-              <div className="order-1 lg:order-2 flex justify-center items-center w-full max-w-[400px] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[640px] xl:max-w-[720px] mx-auto">
+              <div className="order-1 lg:order-2 flex justify-center items-center w-full max-w-[240px] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[400px] xl:max-w-[440px] mx-auto h-full min-h-[200px] lg:min-h-[300px] my-auto">
                 <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/9a911d75162403557beac2155006e70e2b647c95?width=1922"
+                  src="/assets/images/techniques/ai4.png"
                   alt="Best practices illustration"
                   className="w-full h-auto object-contain"
                   loading="lazy"
@@ -270,7 +262,7 @@ export const Techniques = () => {
               </div>
 
               {/* Right Card - Common Pitfalls - Dark Blue */}
-              <div className="relative order-3 lg:order-3 group w-full lg:max-w-md xl:max-w-lg mx-auto -mr-2 sm:-mr-3 md:-mr-4 lg:-mr-6">
+              <div className="relative order-3 lg:order-3 group w-full max-w-md xl:max-w-lg mx-auto lg:-mr-6 px-4 sm:px-6 lg:px-0">
                 {/* Background Shape */}
                 <div 
                   className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"

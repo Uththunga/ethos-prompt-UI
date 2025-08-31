@@ -1,4 +1,9 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import ShinyText from './ShinyText';
+const groupHeroPath = process.env.NODE_ENV === 'production' 
+    ? '/ethos-prompt-UI/assets/images/Group%20hero.png' 
+    : '/assets/images/Group%20hero.png';
 
 export const Hero = () => {
   // Add animation style in a style tag to ensure it's scoped
@@ -15,8 +20,9 @@ export const Hero = () => {
   
   // For assets in the public directory, we should use the Vite base URL
   const baseUrl = import.meta.env.BASE_URL || '/';
-  const group282Path = `${baseUrl}assets/images/Group 282.png`;
+  const group282Path = `${baseUrl}assets/images/Group 288.png`;
   const botPath = `${baseUrl}assets/images/bot.png`;
+    const group287Path = `${baseUrl}assets/images/Group 287.svg`;
   
   return (
     <>
@@ -33,30 +39,46 @@ export const Hero = () => {
         <section className="text-center mb-4 -mt-2" aria-labelledby="hero-heading">
           <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-              Transform your Business
-            </span>
+            Transform your Business
+          </span>
             <br />
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-              with{" "}
-            </span>
-            <span className="text-ethos-purple">AI Agents</span>
+            with{" "}
+          </span>
+            <ShinyText className="bg-gradient-to-r from-purple-500 to-purple-500" speedInMs={10000}>AI Agents</ShinyText>
           </h1>
         </section>
 
         {/* Hero Image with Overlay */}
         <div className="relative flex justify-center -mt-4" role="img" aria-label="AI Agent interface demonstration">
           <div className="relative">
+            {/* Desktop Image - shown on lg screens and up */}
             <img
               src={group282Path}
               alt="Interactive AI agent dashboard interface showing workflow automation"
-              className="w-full h-auto object-contain"
+              className="hidden lg:block w-full h-auto object-contain"
+              width={1090}
+              height={642}
+            />
+              {/* Inserted SVG between Group 288.png and bot.png for large screens */}
+              <img
+                src={group287Path}
+                alt="Decorative SVG graphic"
+                className="hidden lg:block absolute top-[54%] left-[54%] transform -translate-x-1/2 -translate-y-1/2 w-[67%] h-auto"
+                style={{ zIndex: 2 }}
+              />
+            {/* Mobile/Tablet Image - shown on screens smaller than lg */}
+            <img
+              src={groupHeroPath}
+              alt="Interactive AI agent dashboard interface"
+              className="lg:hidden w-full h-auto object-contain"
               width={1090}
               height={642}
             />
             <img
               src={botPath}
               alt="Animated AI assistant character"
-              className="absolute top-[calc(40.5%+2mm)] sm:top-[calc(42.5%+2mm)] md:top-[calc(52.5%-26.5mm)] lg:top-[calc(53.5%-26.5mm)] left-[calc(56%+2mm)] sm:left-[calc(58%-1mm)] md:left-[calc(59%-1.8mm)] lg:left-[calc(59%-1.8mm)] transform -translate-x-1/2 -translate-y-1/2 w-[44%] sm:w-[45%] md:w-[46%] h-auto animate-float-slow"
+              className="hidden lg:block absolute top-[calc(52.5%-26.5mm)] lg:top-[calc(53.5%-26.5mm)] left-[calc(59%-1.8mm)] lg:left-[calc(59%-1.8mm)] transform -translate-x-1/2 -translate-y-1/2 w-[46%] h-auto animate-float-slow"
             />
           </div>
         </div>
@@ -65,12 +87,12 @@ export const Hero = () => {
       {/* Proven Results Section */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 mt-16" aria-labelledby="results-heading">
         {/* Section Header */}
-        <header className="mb-12 md:mb-16 lg:mb-20">
-          <h2 id="results-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal leading-snug tracking-tight">
-            <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-              Proven results for{" "}
+        <header className="mb-8 md:mb-10 lg:mb-12 text-left">
+          <h2 id="results-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.13] tracking-[-0.03em] max-w-7xl">
+            <span className="text-ethos-navy-light">
+              Proven results for
             </span>
-            <span className="text-ethos-purple">Your Business</span>
+            <ShinyText className="bg-gradient-to-r from-ethos-purple to-ethos-purple ml-4" speedInMs={10000}>Your Business</ShinyText>
           </h2>
         </header>
 
@@ -145,13 +167,15 @@ export const Hero = () => {
               See how your Business can achieve these results
             </h3>
             <div className="w-full flex justify-center">
-              <Button 
-                variant="cta" 
-                size="cta"
-                aria-label="Schedule consultation to discuss business results"
-              >
-                Talk to Expert
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  variant="cta" 
+                  size="cta"
+                  aria-label="Schedule consultation to discuss business results"
+                >
+                  Talk to Expert
+                </Button>
+              </Link>
             </div>
           </aside>
         </div>

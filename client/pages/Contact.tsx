@@ -29,20 +29,20 @@ export const Contact = () => {
             <section className="space-y-6 md:space-y-8 lg:space-y-10" aria-labelledby="contact-heading">
               {/* Main Heading */}
               <header className="space-y-6">
-                <h1 id="contact-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                <h1 id="contact-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold font-poppins leading-tight tracking-tight">
                   <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Contact our </span>
                   <span className="text-ethos-purple">Sales Team </span>
                   <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Today</span>
                 </h1>
                 
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-4xl">
+                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight max-w-4xl">
                   Experience how EthosPrompt's powerful AI automation platform helps businesses streamline operations, integrate tools, and unlock smarter workflows—seamlessly and securely.
                 </p>
               </header>
 
               {/* Discussion Points */}
               <section className="space-y-6" aria-labelledby="discussion-heading">
-                <h2 id="discussion-heading" className="text-ethos-gray text-lg md:text-xl lg:text-2xl font-medium leading-relaxed tracking-tight">
+                <h2 id="discussion-heading" className="text-ethos-gray text-base md:text-lg lg:text-xl font-medium leading-relaxed tracking-tight">
                   Lets connect to discuss;
                 </h2>
                 
@@ -59,7 +59,7 @@ export const Contact = () => {
                           aria-hidden="true"
                         />
                       </div>
-                      <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
+                      <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
                         Maximizing ROI with EthosPrompt Agents
                       </p>
                     </div>
@@ -74,7 +74,7 @@ export const Contact = () => {
                           aria-hidden="true"
                         />
                       </div>
-                      <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
+                      <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
                         Tailored solutions for your specific industry
                       </p>
                     </div>
@@ -92,7 +92,7 @@ export const Contact = () => {
                           aria-hidden="true"
                         />
                       </div>
-                      <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
+                      <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
                         Finding the best plan for your business
                       </p>
                     </div>
@@ -107,7 +107,7 @@ export const Contact = () => {
                           aria-hidden="true"
                         />
                       </div>
-                      <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
+                      <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
                         A live demo to see EthosPrompt in action
                       </p>
                     </div>
@@ -118,10 +118,10 @@ export const Contact = () => {
               {/* Contact Information */}
               <section className="space-y-4" aria-labelledby="contact-info-heading">
                 <h3 id="contact-info-heading" className="sr-only">Contact Information</h3>
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
+                <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
                   Talk to an EthosPrompt expert today: <span className="font-medium">+1 (877) XXX-XXXX</span>
                 </p>
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
+                <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
                   Need help? For technical or billing support, visit our <span className="font-medium">Help Center</span> for FAQs and troubleshooting resources.
                 </p>
               </section>
@@ -131,9 +131,9 @@ export const Contact = () => {
             <section className="w-full max-w-2xl xl:max-w-none" aria-labelledby="contact-form-heading">
               <div className="bg-gradient-to-b from-[#FBF9F9] to-[#F3F3F3] rounded-2xl md:rounded-3xl lg:rounded-[33px] p-4 sm:p-6 md:p-8 lg:p-12">
                 <h2 id="contact-form-heading" className="sr-only">Contact Form</h2>
-                <form className="space-y-4 md:space-y-6" aria-label="Contact sales team form">
+                <form className="space-y-6" aria-label="Contact sales team form" noValidate>
                   {/* Form Grid */}
-                  <fieldset className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                  <fieldset className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <legend className="sr-only">Personal and Business Information</legend>
                     
                     {/* First Name */}
@@ -147,9 +147,9 @@ export const Contact = () => {
                           aria-required="true"
                           aria-describedby="first-name-error"
                           placeholder="First Name"
-                          className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200"
+                          className="h-12 px-4 py-2 text-base font-normal placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full"
                         />
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-3 sm:right-4 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
 
@@ -164,9 +164,9 @@ export const Contact = () => {
                           aria-required="true"
                           aria-describedby="last-name-error"
                           placeholder="Last Name"
-                          className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200"
+                          className="h-12 px-4 py-2 text-base font-normal placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full"
                         />
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-3 sm:right-4 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
 
@@ -182,9 +182,9 @@ export const Contact = () => {
                           aria-required="true"
                           aria-describedby="business-email-error"
                           placeholder="Business Email"
-                          className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200"
+                          className="h-12 px-4 py-2 text-base font-normal placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full"
                         />
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-3 sm:right-4 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
 
@@ -200,9 +200,9 @@ export const Contact = () => {
                           aria-required="true"
                           aria-describedby="business-phone-error"
                           placeholder="Business Phone"
-                          className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200"
+                          className="h-12 px-4 py-2 text-base font-normal placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full"
                         />
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-3 sm:right-4 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
 
@@ -217,9 +217,9 @@ export const Contact = () => {
                           aria-required="true"
                           aria-describedby="job-title-error"
                           placeholder="Job Title"
-                          className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200"
+                          className="h-12 px-4 py-2 text-base font-normal placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full"
                         />
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-3 sm:right-4 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
 
@@ -234,9 +234,9 @@ export const Contact = () => {
                           aria-required="true"
                           aria-describedby="company-name-error"
                           placeholder="Company Name"
-                          className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200"
+                          className="h-12 px-4 py-2 text-base font-normal placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full"
                         />
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-3 sm:right-4 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
 
@@ -247,19 +247,44 @@ export const Contact = () => {
                         <Select name="country" required aria-required="true">
                           <SelectTrigger 
                             id="country"
-                            className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 [&>svg]:w-4 [&>svg]:h-4 sm:[&>svg]:w-5 sm:[&>svg]:h-5 md:[&>svg]:w-6 md:[&>svg]:h-6 [&>svg]:text-ethos-purple"
+                            className="h-12 px-4 py-2 text-sm sm:text-sm md:text-sm font-normal text-ethos-gray-light placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full text-left"
                             aria-label="Select country"
                           >
-                            <SelectValue placeholder="Country" />
+                            <SelectValue placeholder="Country" className="text-ethos-gray-light" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="us">United States</SelectItem>
-                            <SelectItem value="ca">Canada</SelectItem>
-                            <SelectItem value="uk">United Kingdom</SelectItem>
                             <SelectItem value="au">Australia</SelectItem>
+                            <SelectItem value="nz">New Zealand</SelectItem>
+                            <SelectItem value="us">United States</SelectItem>
+                            <SelectItem value="uk">United Kingdom</SelectItem>
+                            <SelectItem value="ca">Canada</SelectItem>
+                            <SelectItem value="cn">China</SelectItem>
+                            <SelectItem value="jp">Japan</SelectItem>
+                            <SelectItem value="kr">South Korea</SelectItem>
+                            <SelectItem value="sg">Singapore</SelectItem>
+                            <SelectItem value="my">Malaysia</SelectItem>
+                            <SelectItem value="th">Thailand</SelectItem>
+                            <SelectItem value="vn">Vietnam</SelectItem>
+                            <SelectItem value="id">Indonesia</SelectItem>
+                            <SelectItem value="in">India</SelectItem>
+                            <SelectItem value="de">Germany</SelectItem>
+                            <SelectItem value="fr">France</SelectItem>
+                            <SelectItem value="it">Italy</SelectItem>
+                            <SelectItem value="es">Spain</SelectItem>
+                            <SelectItem value="nz">New Zealand</SelectItem>
+                            <SelectItem value="ae">United Arab Emirates</SelectItem>
+                            <SelectItem value="sa">Saudi Arabia</SelectItem>
+                            <SelectItem value="za">South Africa</SelectItem>
+                            <SelectItem value="br">Brazil</SelectItem>
+                            <SelectItem value="mx">Mexico</SelectItem>
+                            <SelectItem value="pe">Peru</SelectItem>
+                            <SelectItem value="cl">Chile</SelectItem>
+                            <SelectItem value="ar">Argentina</SelectItem>
+                            <SelectItem value="ru">Russia</SelectItem>
+                            <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-8 sm:right-10 md:right-12 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
 
@@ -270,10 +295,10 @@ export const Contact = () => {
                         <Select name="companySize" required aria-required="true">
                           <SelectTrigger 
                             id="company-size"
-                            className="h-12 sm:h-14 md:h-16 px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 [&>svg]:w-4 [&>svg]:h-4 sm:[&>svg]:w-5 sm:[&>svg]:h-5 md:[&>svg]:w-6 md:[&>svg]:h-6 [&>svg]:text-ethos-purple"
+                            className="h-12 px-4 py-2 text-sm sm:text-sm md:text-sm font-normal text-ethos-gray-light placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 w-full text-left"
                             aria-label="Select company size"
                           >
-                            <SelectValue placeholder="Company Size" />
+                            <SelectValue placeholder="Company Size" className="text-ethos-gray-light" />
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="1-10">1-10 employees</SelectItem>
@@ -283,7 +308,7 @@ export const Contact = () => {
                             <SelectItem value="500+">500+ employees</SelectItem>
                           </SelectContent>
                         </Select>
-                        <span className="absolute top-3 sm:top-4 md:top-5 lg:top-6 right-8 sm:right-10 md:right-12 text-red-600 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" aria-label="required">*</span>
+                        <span className="absolute top-1/2 right-3 -translate-y-1/2 text-red-600 text-lg" aria-hidden="true">*</span>
                       </div>
                     </div>
                   </fieldset>
@@ -295,7 +320,7 @@ export const Contact = () => {
                       id="help-message"
                       name="helpMessage"
                       placeholder="How can we help you"
-                      className="min-h-[120px] px-4 sm:px-6 md:px-8 py-3 lg:py-4 text-sm sm:text-base md:text-lg font-normal placeholder:text-ethos-gray-light border-[#D7D7D7] rounded-xl md:rounded-2xl bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 resize-none"
+                      className="min-h-[120px] px-4 py-3 text-base font-normal placeholder:text-ethos-gray-light border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-ethos-purple focus:border-transparent transition-all duration-200 resize-none w-full"
                     />
                   </div>
 
@@ -316,7 +341,7 @@ export const Contact = () => {
                         required
                         aria-required="true"
                         aria-describedby="terms-description"
-                        className="mt-1 sm:mt-2 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-md lg:rounded-lg border-[#909090] bg-[#D9D9D9] flex-shrink-0" 
+                        className="mt-1 w-5 h-5 rounded border-gray-400 bg-white flex-shrink-0 focus:ring-2 focus:ring-ethos-purple focus:ring-offset-2" 
                       />
                       <label htmlFor="terms-agreement" className="text-ethos-gray text-sm sm:text-base font-normal leading-relaxed tracking-tight cursor-pointer">
                         <span id="terms-description">
@@ -330,7 +355,7 @@ export const Contact = () => {
                   <div className="flex justify-center pt-6 md:pt-8">
                     <Button 
                       type="submit"
-                      className="bg-ethos-purple hover:bg-ethos-purple-dark text-white px-8 sm:px-12 md:px-16 py-3 sm:py-4 md:py-5 rounded-full text-sm sm:text-base md:text-lg font-normal h-12 sm:h-14 md:h-16 w-full sm:w-auto min-w-[200px] sm:min-w-[250px] transition-colors duration-200"
+                      className="bg-ethos-purple hover:bg-ethos-purple-dark text-white px-8 py-3 rounded-full text-base font-medium h-12 w-full sm:w-auto min-w-[200px] transition-colors duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-ethos-purple"
                       aria-label="Submit contact form to reach our sales team"
                     >
                       Contact Us

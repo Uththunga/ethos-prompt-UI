@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 export const ServiceFailuresSection = () => {
   // For assets in the public directory, we should use the Vite base URL
   const baseUrl = import.meta.env.BASE_URL || '/';
-  const aiImagePath = `${baseUrl}assets/images/ai 2.png`;
+  const aiImagePath = `${baseUrl}assets/images/ai 3 1.png`;
   
   return (
     <section 
@@ -34,7 +34,7 @@ export const ServiceFailuresSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(300px,1fr)_auto_minmax(300px,1fr)] gap-8 sm:gap-10 md:gap-12 lg:gap-1 xl:gap-2 items-center justify-items-center min-h-[480px] md:min-h-[450px] lg:min-h-[500px]">
             
             {/* Left Card - Purple */}
-            <div className="relative order-2 lg:order-1 group w-full lg:max-w-md xl:max-w-lg mx-auto -ml-2 sm:-ml-3 md:-ml-4 lg:-ml-6">
+            <div className="relative order-2 lg:order-1 group w-full max-w-md xl:max-w-lg mx-auto lg:-ml-6 px-4 sm:px-6 lg:px-0">
               {/* Background Shape */}
               <div 
                 className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"
@@ -103,7 +103,7 @@ export const ServiceFailuresSection = () => {
             </div>
 
             {/* Right Card - Dark Blue */}
-            <div className="relative order-3 lg:order-3 group w-full lg:max-w-md xl:max-w-lg mx-auto -mr-2 sm:-mr-3 md:-mr-4 lg:-mr-6">
+            <div className="relative order-3 lg:order-3 group w-full max-w-md xl:max-w-lg mx-auto lg:-mr-6 px-4 sm:px-6 lg:px-0">
               {/* Background Shape */}
               <div 
                 className="absolute inset-0 rounded-[20px] sm:rounded-[24px] lg:rounded-[28px] transition-all duration-300 group-hover:scale-[1.02] shadow-lg hover:shadow-xl"

@@ -11,47 +11,50 @@ export const Basics = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section - The Story of Prompting */}
       <main role="main" id="main-content">
-        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden" aria-labelledby="hero-heading">
-          <div className="max-w-7xl mx-auto relative">
-            {/* Hero Image */}
-            <div className="absolute right-0 top-0 w-3/5 h-full pointer-events-none">
-              <img
-                src={`${baseUrl}assets/images/basics-hero-image.jpg`}
-                alt=""
-                className="w-full h-full object-contain"
-                aria-hidden="true"
-              />
-            </div>
-            
-            {/* Content Container */}
-            <div className="relative z-10 px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-16 lg:pb-20">
-              {/* Main Title */}
-              <header className="max-w-5xl mb-12 lg:mb-16">
-                <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
-                  <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-                    The Story of 
-                  </span>
-                  <br />
-                  <span className="text-ethos-purple">Prompting</span>
-                </h1>
-              </header>
-              
-              {/* Description */}
-              <div className="max-w-4xl mb-12 lg:mb-16">
-                <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
-                  Explore how artificial intelligence learns to communicate like humans in this engaging, interactive journey that unpacks machine learning, language models, and the evolving relationship between AI and natural conversation.
-                </p>
+        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden py-4 md:py-6 lg:py-8" aria-labelledby="hero-heading">
+          {/* Background Image - Positioned more to the right */}
+          <div className="absolute right-[-5%] lg:right-[-10%] top-16 md:top-20 w-full h-full pointer-events-none">
+            <img
+              src={`${baseUrl}assets/images/basics/Group 287.png`}
+              alt=""
+              className="w-full h-full object-contain object-right lg:object-center"
+              style={{ transform: 'scale(1.4)' }}
+              aria-hidden="true"
+            />
+          </div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5 items-center min-h-[150px] sm:min-h-[180px] lg:min-h-[220px]">
+              {/* Left Content */}
+              <div className="flex flex-col justify-center space-y-3 md:space-y-4 lg:space-y-5">
+                {/* Title */}
+                <header>
+                  <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                    <span className="block bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
+                      The Story of
+                    </span>
+                    <span className="block text-ethos-purple">
+                      Prompting
+                    </span>
+                  </h1>
+                </header>
+
+                {/* Description */}
+                <div>
+                  <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
+                    Explore how artificial intelligence learns to communicate like humans in this engaging, interactive journey that unpacks machine learning, language models, and the evolving relationship between AI and natural conversation.
+                  </p>
+                </div>
+
+                {/* Download Button */}
+                <Button 
+                  className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-4 sm:px-6 md:px-8 lg:px-10 py-2 rounded-[28px] sm:rounded-[32px] lg:rounded-[40px] text-sm sm:text-sm md:text-base lg:text-base font-normal h-9 sm:h-10 md:h-11 lg:h-12 w-full max-w-[280px]"
+                  aria-label="Download learning materials about AI prompting"
+                >
+                  Download Materials
+                </Button>
               </div>
-              
-              {/* Download Button */}
-              <Button 
-                className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-4 sm:px-6 md:px-8 lg:px-10 py-2 rounded-[28px] sm:rounded-[32px] lg:rounded-[40px] text-sm sm:text-sm md:text-base lg:text-base font-normal h-9 sm:h-10 md:h-11 lg:h-12 w-full max-w-[280px] mx-auto"
-                aria-label="Download learning materials about AI prompting"
-              >
-                Download Materials
-              </Button>
             </div>
           </div>
         </section>
