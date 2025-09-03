@@ -9,7 +9,7 @@ const ShinyText = ({
 }: {
   children: ReactNode;
   speedInMs?: number;
-} & ComponentProps<"div">) => {
+} & ComponentProps<"span">) => {
   return (
     <>
       <style>
@@ -24,9 +24,9 @@ const ShinyText = ({
         }
         `}
       </style>
-      <div
+      <span
         className={cn(
-          "inline-block bg-clip-text text-transparent",
+          "bg-clip-text text-transparent",
           "bg-gradient-to-r",
           "from-neutral-400 via-neutral-950 to-neutral-400",
           "dark:from-neutral-500 dark:via-neutral-50 dark:to-neutral-500",
@@ -40,7 +40,7 @@ const ShinyText = ({
         {...props}
       >
         {children}
-      </div>
+      </span>
     </>
   );
 };
