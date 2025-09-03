@@ -253,7 +253,7 @@ export const Techniques = () => {
               {/* Center Image */}
               <div className="order-1 lg:order-2 flex justify-center items-center w-full max-w-[240px] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[400px] xl:max-w-[440px] mx-auto h-full min-h-[200px] lg:min-h-[300px] my-auto">
                 <img
-                  src="/assets/images/techniques/ai4.png"
+                  src={`${baseUrl}assets/images/techniques/ai4.png`}
                   alt="Best practices illustration"
                   className="w-full h-auto object-contain"
                   loading="lazy"
