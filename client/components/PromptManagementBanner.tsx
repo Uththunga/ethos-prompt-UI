@@ -26,7 +26,7 @@ export const PromptManagementBanner = () => {
             <div className="text-left max-w-7xl">
               {/* Section Subheader */}
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal leading-tight tracking-tight text-white mb-4 sm:mb-6 lg:mb-8">
-                Moreover we provide
+                Moreover, we provide
               </p>
 
               {/* Main Header */}

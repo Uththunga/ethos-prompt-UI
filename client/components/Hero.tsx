@@ -116,7 +116,7 @@ export const Hero = () => {
               Increased sales rates
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              Ai can ensures automatic task handling, scheduling optimizing lead to customer conversations
+              AI ensures automatic task handling and scheduling optimization, leading to better customer conversations
             </p>
           </article>
 
@@ -134,10 +134,10 @@ export const Hero = () => {
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
-              Cutoff manual and repetitive work
+              Reduce manual and repetitive work
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              AI agents can massively reducing manual and repetitive work.
+              AI agents can massively reduce manual and repetitive work.
             </p>
           </article>
 
@@ -158,7 +158,7 @@ export const Hero = () => {
               Leverage your cost savings
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              Increased sales, lowering your overheads will provide significant cost savings on your Business
+              Increased sales and reduced overheads provide significant cost savings for your business
             </p>
           </article>
 

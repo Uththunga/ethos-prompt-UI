@@ -259,7 +259,7 @@ export const Testimonials = () => {
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-navy"
             >
-              Who uses it became
+              Who uses it becomes
             </span>
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-purple"
