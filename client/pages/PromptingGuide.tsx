@@ -42,7 +42,7 @@ export const PromptingGuide = () => {
             {/* Subtitle - positioned at bottom */}
             <div className="text-center">
               <p className="text-ethos-gray font-normal leading-relaxed text-sm sm:text-base lg:text-lg xl:text-xl w-full text-center whitespace-normal sm:whitespace-nowrap overflow-visible sm:overflow-hidden sm:text-ellipsis">
-                Unlock the full potential of AI models by learning how to craft effective prompts. Turn your ideas into powerful results.
+                Master the art of communicating with AI through strategic prompting. Learn to craft precise instructions that transform your ideas into exceptional results, whether you're coding, writing, or solving complex problems.
               </p>
             </div>
           </div>

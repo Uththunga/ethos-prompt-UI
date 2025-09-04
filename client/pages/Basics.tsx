@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { LearningMaterialSection } from "@/components/LearningMaterialSection";
+import { Link } from "react-router-dom";
 
 export const Basics = () => {
   // For assets in the public directory, we should use the Vite base URL
@@ -66,12 +67,12 @@ export const Basics = () => {
             {/* Section Title */}
             <header className="text-center mb-12 lg:mb-16">
               <h2 id="ai-to-llm-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
-                <span className="text-ethos-gray">From AI to </span>
-                <span className="text-ethos-purple">Large Language Model (LLM)</span>
+                <span className="text-ethos-gray">Understanding </span>
+                <span className="text-ethos-purple">Language Models</span>
               </h2>
               
               <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-6xl mx-auto">
-                You might know these as "AI" tools, but we'll call them "LLMs" (Large Language Models). Why? Because that's exactly what they are - large models that understand and generate human language. Understanding LLMs is crucial because prompt engineering is all about effectively communicating with these models - the better you understand how they work, the more effectively you can craft your prompts.
+                While often called "AI" tools, these systems are specifically Large Language Models (LLMs) - sophisticated programs designed to understand and generate human language. Understanding how LLMs work is essential for prompt engineering, as it helps you communicate more effectively with these models and achieve better results.
               </p>
             </header>
 
@@ -190,7 +191,7 @@ export const Basics = () => {
                 </header>
                 
                 <p className="text-gray-800 text-sm sm:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-4xl mx-auto lg:mx-0">
-                  EthosPrompt agents can seamlessly integrate with over 20+ leading language models to enhance your AI capabilities. From content generation to code assistance and beyond, access the right model for every task with a single click.
+                  EthosPrompt agents seamlessly integrate with over 20 leading language models, including GPT-4, Claude, and PaLM. Whether you need content creation, code assistance, data analysis, or creative writing, you can instantly access the perfect model for your specific task through our unified interface.
                 </p>
 
                 <div className="pt-2">
@@ -213,7 +214,7 @@ export const Basics = () => {
               {/* Pre-Training */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What is an </span>
+                  <span className="text-ethos-gray">What is </span>
                   <span className="text-ethos-purple">Pre-Training?</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
@@ -224,8 +225,8 @@ export const Basics = () => {
               {/* Fine-Tuning */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What is an </span>
-                  <span className="text-ethos-purple">Fine tuning?</span>
+                  <span className="text-ethos-gray">What is </span>
+                  <span className="text-ethos-purple">Fine-Tuning?</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
                   This is where the "M" (Model) in LLM truly comes to life! While pre-training provides vast knowledge, fine-tuning transforms this raw knowledge into sophisticated thinking and decision-making abilities - it's like transforming a medical student who has memorized textbooks into a skilled doctor who can diagnose and treat patients effectively.
@@ -242,6 +243,31 @@ export const Basics = () => {
                   This is where the second "L" (Language) in LLM comes to life! Prompting is like having a conversation with a highly knowledgeable assistant - you communicate your needs in plain language, and the AI understands and responds accordingly.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Next Steps - Advanced Techniques Section */}
+      <section className="bg-gradient-to-b from-[#E9EBEB] to-white py-16 md:py-20 lg:py-24 xl:py-28 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-6 md:space-y-8 lg:space-y-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight">
+              <span className="text-ethos-gray">Ready for </span>
+              <span className="text-ethos-purple">Advanced Techniques?</span>
+            </h2>
+            
+            <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed max-w-3xl mx-auto">
+              Now that you understand the basics, take your prompting skills to the next level. Discover advanced techniques like Chain of Thought, Role Playing, and Context Engineering.
+            </p>
+
+            <div className="pt-4 md:pt-6 lg:pt-8">
+              <Link 
+                to="/techniques" 
+                className="inline-block bg-gradient-to-r from-[#7A71DF] to-[#442785] text-white px-8 md:px-10 py-3 md:py-4 rounded-full text-base md:text-lg font-medium hover:shadow-lg transition-shadow duration-300 ease-in-out"
+              >
+                Explore Advanced Techniques
+              </Link>
             </div>
           </div>
         </div>

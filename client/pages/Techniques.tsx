@@ -81,7 +81,7 @@ export const Techniques = () => {
               </h2>
               
               <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-2xl text-left">
-                Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
+                Master these fundamental techniques to transform your interactions with AI. Each approach serves a specific purpose and, when combined effectively, enables you to achieve more accurate, creative, and reliable results from AI models.
               </p>
             </header>
 
@@ -154,11 +154,11 @@ export const Techniques = () => {
               
               <div className="space-y-4 lg:space-y-5">
                 <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
-                  Chain of Thought (CoT) is a powerful prompting technique used in artificial intelligence—particularly in large language models like ChatGPT—that encourages the model to generate step-by-step reasoning before reaching a final answer. Rather than responding immediately with a single, direct answer, the AI is prompted to "think out loud", breaking down the problem or question into logical steps. This method closely mirrors how humans solve complex problems by working through their thoughts in stages.
+                  Chain of Thought (CoT) prompting is a powerful technique that guides AI models to break down complex problems into logical steps, similar to human reasoning. Instead of jumping to conclusions, the AI explains its thinking process, making its responses more accurate and transparent. This approach is particularly effective for tasks requiring multi-step reasoning or complex problem-solving.
                 </p>
                 
                 <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
-                  CoT is especially useful in scenarios that require multi-step thinking, such as solving math equations, analyzing cause-and-effect relationships, making decisions based on multiple conditions, or answering questions that involve abstract or layered reasoning. By guiding the model to articulate its thought process, CoT significantly improves the accuracy, clarity, and reliability of responses.
+                  This technique excels in complex scenarios like mathematical problem-solving, code debugging, logical analysis, and multi-step decision making. By encouraging the AI to show its work, you can verify its reasoning, catch potential errors, and ensure the final output aligns with your expectations. It's like having a collaborative partner that explains their thinking at each step.
                 </p>
                 
                 <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
@@ -253,7 +253,7 @@ export const Techniques = () => {
               {/* Center Image */}
               <div className="order-1 lg:order-2 flex justify-center items-center w-full max-w-[240px] sm:max-w-[300px] md:max-w-[360px] lg:max-w-[400px] xl:max-w-[440px] mx-auto h-full min-h-[200px] lg:min-h-[300px] my-auto">
                 <img
-                  src={`${baseUrl}assets/images/techniques/ai4.png`}
+                  src={`${baseUrl}assets/images/techniques/ai5.png`}
                   alt="Best practices illustration"
                   className="w-full h-auto object-contain"
                   loading="lazy"
