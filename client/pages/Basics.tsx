@@ -11,26 +11,25 @@ export const Basics = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      <main role="main" id="main-content">
-        <section className="bg-gradient-to-b from-white via-white to-[#E8E8E8] relative overflow-hidden py-4 md:py-6 lg:py-8" aria-labelledby="hero-heading">
-          {/* Background Image - Positioned more to the right */}
-          <div className="absolute right-[-5%] lg:right-[-10%] top-16 md:top-20 w-full h-full pointer-events-none">
+      <main role="main" id="main-content" className="pt-4">
+        <section className="relative overflow-hidden border-b border-gray-200" aria-labelledby="hero-heading">
+          <div className="absolute right-0 top-12 bottom-0 w-1/2 pointer-events-none">
             <img
               src={`${baseUrl}assets/images/basics/Group 287.png`}
               alt=""
-              className="w-full h-full object-contain object-right lg:object-center"
-              style={{ transform: 'scale(1.4)' }}
+              className="h-[120%] w-auto object-contain object-right-bottom"
+              style={{ transform: 'scale(1.2)' }}
               aria-hidden="true"
             />
           </div>
           
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-5 items-center min-h-[150px] sm:min-h-[180px] lg:min-h-[220px]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative py-12 md:py-16 lg:py-20">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
               {/* Left Content */}
               <div className="flex flex-col justify-center space-y-3 md:space-y-4 lg:space-y-5">
                 {/* Title */}
-                <header>
-                  <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
+                <header className="space-y-2 md:space-y-3 lg:space-y-4">
+                  <h1 id="hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-poppins leading-tight tracking-tight">
                     <span className="block bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
                       The Story of
                     </span>
@@ -41,19 +40,21 @@ export const Basics = () => {
                 </header>
 
                 {/* Description */}
-                <div>
-                  <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
+                <div className="max-w-xl">
+                  <p className="text-ethos-gray text-base sm:text-lg md:text-xl font-normal leading-relaxed">
                     Explore how artificial intelligence learns to communicate like humans in this engaging, interactive journey that unpacks machine learning, language models, and the evolving relationship between AI and natural conversation.
                   </p>
                 </div>
 
                 {/* Download Button */}
-                <Button 
-                  className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-4 sm:px-6 md:px-8 lg:px-10 py-2 rounded-[28px] sm:rounded-[32px] lg:rounded-[40px] text-sm sm:text-sm md:text-base lg:text-base font-normal h-9 sm:h-10 md:h-11 lg:h-12 w-full max-w-[280px]"
-                  aria-label="Download learning materials about AI prompting"
-                >
-                  Download Materials
-                </Button>
+                <div className="pt-2">
+                  <Button 
+                    className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-6 md:px-8 py-3 rounded-full text-base font-medium w-full sm:w-auto"
+                    aria-label="Download learning materials about AI prompting"
+                  >
+                    Download Materials
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
