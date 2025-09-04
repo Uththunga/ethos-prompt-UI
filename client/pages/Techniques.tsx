@@ -72,7 +72,7 @@ export const Techniques = () => {
         </section>
 
         {/* The Core Techniques Section */}
-        <section className="bg-gradient-to-b from-[#FEFEFE] to-[#FBFBFB] py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24" aria-labelledby="core-techniques-heading">
+        <section className="bg-gradient-to-b from-ethos-light to-ethos-offwhite py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24" aria-labelledby="core-techniques-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-left">
               <h2 id="core-techniques-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-3 sm:mb-4">
@@ -86,64 +86,94 @@ export const Techniques = () => {
             </header>
 
             {/* Four Technique Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 lg:gap-4" role="list" aria-label="Core prompt engineering techniques">
-              {/* Role Setting */}
-              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Role Setting
-                </h3>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Give the AI a specific role to guide its responses.
-                </p>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  Roles help set expectations and context for the interaction.
-                </p>
-              </article>
+            <div className="w-full px-4 sm:px-6 lg:px-8" role="list" aria-label="Core prompt engineering techniques">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
+                {/* Role Setting */}
+                <div
+                  className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 hover:shadow-xl transition-all duration-300"
+                  role="article"
+                  aria-labelledby="role-setting"
+                  style={{
+                    boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25), inset -30px -30px 50px rgba(255, 255, 255, 0.7), inset 30px 30px 50px rgba(0, 39, 80, 0.05)"
+                  }}
+                >
+                  <h4 
+                    id="role-setting"
+                    className="text-base sm:text-lg font-medium mb-2 sm:mb-3 bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center"
+                  >
+                    Role Setting
+                  </h4>
+                  <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed tracking-tight flex-grow flex items-center">
+                    Give the AI a specific role to guide its responses. Roles help set expectations and context for the interaction.
+                  </p>
+                </div>
 
-              {/* Context Providing */}
-              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Context Providing
-                </h3>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Set the background and requirements clearly.
-                </p>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  More context leads to more relevant responses.
-                </p>
-              </article>
+                {/* Context Providing */}
+                <div
+                  className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 hover:shadow-xl transition-all duration-300"
+                  role="article"
+                  aria-labelledby="context-providing"
+                  style={{
+                    boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25), inset -30px -30px 50px rgba(255, 255, 255, 0.7), inset 30px 30px 50px rgba(0, 39, 80, 0.05)"
+                  }}
+                >
+                  <h4 
+                    id="context-providing"
+                    className="text-base sm:text-lg font-medium mb-2 sm:mb-3 bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center"
+                  >
+                    Context Providing
+                  </h4>
+                  <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed tracking-tight flex-grow flex items-center">
+                    Set the background and requirements clearly. More context leads to more relevant responses.
+                  </p>
+                </div>
 
-              {/* Task Breakdown */}
-              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Task Breakdown
-                </h3>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Split complex requests into clear steps.
-                </p>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  Breaking down tasks improves clarity and quality.
-                </p>
-              </article>
+                {/* Task Breakdown */}
+                <div
+                  className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 hover:shadow-xl transition-all duration-300"
+                  role="article"
+                  aria-labelledby="task-breakdown"
+                  style={{
+                    boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25), inset -30px -30px 50px rgba(255, 255, 255, 0.7), inset 30px 30px 50px rgba(0, 39, 80, 0.05)"
+                  }}
+                >
+                  <h4 
+                    id="task-breakdown"
+                    className="text-base sm:text-lg font-medium mb-2 sm:mb-3 bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center"
+                  >
+                    Task Breakdown
+                  </h4>
+                  <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed tracking-tight flex-grow flex items-center">
+                    Split complex requests into clear steps. Breaking down tasks improves clarity and quality.
+                  </p>
+                </div>
 
-              {/* Output Formatting */}
-              <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Output Formatting
-                </h3>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Specify how you want the response structured.
-                </p>
-                <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  Clear formats make responses more useful and actionable.
-                </p>
-              </article>
+                {/* Output Formatting */}
+                <div
+                  className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 hover:shadow-xl transition-all duration-300"
+                  role="article"
+                  aria-labelledby="output-formatting"
+                  style={{
+                    boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25), inset -30px -30px 50px rgba(255, 255, 255, 0.7), inset 30px 30px 50px rgba(0, 39, 80, 0.05)"
+                  }}
+                >
+                  <h4 
+                    id="output-formatting"
+                    className="text-base sm:text-lg font-medium mb-2 sm:mb-3 bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center"
+                  >
+                    Output Formatting
+                  </h4>
+                  <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed tracking-tight flex-grow flex items-center">
+                    Specify how you want the response structured. Clear formats make responses more useful and actionable.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
       {/* Chain of Thoughts Section */}
-      <section className="bg-gradient-to-b from-white to-[#F1F1F1] pt-8 md:pt-12 lg:pt-16 pb-16 md:pb-20 lg:pb-24">
+      <section className="bg-gradient-to-b from-ethos-offwhite to-ethos-light pt-8 md:pt-12 lg:pt-16 pb-16 md:pb-20 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             <div>

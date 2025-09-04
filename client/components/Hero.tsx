@@ -100,16 +100,20 @@ export const Hero = () => {
         {/* Feature Cards and CTA - 4 column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 lg:gap-4" role="list" aria-label="Business results statistics">
           {/* Card 1 - 30% */}
-          <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-            <div className="mb-6 flex justify-start w-full">
-              <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
-                <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
-                  <span
-                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
-                  >
-                    30%
-                  </span>
-                </div>
+          <div 
+            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
+            role="article"
+            style={{
+              boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)'
+            }}
+          >
+            <div className="mb-4 flex justify-start w-full">
+              <div className="bg-white rounded-full px-3 py-1 sm:px-4 sm:py-1.5">
+                <span
+                  className="block text-3xl md:text-4xl lg:text-5xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
+                >
+                  30%
+                </span>
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
@@ -118,19 +122,23 @@ export const Hero = () => {
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
               AI-powered automation streamlines lead qualification and customer engagement, driving higher conversion rates
             </p>
-          </article>
+          </div>
 
           {/* Card 2 - 80% */}
-          <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-            <div className="mb-6 flex justify-start w-full">
-              <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
-                <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
-                  <span
-                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
-                  >
-                    80%
-                  </span>
-                </div>
+          <div 
+            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
+            role="article"
+            style={{
+              boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)'
+            }}
+          >
+            <div className="mb-4 flex justify-start w-full">
+              <div className="bg-white rounded-full px-3 py-1 sm:px-4 sm:py-1.5">
+                <span
+                  className="block text-3xl md:text-4xl lg:text-5xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
+                >
+                  80%
+                </span>
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
@@ -139,28 +147,32 @@ export const Hero = () => {
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
               Intelligent automation eliminates repetitive tasks, allowing your team to focus on strategic initiatives
             </p>
-          </article>
+          </div>
 
           {/* Card 3 - 40% */}
-          <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
-            <div className="mb-6 flex justify-start w-full">
-              <div className="flex justify-start pl-6 sm:pl-6 md:pl-6 lg:pl-6">
-                <div style={{ display: 'inline-block', background: 'white', borderRadius: 70, padding: '10px 20px' }}>
-                  <span
-                    className="block text-left text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent leading-none tracking-tight"
-                  >
-                    40%
-                  </span>
-                </div>
+          <div 
+            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
+            role="article"
+            style={{
+              boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)'
+            }}
+          >
+            <div className="mb-4 flex justify-start w-full">
+              <div className="bg-white rounded-full px-3 py-1 sm:px-4 sm:py-1.5">
+                <span
+                  className="block text-3xl md:text-4xl lg:text-5xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
+                >
+                  40%
+                </span>
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
-              Cost Optimization
+              Cost Reduction
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              Reduce operational overhead while increasing revenue through intelligent process automation and optimization
+              Automated processes and improved resource allocation significantly lower operational expenses
             </p>
-          </article>
+          </div>
 
           {/* CTA Card */}
           <aside style={{ width: '100%', height: '100%', background: 'transparent', boxShadow: 'none', borderRadius: 30 }} className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
