@@ -23,67 +23,67 @@ const testimonials = [
       name: "Amanda C.",
       role: "Freelance Consultant",
       rating: 5,
-      text: "The best tech decision I've made this year. Ethos Prompt's AI agent handles client messages, follow-ups, and support tickets efficiently, friendly, and reliably."
+      text: "Implementing EthosPrompt's AI solutions was transformative for our consultancy. The system handles client communications, follow-ups, and support requests with exceptional efficiency and professionalism."
     },
     {
       name: "Leo R.",
       role: "Drop Shipping Store Owner", 
       rating: 5,
-      text: "Since implementing the AI assistant, our response time has improved by 200%. It handles customer inquiries 24/7, allowing us to focus on growing the business."
+      text: "Our customer response time improved by 200% after deploying their AI solutions. The 24/7 automated customer service allows our team to focus on strategic business growth initiatives."
     },
     {
       name: "Michael K.",
       role: "Creative Agency Director",
       rating: 5,
-      text: "Ethos Prompt's AI agent is basically our new virtual receptionist. It never misses a message, always replies with context, and can handle rescheduling. Clients are impressed."
+      text: "EthosPrompt's AI system functions as our intelligent virtual assistant. It provides contextual responses, manages scheduling seamlessly, and consistently impresses our clients with its professionalism."
     },
     {
       name: "Ryan G.",
       role: "UX Design Agency",
       rating: 5,
-      text: "The automation is seamless. From lead capture to appointment reminders, everything runs on autopilot. My team now has more time to focus on creative work."
+      text: "The automation capabilities are exceptional. From lead qualification to appointment management, the entire workflow operates autonomously, enabling our team to concentrate on high-value creative projects."
     },
     {
       name: "Samantha W.",
       role: "Beauty Studio Manager",
       rating: 5,
-      text: "We implemented the AI assistant to automate our service bookings and customer responses. Within a week, the agent was managing 80% of our interactions."
+      text: "After implementing their AI solution for service bookings and customer communications, the system was handling 80% of our client interactions within one week of deployment."
     },
     {
       name: "Jared T.",
       role: "Event Coordinator",
       rating: 5,
-      text: "We've been able to cut down on response times and increase client satisfaction without hiring new staff. The ROI has been incredible."
+      text: "We significantly reduced response times and improved client satisfaction without expanding our workforce. The return on investment has exceeded our expectations."
     },
     {
       name: "Steven B.",
       role: "Consultancy Firm",
       rating: 5,
-      text: "Clients have complimented us on how responsive we are now. Little do they know, it's the AI agent doing most of the talking — and it does it better than we could."
+      text: "Our clients consistently praise our improved responsiveness. The AI system handles most communications with such sophistication that it often exceeds human-level service quality."
     },
     {
       name: "Lina J.",
       role: "HR & Recruitment Services",
       rating: 5,
-      text: "Reliable, intelligent, and constantly improving. The AI agent has become a key part of how we run our business. Highly recommended for scaling smart."
+      text: "The system is reliable, intelligent, and continuously evolving. EthosPrompt's AI solutions have become integral to our operations and are essential for strategic scaling."
     },
     {
       name: "Chris D.",
       role: "Digital Marketing Agency",
       rating: 5,
-      text: "Fast, smart, and accurate. Just what we needed for our growing client base."
+      text: "The solution delivers speed, intelligence, and precision—exactly what our expanding client portfolio requires for sustained growth."
     },
     {
       name: "Fatima A.",
       role: "Fitness Coach",
       rating: 5,
-      text: "No more missed leads or late replies. This has been a complete game changer for my business."
+      text: "We've eliminated missed opportunities and delayed responses entirely. This technology has fundamentally transformed our business operations."
     },
     {
       name: "Priya M.",
       role: "Online Course Creator",
       rating: 5,
-      text: "Set it and forget it. The AI just works seamlessly in the background while I focus on content creation."
+      text: "The system operates autonomously with minimal oversight, allowing me to focus entirely on content development while maintaining exceptional customer service."
     }
   ];
 
@@ -259,12 +259,16 @@ export const Testimonials = () => {
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-navy"
             >
+<<<<<<< HEAD
               Who uses it becomes
+=======
+              Trusted by industry
+>>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
             </span>
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-purple"
             >
-              a fan of it
+              leaders worldwide
             </span>
           </h2>
         </header>
@@ -276,8 +280,8 @@ export const Testimonials = () => {
         </div>
 
         <div className="text-center mt-8 sm:mt-10 md:mt-14 lg:mt-18 xl:mt-20">
-          <Button variant="cta" size="cta" aria-label="Send feedback about our service">
-            Send Feedback
+          <Button variant="cta" size="cta" aria-label="Share your experience with our solutions">
+            Share Your Success Story
           </Button>
         </div>
       </div>

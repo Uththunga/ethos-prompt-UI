@@ -2,7 +2,7 @@
   "name": "fusion-starter",
   "private": true,
   "type": "module",
-  "homepage": "https://uththunga.github.io/ethos-prompt-UI/",
+  "homepage": "https://uththunga.github.io/ethos-prompt-UI-text/",
   "pkg": {
     "assets": [
       "dist/spa/*"
@@ -21,7 +21,7 @@
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
     "predeploy": "npm run build:client",
-    "deploy": "gh-pages -d dist/spa"
+    "deploy": "gh-pages -d dist/spa -b gh-pages"
   },
   "dependencies": {
     "dotenv": "^17.2.0",

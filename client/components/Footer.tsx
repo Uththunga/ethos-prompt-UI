@@ -45,7 +45,7 @@ export const Footer = () => {
               <h3 className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl font-bold">EthosPrompt</h3>
             </div>
             <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
-              Premium engineered prompts designed by experts to unlock the full potential of AI for professionals, creators, and innovators worldwide.
+              Enterprise AI solutions engineered by experts to unlock operational excellence and drive measurable business outcomes for organizations worldwide.
             </p>
             <div className="flex space-x-4 pt-2">
               <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Follow us on Twitter">

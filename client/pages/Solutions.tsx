@@ -18,10 +18,10 @@ export const Solutions = () => {
           <header className="text-center mb-8 sm:mb-10 lg:mb-12">
             <h1 id="solutions-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
               <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-                Solutions for a smarter
+                Enterprise AI Solutions for
               </span>
               <br />
-              <span className="text-ethos-purple">Business</span>
+              <span className="text-ethos-purple">Strategic Growth</span>
             </h1>
           </header>
 
@@ -37,7 +37,7 @@ export const Solutions = () => {
           {/* Bottom Text */}
           <div className="text-center">
             <p className="text-ethos-gray text-sm sm:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-4xl mx-auto">
-              Unlock the full potential of AI models by learning how to craft effective prompts. Turn your ideas into powerful results.
+              Transform your organization with intelligent AI systems designed to drive operational excellence, reduce costs, and accelerate business growth through strategic automation.
             </p>
           </div>
         </div>
@@ -51,12 +51,12 @@ export const Solutions = () => {
             <div className="space-y-4 sm:space-y-6 lg:space-y-8">
               <header>
                 <h2 id="ethosprompt-help-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight">
-                  <span className="block text-ethos-gray">How EthosPrompt</span>
-                  <span className="text-ethos-purple">can help your Business</span>
+                  <span className="block text-ethos-gray">How EthosPrompt Drives</span>
+                  <span className="text-ethos-purple">Business Transformation</span>
                 </h2>
               </header>
               <p className="text-ethos-gray text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
-                At EthosPrompt, we make artificial intelligence simple and useful for businesses. Our job is to help you save time, cut costs, and grow faster by creating smart tools that work for you. We build AI agents, automation systems, and intelligent apps that connect with over 600 popular business tools like CRMs, emails, and databases. Whether you want to improve customer service, speed up daily tasks, or upgrade your website, we provide solutions that fit your goals and scale as you grow.
+                EthosPrompt delivers enterprise-grade AI solutions that transform how organizations operate. We specialize in developing intelligent systems that optimize workflows, reduce operational costs, and accelerate growth through strategic automation. Our comprehensive platform integrates seamlessly with over 600 business applications, including CRMs, communication tools, and enterprise databases. From enhancing customer experience to streamlining complex processes, we provide scalable solutions engineered for sustainable business success.
               </p>
 
               <div className="space-y-4 sm:space-y-6 lg:space-y-8">
@@ -66,46 +66,46 @@ export const Solutions = () => {
                 <div className="space-y-3 sm:space-y-4 lg:space-y-6 text-ethos-gray">
                   <div className="space-y-2">
                     <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
-                      Custom AI Agents
+                      Enterprise AI Solutions
                     </h3>
                     <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
-                      AI assistants built for your business—helping with customer support, sales, learning, and more.
+                      Tailored AI systems designed for customer service excellence, sales optimization, and operational automation across your organization.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
-                      Automation & App Connections
+                      System Integration & Automation
                     </h3>
                     <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
-                      Connect AI to your everyday apps (emails, CRMs, calendars, etc.) to handle routine tasks automatically.
+                      Seamlessly connect AI to your enterprise applications—email systems, CRMs, calendars, and databases—for comprehensive workflow automation.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
-                      Prompt Management
+                      AI Prompt Optimization Platform
                     </h3>
                     <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
-                      Simple systems to organize and manage your AI prompts—so your team gets better, faster results.
+                      Advanced management systems for organizing and optimizing AI interactions, ensuring consistent, high-quality results across your organization.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
-                      AI Web & Mobile Apps
+                      Intelligent Application Development
                     </h3>
                     <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
-                      Smart websites and mobile apps that personalize content, create designs, and interact with users in real time.
+                      Dynamic web and mobile applications that adapt intelligently to user behavior, delivering personalized experiences and real-time interactions.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <h3 className="text-sm sm:text-base lg:text-lg font-medium leading-snug">
-                      Website Upgrades & Automation
+                      Digital Transformation Services
                     </h3>
                     <p className="text-xs sm:text-sm lg:text-base font-normal leading-relaxed">
-                      Give your website a new look, better user experience, and built-in automation to save time and improve customer satisfaction.
+                      Comprehensive digital modernization including enhanced user experiences, intelligent automation, and optimized customer engagement systems.
                     </p>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export const Solutions = () => {
                 {/* Get Started Button */}
                 <div className="pt-2">
                   <Button variant="cta" size="cta">
-                    Get started
+                    Start Your Transformation
                   </Button>
                 </div>
               </div>
@@ -170,12 +170,12 @@ export const Solutions = () => {
                 </header>
                 
                 <p className="text-gray-800 text-sm sm:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-4xl">
-                  EthosPrompt agents can seamlessly integrate with over 600+ applications to fully automate and streamline your workflows. From task management to CRM and marketing tools, everything works together effortlessly triggered by a single click.
+                  EthosPrompt's enterprise platform seamlessly integrates with over 600 business applications, creating unified workflows that eliminate silos and maximize efficiency. From task management to CRM and marketing automation, our intelligent systems orchestrate complex processes with precision and reliability.
                 </p>
 
                 <div className="pt-2">
                   <Button variant="cta" size="cta">
-                    Get Started Now
+                    Begin Integration
                   </Button>
                 </div>
               </div>
