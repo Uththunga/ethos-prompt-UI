@@ -21,47 +21,47 @@ export const WaysWeCanHelp = () => {
   
   const services = [
     {
-      title: "Custom AI Agents",
-      subtitle: "AI assistants that help with customer support, sales, and daily tasks."
+      title: "Custom AI Solutions",
+      subtitle: "Tailored AI systems for customer support, sales optimization, and operational automation."
     },
     {
-      title: "Automation & App Connections",
-      subtitle: "Connect AI to your apps to handle routine work automatically."
+      title: "System Integration & Automation",
+      subtitle: "Seamlessly connect AI to your existing applications for automated workflow management."
     },
     {
       title: "Prompt Management",
       subtitle: "Simple tools to organize your AI prompts for better results."
     },
     {
-      title: "AI Web & Mobile Apps",
-      subtitle: "Smart websites and apps that adapt to users in real time."
+      title: "Intelligent Applications",
+      subtitle: "Dynamic web and mobile applications that adapt intelligently to user behavior and preferences."
     },
     {
-      title: "Website Upgrades & Automation",
-      subtitle: "Improve your website's look and add automation to save time."
+      title: "Digital Transformation",
+      subtitle: "Modernize your digital presence with intelligent automation and enhanced user experiences."
     }
   ];
 
   const features = [
     {
       number: 1,
-      title: "Humanized and Natural Service",
-      description: "Deliver an outstanding customer experience with fast, personalized support that's always available. Your AI agent interacts in a conversational, human-like manner to build trust and satisfaction."
+      title: "Natural, Human-Like Interactions",
+      description: "Deliver exceptional customer experiences through AI that communicates naturally and personally. Our systems build trust and satisfaction by providing contextually aware, empathetic responses that feel genuinely human."
     },
     {
       number: 2,
-      title: "Intelligent Automation for Operations",
-      description: "Let AI manage scheduling, confirmations, updates, follow-ups, and more — so your team can focus on what matters most: delivering value and growing the business."
+      title: "Strategic Process Automation",
+      description: "Enable your team to focus on high-value activities while AI handles routine operations like scheduling, confirmations, updates, and follow-ups. This strategic automation drives business growth and operational excellence."
     },
     {
       number: 3,
-      title: "Fast and Always Up-To-Date Responses",
-      description: "Provide real-time, accurate information about your offerings, availability, pricing, or policies — reducing confusion and improving customer confidence and conversions."
+      title: "Real-Time Intelligence and Accuracy",
+      description: "Deliver instant, precise information about products, services, availability, and policies. Our AI systems maintain current data to eliminate confusion, boost customer confidence, and increase conversion rates."
     },
     {
       number: 4,
-      title: "Smart Decision-Making and Problem Solving",
-      description: "Your AI agent detects needs, solves issues, and delivers proactive solutions — all without human intervention. This boosts efficiency and keeps your workflows smooth and optimized."
+      title: "Proactive Problem Resolution",
+      description: "Our AI systems anticipate needs, identify issues early, and implement solutions autonomously. This proactive approach optimizes workflows, prevents bottlenecks, and maintains peak operational efficiency."
     }
   ];
 
@@ -87,11 +87,11 @@ export const WaysWeCanHelp = () => {
             {/* Main Heading */}
             <header>
               <h2 id="ai-agent-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-3 lg:mb-4">
-                <span style={{ color: '#0F1345' }}>What is an AI agent for </span>
-                <span style={{ color: '#7409C5' }}>your Business</span>
+                <span style={{ color: '#0F1345' }}>Enterprise AI Solutions for </span>
+                <span style={{ color: '#7409C5' }}>Modern Business</span>
               </h2>
               <p className="text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight text-ethos-gray">
-                Imagine having your own exclusive AI assistant — like ChatGPT, Deepseek, or Gemini — working around the clock for your business. These AI agents understand and respond to your customers, handle routine tasks, and deliver seamless service 24/7 — without breaks, errors, or downtime.
+                Deploy intelligent AI systems that work continuously for your organization. Our enterprise-grade solutions understand customer needs, automate complex workflows, and deliver consistent, high-quality service around the clock — ensuring operational excellence without human limitations.
               </p>
             </header>
 

@@ -39,13 +39,13 @@ export const Hero = () => {
        <section className="relative z-10 text-center mb-4 -mt-2" aria-labelledby="hero-heading">
           <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-            Transform your Business
+            Accelerate Your Business Growth
           </span>
             <br />
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-            with{" "}
+            with {" "}
           </span>
-            <ShinyText className="bg-gradient-to-r from-purple-500 to-purple-500" speedInMs={10000}>AI Agents</ShinyText>
+            <ShinyText className="bg-gradient-to-r from-purple-500 to-purple-500" speedInMs={10000}>Intelligent AI Solutions</ShinyText>
           </h1>
         </section>
 
@@ -91,9 +91,9 @@ export const Hero = () => {
         <header className="mb-8 md:mb-10 lg:mb-12 text-left">
           <h2 id="results-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.13] tracking-[-0.03em] max-w-7xl">
             <span className="text-ethos-navy-light">
-              Proven results for
+              Measurable Impact for
             </span>
-            <ShinyText className="bg-gradient-to-r from-ethos-purple to-ethos-purple ml-4" speedInMs={10000}>Your Business</ShinyText>
+            <ShinyText className="bg-gradient-to-r from-ethos-purple to-ethos-purple ml-4" speedInMs={10000}>Forward-Thinking Companies</ShinyText>
           </h2>
         </header>
 
@@ -113,10 +113,10 @@ export const Hero = () => {
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
-              Increased sales rates
+              Revenue Growth
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              Ai can ensures automatic task handling, scheduling optimizing lead to customer conversations
+              AI-powered automation streamlines lead qualification and customer engagement, driving higher conversion rates
             </p>
           </article>
 
@@ -134,10 +134,10 @@ export const Hero = () => {
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
-              Cutoff manual and repetitive work
+              Operational Efficiency
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              AI agents can massively reducing manual and repetitive work.
+              Intelligent automation eliminates repetitive tasks, allowing your team to focus on strategic initiatives
             </p>
           </article>
 
@@ -155,17 +155,17 @@ export const Hero = () => {
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
-              Leverage your cost savings
+              Cost Optimization
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              Increased sales, lowering your overheads will provide significant cost savings on your Business
+              Reduce operational overhead while increasing revenue through intelligent process automation and optimization
             </p>
           </article>
 
           {/* CTA Card */}
           <aside style={{ width: '100%', height: '100%', background: 'transparent', boxShadow: 'none', borderRadius: 30 }} className="flex flex-col justify-center items-center text-center p-4 sm:p-6 lg:p-8 xl:p-10 w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-medium mb-4 sm:mb-6 lg:mb-8 leading-snug tracking-tight">
-              See how your Business can achieve these results
+              Discover how your organization can achieve these outcomes
             </h3>
             <div className="w-full flex justify-center">
               <Link to="/contact">

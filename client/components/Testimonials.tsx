@@ -259,12 +259,12 @@ export const Testimonials = () => {
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-navy"
             >
-              Who uses it became
+              Trusted by industry
             </span>
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-purple"
             >
-              a fan of it
+              leaders worldwide
             </span>
           </h2>
         </header>
@@ -277,7 +277,7 @@ export const Testimonials = () => {
 
         <div className="text-center mt-8 sm:mt-10 md:mt-14 lg:mt-18 xl:mt-20">
           <Button variant="cta" size="cta" aria-label="Send feedback about our service">
-            Send Feedback
+            Share Your Success Story
           </Button>
         </div>
       </div>
