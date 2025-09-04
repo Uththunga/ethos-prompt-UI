@@ -43,11 +43,7 @@ export const Contact = () => {
               {/* Discussion Points */}
               <section className="space-y-6" aria-labelledby="discussion-heading">
                 <h2 id="discussion-heading" className="text-ethos-gray text-base md:text-lg lg:text-xl font-medium leading-relaxed tracking-tight">
-<<<<<<< HEAD
-                  Let's connect to discuss:
-=======
                   Let's schedule a consultation to discuss:
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
                 </h2>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8" role="list">

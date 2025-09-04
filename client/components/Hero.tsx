@@ -116,11 +116,7 @@ export const Hero = () => {
               Revenue Growth
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-<<<<<<< HEAD
-              AI ensures automatic task handling and scheduling optimization, leading to better customer conversations
-=======
               AI-powered automation streamlines lead qualification and customer engagement, driving higher conversion rates
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
             </p>
           </article>
 
@@ -138,17 +134,10 @@ export const Hero = () => {
               </div>
             </div>
             <h3 className="text-ethos-gray text-base sm:text-lg md:text-xl lg:text-2xl font-normal mb-3 sm:mb-4 leading-snug tracking-tight">
-<<<<<<< HEAD
-              Reduce manual and repetitive work
-            </h3>
-            <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-              AI agents can massively reduce manual and repetitive work.
-=======
               Operational Efficiency
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
               Intelligent automation eliminates repetitive tasks, allowing your team to focus on strategic initiatives
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
             </p>
           </article>
 
@@ -169,11 +158,7 @@ export const Hero = () => {
               Cost Optimization
             </h3>
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight">
-<<<<<<< HEAD
-              Increased sales and reduced overheads provide significant cost savings for your business
-=======
               Reduce operational overhead while increasing revenue through intelligent process automation and optimization
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
             </p>
           </article>
 

@@ -259,11 +259,7 @@ export const Testimonials = () => {
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-navy"
             >
-<<<<<<< HEAD
-              Who uses it becomes
-=======
               Trusted by industry
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
             </span>
             <span 
               className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium leading-tight tracking-tight text-ethos-purple"

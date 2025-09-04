@@ -114,11 +114,7 @@ export const ServiceFailuresSection = () => {
               <div className="relative z-10 p-4 sm:p-6 lg:p-8 xl:p-10 flex items-center justify-center min-h-[200px] sm:min-h-[240px] lg:min-h-[280px]">
                 <div className="w-full text-center">
                   <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-[1.46] tracking-[-0.03em] transition-opacity duration-300 group-hover:opacity-95">
-<<<<<<< HEAD
-                    Our AI agents serve 24/7, responding quickly, professionally, and accurately to ensure no client is forgotten
-=======
                     Our AI solutions provide 24/7 availability, delivering fast, professional, and accurate responses while ensuring every client receives exceptional service
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
                   </p>
                   
                   {/* Subtle accent line */}

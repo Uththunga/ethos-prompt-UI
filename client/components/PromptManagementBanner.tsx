@@ -26,11 +26,7 @@ export const PromptManagementBanner = () => {
             <div className="text-left max-w-7xl">
               {/* Section Subheader */}
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal leading-tight tracking-tight text-white mb-4 sm:mb-6 lg:mb-8">
-<<<<<<< HEAD
-                Moreover, we provide
-=======
                 Additionally, we offer
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
               </p>
 
               {/* Main Header */}

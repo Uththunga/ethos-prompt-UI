@@ -223,13 +223,8 @@ export const Basics = () => {
               {/* Fine-Tuning */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-<<<<<<< HEAD
-                  <span className="text-ethos-gray">What is an </span>
-                  <span className="text-ethos-purple">Fine-tuning?</span>
-=======
                   <span className="text-ethos-gray">Strategic </span>
                   <span className="text-ethos-purple">Fine-Tuning</span>
->>>>>>> badb4b1a1141a78c890bc33039528cfbfcea0287
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
                   Fine-tuning transforms general AI capabilities into specialized business intelligence systems. This process aligns models with specific organizational requirements, industry standards, and strategic objectives, enabling precise, context-aware responses that drive measurable business outcomes and operational excellence.
