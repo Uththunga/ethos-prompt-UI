@@ -22,7 +22,7 @@ export const PlaceholderPage = ({ title, description }: PlaceholderPageProps) =>
           </p>
           <div className="space-y-4 lg:space-y-6">
             <p className="text-sm sm:text-base md:text-lg text-ethos-gray-light">
-              This page is coming soon! Continue prompting to help us build out this section.
+              This section is currently under development. Our team is working to deliver comprehensive enterprise AI solutions and resources.
             </p>
             <Button 
               onClick={() => window.history.back()}
@@ -30,7 +30,7 @@ export const PlaceholderPage = ({ title, description }: PlaceholderPageProps) =>
               size="cta"
               aria-label="Go back to previous page"
             >
-              Go Back
+              Return to Platform
             </Button>
           </div>
         </section>

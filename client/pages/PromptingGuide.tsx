@@ -19,11 +19,11 @@ export const PromptingGuide = () => {
             <header className="text-center">
               <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
                 <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-                  Master the art of
+                  Master Enterprise
                 </span>
                 <br />
                 <span className="text-ethos-purple">
-                  AI Communication
+                  AI Prompt Engineering
                 </span>
               </h1>
             </header>
@@ -42,7 +42,7 @@ export const PromptingGuide = () => {
             {/* Subtitle - positioned at bottom */}
             <div className="text-center">
               <p className="text-ethos-gray font-normal leading-relaxed text-sm sm:text-base lg:text-lg xl:text-xl w-full text-center whitespace-normal sm:whitespace-nowrap overflow-visible sm:overflow-hidden sm:text-ellipsis">
-                Unlock the full potential of AI models by learning how to craft effective prompts. Turn your ideas into powerful results.
+                Master the strategic art of AI communication to unlock unprecedented business value. Transform complex requirements into precise, actionable AI instructions that drive measurable outcomes.
               </p>
             </div>
           </div>
@@ -54,8 +54,8 @@ export const PromptingGuide = () => {
             <header className="text-center mb-12 lg:mb-16">
               <div className="space-y-1 sm:space-y-2">
                 <h2 id="journey-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight">
-                  <span className="text-ethos-gray">Your Journey to Becoming a </span>
-                  <span className="text-ethos-purple">Prompt Expert</span>
+                  <span className="text-ethos-gray">Your Path to </span>
+                  <span className="text-ethos-purple">AI Mastery</span>
                 </h2>
               </div>
             </header>
@@ -70,10 +70,10 @@ export const PromptingGuide = () => {
                   </div>
                   <div className="flex-1 pt-1 sm:pt-2">
                     <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-2 sm:mb-3 lg:mb-6">
-                      Understand the basics
+                      Master Core Principles
                     </h3>
                     <p className="text-ethos-gray text-xs sm:text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                      Learn the core principles of how AI interprets your requests.
+                      Understand how enterprise AI systems process and respond to strategic business requirements.
                     </p>
                   </div>
                 </div>
@@ -87,10 +87,10 @@ export const PromptingGuide = () => {
                   </div>
                   <div className="flex-1 pt-1 sm:pt-2">
                     <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-2 sm:mb-3 lg:mb-6">
-                      Master advanced techniques
+                      Apply Advanced Methodologies
                     </h3>
                     <p className="text-ethos-gray text-xs sm:text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                      Explore methods like zero-shot, few-shot, and chain-of-thought
+                      Implement sophisticated techniques including zero-shot learning, few-shot optimization, and chain-of-thought reasoning for complex business scenarios.
                     </p>
                   </div>
                 </div>
@@ -104,10 +104,10 @@ export const PromptingGuide = () => {
                   </div>
                   <div className="flex-1 pt-1 sm:pt-2">
                     <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-medium leading-snug bg-gradient-to-b from-[#7771DF] to-[#E872D4] bg-clip-text text-transparent mb-2 sm:mb-3 lg:mb-6">
-                      Transform Ideas into Reality
+                      Drive Business Innovation
                     </h3>
                     <p className="text-ethos-gray text-xs sm:text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                      Use your skills to solve complex problems and create amazing things.
+                      Apply advanced prompt engineering to solve strategic challenges and deliver transformative business solutions.
                     </p>
                   </div>
                 </div>
@@ -125,24 +125,24 @@ export const PromptingGuide = () => {
                   <header className="mb-6 md:mb-8 lg:mb-10">
                     <h2 id="what-is-prompting-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight">
                       <span className="text-ethos-gray">What is </span>
-                      <span className="text-ethos-purple">Prompting?</span>
+                      <span className="text-ethos-purple">Strategic Prompting?</span>
                     </h2>
                   </header>
                   
                   {/* Content */}
                   <div className="space-y-4 md:space-y-5 lg:space-y-6">
                     <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                      Think of prompting as having a conversation with an AI. It's the art of giving clear, specific instructions to guide the AI towards the exact result you want. In essence, you're not just asking a question; you're programming the AI with words.
+                      Strategic prompting is the discipline of crafting precise, context-aware instructions that guide AI systems toward optimal business outcomes. It's the bridge between complex organizational requirements and actionable AI responses—essentially programming intelligence through strategic communication.
                     </p>
                     
                     <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                      A great prompt is like a good recipe—it gives the AI all the right ingredients and steps to create something amazing for you.
+                      Effective enterprise prompting combines domain expertise, clear objectives, and structured methodology to consistently deliver high-quality, business-relevant AI outputs that drive measurable value.
                     </p>
                   
                     {/* CTA Button */}
                     <div className="pt-6 md:pt-8 lg:pt-10">
                       <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-6 lg:px-8 xl:px-10 py-3 lg:py-4 rounded-full text-sm lg:text-base xl:text-lg font-normal h-auto transition-colors duration-300">
-                        Go to Playground
+                        Explore AI Platform
                       </Button>
                     </div>
                   </div>
@@ -169,8 +169,8 @@ export const PromptingGuide = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight">
-              <span className="text-ethos-gray">AI vs. Human </span>
-              <span className="text-ethos-purple">Conversation</span>
+              <span className="text-ethos-gray">Enterprise AI vs. Human </span>
+              <span className="text-ethos-purple">Communication</span>
             </h2>
           </div>
 
@@ -178,17 +178,17 @@ export const PromptingGuide = () => {
             {/* Talking to Human */}
             <div className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center">
               <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-center mb-6 lg:mb-8">
-                <span className="text-ethos-gray">Talking to a </span>
-                <span className="text-ethos-purple">Human</span>
+                <span className="text-ethos-gray">Human </span>
+                <span className="text-ethos-purple">Communication</span>
               </h3>
               
               <div className="space-y-4 sm:space-y-6">
                 <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                  Humans understand context, read between the lines, and use shared experiences to fill in the gaps. You can be vague, and they'll likely still get what you mean.
+                  Human colleagues leverage contextual understanding, organizational knowledge, and shared business experiences to interpret ambiguous requests and deliver appropriate responses.
                 </p>
                 
                 <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-bold leading-relaxed">
-                  "Hey, can you suggest a dinner spot? Something not too fancy."
+                  "Can you prepare a market analysis? Make it comprehensive but accessible."
                 </p>
               </div>
             </div>
@@ -196,17 +196,17 @@ export const PromptingGuide = () => {
             {/* Talking to AI */}
             <div className="bg-white rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset,0_4px_4px_0_rgba(0,0,0,0.25)] min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col justify-center">
               <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-center mb-6 lg:mb-8">
-                <span className="text-ethos-gray">Talking to an </span>
-                <span className="text-ethos-purple">AI</span>
+                <span className="text-ethos-gray">Enterprise AI </span>
+                <span className="text-ethos-purple">Communication</span>
               </h3>
               
               <div className="space-y-4 sm:space-y-6">
                 <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-normal leading-relaxed">
-                  AI needs clear, direct instructions. It doesn't have personal experiences or intuition, so you need to provide all the necessary details for it to give you the best response.
+                  Enterprise AI systems require structured, detailed instructions with explicit context, objectives, and constraints. Without organizational intuition, they depend on comprehensive specifications to deliver optimal business outcomes.
                 </p>
                 
                 <p className="text-ethos-gray text-sm lg:text-base xl:text-lg font-bold leading-relaxed">
-                  "Suggest 3 casual Italian restaurants in San Francisco suitable for a date night, with an average price under $50 per person."
+                  "Generate a comprehensive market analysis for Q4 2024, focusing on SaaS competitors in the mid-market segment, including market share data, pricing strategies, and growth projections. Format as executive summary with supporting charts."
                 </p>
               </div>
             </div>
@@ -224,10 +224,10 @@ export const PromptingGuide = () => {
               {/* Section Header - Left Aligned */}
               <header className="mb-8 md:mb-10 lg:mb-12">
                 <h2 id="prompt-breakdown-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent">
-                  Let's break down a prompt
+                  Enterprise Prompt Architecture
                 </h2>
                 <p className="text-white text-sm lg:text-base xl:text-lg font-normal leading-relaxed mt-4 md:mt-5 lg:mt-6">
-                  A good prompt is made of several key parts. Let's look at an example and see how they work together.
+                  Strategic business prompts require structured components that work synergistically to deliver precise, actionable results. Let's examine the essential architecture.
                 </p>
               </header>
 
@@ -238,10 +238,10 @@ export const PromptingGuide = () => {
                   <div className="w-5 h-5 lg:w-6 lg:h-6 bg-[#E16D00] rounded flex-shrink-0 mt-1" aria-hidden="true"></div>
                   <div>
                     <h3 className="text-[#E16D00] text-xs lg:text-sm font-bold mb-1">
-                      The Role: Set the Persona
+                      Role Definition: Strategic Context
                     </h3>
                     <p className="text-white text-xs lg:text-sm font-normal leading-relaxed">
-                      Tells the AI who to be. This sets the tone, style, and expertise.
+                      Establishes the AI's expertise domain, perspective, and communication style aligned with business objectives.
                     </p>
                   </div>
                 </article>
@@ -251,10 +251,10 @@ export const PromptingGuide = () => {
                   <div className="w-5 h-5 lg:w-6 lg:h-6 bg-[#399703] rounded flex-shrink-0 mt-1" aria-hidden="true"></div>
                   <div>
                     <h3 className="text-[#399703] text-xs lg:text-sm font-bold mb-1">
-                      The Task: Define the Goal
+                      Objective Specification: Clear Deliverable
                     </h3>
                     <p className="text-white text-xs lg:text-sm font-normal leading-relaxed">
-                      This is the core instruction—what you want the AI to do.
+                      Precisely defines the desired outcome, deliverable format, and success criteria.
                     </p>
                   </div>
                 </article>
@@ -264,10 +264,10 @@ export const PromptingGuide = () => {
                   <div className="w-5 h-5 lg:w-6 lg:h-6 bg-[#008A9D] rounded flex-shrink-0 mt-1" aria-hidden="true"></div>
                   <div>
                     <h3 className="text-[#008A9D] text-xs lg:text-sm font-bold mb-1">
-                      The Context: Provide the Details
+                      Business Context: Strategic Framework
                     </h3>
                     <p className="text-white text-xs lg:text-sm font-normal leading-relaxed">
-                      This gives the AI the 'who, what, where' to work with.
+                      Provides essential business context, stakeholder requirements, and operational parameters.
                     </p>
                   </div>
                 </article>
@@ -277,10 +277,10 @@ export const PromptingGuide = () => {
                   <div className="w-5 h-5 lg:w-6 lg:h-6 bg-[#D50072] rounded flex-shrink-0 mt-1" aria-hidden="true"></div>
                   <div>
                     <h3 className="text-[#D50072] text-xs lg:text-sm font-bold mb-1">
-                      The Constraint: Set the Rules
+                      Parameters: Quality Controls
                     </h3>
                     <p className="text-white text-xs lg:text-sm font-normal leading-relaxed">
-                      These are boundaries that guide the output.
+                      Establishes quality standards, compliance requirements, and output specifications.
                     </p>
                   </div>
                 </article>
@@ -326,8 +326,8 @@ export const PromptingGuide = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <header className="text-center mb-8 md:mb-10 lg:mb-12">
             <h2 id="learning-journey-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight">
-              <span className="text-ethos-gray">Start your </span>
-              <span className="text-ethos-purple">learning journey</span>
+              <span className="text-ethos-gray">Begin Your </span>
+              <span className="text-ethos-purple">AI Mastery Journey</span>
             </h2>
           </header>
 
@@ -350,12 +350,12 @@ export const PromptingGuide = () => {
 
                     <div className="pt-6 sm:pt-8 lg:pt-12 text-center">
                       <h3 className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-medium mb-2 sm:mb-3 md:mb-4 lg:mb-6">
-                        <span className="text-ethos-gray">Learn the </span>
-                        <span className="text-ethos-purple">Basics</span>
+                        <span className="text-ethos-gray">Master </span>
+                        <span className="text-ethos-purple">Fundamentals</span>
                       </h3>
 
                       <p className="text-ethos-gray text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
-                        Learn the foundational skills of prompt engineering — how to craft clear, effective prompts to get accurate, creative, and useful responses from AI systems.
+                        Build essential prompt engineering competencies—master the strategic principles for crafting precise, business-focused prompts that consistently deliver high-value AI responses.
                       </p>
                     </div>
                   </div>
@@ -378,12 +378,12 @@ export const PromptingGuide = () => {
 
                     <div className="pt-6 sm:pt-8 lg:pt-12 text-center">
                       <h3 className="text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl font-medium mb-2 sm:mb-3 md:mb-4 lg:mb-6">
-                        <span className="text-ethos-gray">Explore </span>
-                        <span className="text-ethos-purple">Techniques</span>
+                        <span className="text-ethos-gray">Advanced </span>
+                        <span className="text-ethos-purple">Methodologies</span>
                       </h3>
 
                       <p className="text-ethos-gray text-sm sm:text-base lg:text-lg font-normal leading-relaxed">
-                        Dive into practical techniques to enhance your prompt engineering skills.
+                        Explore sophisticated prompt engineering methodologies and enterprise-grade techniques for complex business applications and strategic AI implementations.
                       </p>
                     </div>
                   </div>

@@ -23,18 +23,18 @@ const NotFound = () => {
           
           {/* Error Message */}
           <h1 id="error-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-ethos-navy mb-4 lg:mb-6">
-            Oops! Page not found
+            Page Not Found
           </h1>
           
           {/* Description */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-ethos-gray leading-relaxed mb-6 lg:mb-8">
-            The page you're looking for doesn't exist. It might have been moved, deleted, or you entered the wrong URL.
+            The requested resource could not be located. This page may have been moved, removed, or the URL may be incorrect. Please verify the address or navigate back to our main platform.
           </p>
           
           {/* Action Button */}
           <Link to="/" aria-label="Return to home page">
             <Button variant="cta" size="cta">
-              Return to Home
+              Return to Platform
             </Button>
           </Link>
         </section>

@@ -26,23 +26,23 @@ export const PromptManagementBanner = () => {
             <div className="text-left max-w-7xl">
               {/* Section Subheader */}
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal leading-tight tracking-tight text-white mb-4 sm:mb-6 lg:mb-8">
-                Moreover we provide
+                Additionally, we offer
               </p>
 
               {/* Main Header */}
               <h2 id="prompt-management-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight tracking-tight bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent mb-6 sm:mb-8 lg:mb-10">
-                AI-powered system for managing prompts
+                Enterprise AI Prompt Management Platform
               </h2>
 
               {/* Description */}
               <p className="text-white text-base sm:text-lg lg:text-xl leading-relaxed max-w-7xl mb-8 sm:mb-10 lg:mb-12">
-                (text instructions for AI models) that includes RAG (Retrieval-Augmented Generation) capabilities for document-based context enhancement
+                Advanced prompt engineering and management system with Retrieval-Augmented Generation (RAG) capabilities for enhanced document-based AI interactions and contextual intelligence
               </p>
 
               {/* CTA Button */}
               <div>
                 <Button variant="cta" size="cta" aria-label="View Prompt Library">
-                  Prompt Library
+                  Explore Our Platform
                 </Button>
               </div>
             </div>

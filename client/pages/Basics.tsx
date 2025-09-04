@@ -32,10 +32,10 @@ export const Basics = () => {
                 <header>
                   <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
                     <span className="block bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-                      The Story of
+                      Enterprise AI
                     </span>
                     <span className="block text-ethos-purple">
-                      Prompting
+                      Fundamentals
                     </span>
                   </h1>
                 </header>
@@ -43,7 +43,7 @@ export const Basics = () => {
                 {/* Description */}
                 <div>
                   <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
-                    Explore how artificial intelligence learns to communicate like humans in this engaging, interactive journey that unpacks machine learning, language models, and the evolving relationship between AI and natural conversation.
+                    Master the foundational principles of enterprise AI systems and large language models. Understand how strategic prompt engineering drives business value through intelligent automation and optimized AI communication.
                   </p>
                 </div>
 
@@ -52,7 +52,7 @@ export const Basics = () => {
                   className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-4 sm:px-6 md:px-8 lg:px-10 py-2 rounded-[28px] sm:rounded-[32px] lg:rounded-[40px] text-sm sm:text-sm md:text-base lg:text-base font-normal h-9 sm:h-10 md:h-11 lg:h-12 w-full max-w-[280px]"
                   aria-label="Download learning materials about AI prompting"
                 >
-                  Download Materials
+                  Access Resources
                 </Button>
               </div>
             </div>
@@ -65,24 +65,24 @@ export const Basics = () => {
             {/* Section Title */}
             <header className="text-center mb-12 lg:mb-16">
               <h2 id="ai-to-llm-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
-                <span className="text-ethos-gray">From AI to </span>
-                <span className="text-ethos-purple">Large Language Model (LLM)</span>
+                <span className="text-ethos-gray">Understanding </span>
+                <span className="text-ethos-purple">Enterprise AI Architecture</span>
               </h2>
               
               <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-6xl mx-auto">
-                You might know these as "AI" tools, but we'll call them "LLMs" (Large Language Models). Why? Because that's exactly what they are - large models that understand and generate human language. Understanding LLMs is crucial because prompt engineering is all about effectively communicating with these models - the better you understand how they work, the more effectively you can craft your prompts.
+                Enterprise AI systems are powered by Large Language Models (LLMs)—sophisticated neural networks trained on vast datasets to understand and generate human language. Mastering LLM architecture is essential for strategic prompt engineering, as deeper technical understanding enables more precise, business-focused AI implementations that deliver measurable organizational value.
               </p>
             </header>
 
             {/* What is an LLM Really? */}
             <section className="mb-16 lg:mb-20" aria-labelledby="what-is-llm-heading">
               <h3 id="what-is-llm-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight text-center mb-6 lg:mb-8">
-                <span className="text-ethos-gray">What is an </span>
-                <span className="text-ethos-purple">LLM Really?</span>
+                <span className="text-ethos-gray">Enterprise LLM </span>
+                <span className="text-ethos-purple">Architecture</span>
               </h3>
               
               <p className="text-[#313131] text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-relaxed tracking-tight text-center mx-auto mb-12 lg:mb-16">
-                Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
+                Enterprise Large Language Models function as sophisticated knowledge processing systems, trained on extensive datasets to understand complex business contexts, industry-specific terminology, and strategic communication patterns. These systems serve as intelligent intermediaries between organizational requirements and actionable AI responses.
               </p>
 
               {/* L-L-M Breakdown Cards */}
@@ -95,10 +95,10 @@ export const Basics = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
-                        Large
+                        Scale
                       </h4>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-normal tracking-tight">
-                        Vast knowledge bank - like having read millions of books!
+                        Massive datasets encompassing industry knowledge, best practices, and strategic frameworks.
                       </p>
                     </div>
                   </div>
@@ -112,10 +112,10 @@ export const Basics = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
-                        Language
+                        Intelligence
                       </h4>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-normal tracking-tight">
-                        Speaks and understands human languages!
+                        Advanced natural language processing for complex business communication.
                       </p>
                     </div>
                   </div>
@@ -129,10 +129,10 @@ export const Basics = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-3 lg:mb-4">
-                        Model
+                        System
                       </h4>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-normal tracking-tight">
-                        The intelligent part that processes patterns and thinks!
+                        Sophisticated neural architecture that processes patterns and generates strategic insights.
                       </p>
                     </div>
                   </div>
@@ -141,7 +141,7 @@ export const Basics = () => {
             </section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 id="llm-description-heading" className="sr-only">What is a Large Language Model?</h3>
             <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-5xl mx-auto">
-              Large Language Models are AI systems trained by processing vast amounts of text from the internet.
+              Enterprise LLMs are sophisticated AI systems trained on comprehensive datasets to deliver strategic business intelligence and automated decision support.
             </p>
     
           </div>
@@ -178,23 +178,23 @@ export const Basics = () => {
               <div className="space-y-3 sm:space-y-4 lg:space-y-6 lg:pl-8 xl:pl-16 text-center lg:text-left">
                 <header className="space-y-1 sm:space-y-2">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight text-ethos-purple">
-                    Integrate
+                    Deploy
                   </h2>
                   <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-black">
-                    20+ LLMs
+                    20+ Enterprise Models
                   </div>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight text-black">
-                    Available
+                    Ready
                   </h3>
                 </header>
                 
                 <p className="text-gray-800 text-sm sm:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-4xl mx-auto lg:mx-0">
-                  EthosPrompt agents can seamlessly integrate with over 20+ leading language models to enhance your AI capabilities. From content generation to code assistance and beyond, access the right model for every task with a single click.
+                  EthosPrompt's enterprise platform provides seamless integration with 20+ leading language models, enabling organizations to deploy optimal AI solutions for diverse business requirements. From strategic analysis to automated workflows, access enterprise-grade models tailored for specific operational needs.
                 </p>
 
                 <div className="pt-2">
                   <Button variant="cta" size="cta">
-                    Get Started Now
+                    Explore Platform
                   </Button>
                 </div>
               </div>
@@ -212,33 +212,33 @@ export const Basics = () => {
               {/* Pre-Training */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What is an </span>
-                  <span className="text-ethos-purple">Pre-Training?</span>
+                  <span className="text-ethos-gray">Understanding </span>
+                  <span className="text-ethos-purple">Pre-Training</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
-                  This is where the "L" (Large) in LLM comes to life! Pre-training is the foundational phase where an AI model acquires its vast knowledge by processing enormous amounts of text data - like a student speed-reading through millions of books, articles, and documents simultaneously.
+                  Pre-training establishes the foundational knowledge base of enterprise AI systems through comprehensive dataset processing. This critical phase enables models to understand industry contexts, business terminology, and strategic frameworks essential for delivering relevant, actionable insights across diverse organizational functions.
                 </p>
               </div>
 
               {/* Fine-Tuning */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What is an </span>
-                  <span className="text-ethos-purple">Fine tuning?</span>
+                  <span className="text-ethos-gray">Strategic </span>
+                  <span className="text-ethos-purple">Fine-Tuning</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
-                  This is where the "M" (Model) in LLM truly comes to life! While pre-training provides vast knowledge, fine-tuning transforms this raw knowledge into sophisticated thinking and decision-making abilities - it's like transforming a medical student who has memorized textbooks into a skilled doctor who can diagnose and treat patients effectively.
+                  Fine-tuning transforms general AI capabilities into specialized business intelligence systems. This process aligns models with specific organizational requirements, industry standards, and strategic objectives, enabling precise, context-aware responses that drive measurable business outcomes and operational excellence.
                 </p>
               </div>
 
               {/* Prompting */}
               <div>
                 <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-                  <span className="text-ethos-gray">What is </span>
-                  <span className="text-ethos-purple">Prompting?</span>
+                  <span className="text-ethos-gray">Strategic </span>
+                  <span className="text-ethos-purple">Prompt Engineering</span>
                 </h3>
                 <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight">
-                  This is where the second "L" (Language) in LLM comes to life! Prompting is like having a conversation with a highly knowledgeable assistant - you communicate your needs in plain language, and the AI understands and responds accordingly.
+                  Strategic prompt engineering is the discipline of crafting precise, business-focused instructions that guide AI systems toward optimal outcomes. This methodology bridges organizational requirements with AI capabilities, enabling consistent delivery of high-value, actionable intelligence that supports strategic decision-making and operational efficiency.
                 </p>
               </div>
             </div>

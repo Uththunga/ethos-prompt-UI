@@ -33,10 +33,10 @@ export const Techniques = () => {
                 <header>
                   <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
                     <span className="block bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
-                      Practical
+                      Advanced
                     </span>
                     <span className="block text-ethos-purple">
-                      Prompt Engineering
+                      AI Methodologies
                     </span>
                   </h1>
                 </header>
@@ -44,7 +44,7 @@ export const Techniques = () => {
                 {/* Subtitle */}
                 <div>
                   <p className="text-[#313131] text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-xl">
-                    Master the Art of Crafting Effective Prompts
+                    Strategic Techniques for Enterprise AI Implementation
                   </p>
                 </div>
 
@@ -54,7 +54,7 @@ export const Techniques = () => {
                     className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-5 sm:px-6 md:px-8 lg:px-10 py-2.5 lg:py-3 rounded-[24px] sm:rounded-[32px] lg:rounded-[40px] text-xs sm:text-sm md:text-base lg:text-lg font-normal h-10 sm:h-12 md:h-14 lg:h-16"
                     aria-label="Download prompt engineering learning material"
                   >
-                    Download material
+                    Access Resources
                   </Button>
                 </div>
               </div>
@@ -76,12 +76,12 @@ export const Techniques = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-left">
               <h2 id="core-techniques-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mb-3 sm:mb-4">
-                <span className="text-ethos-gray">The </span>
-                <span className="text-ethos-purple">Core techniques</span>
+                <span className="text-ethos-gray">Enterprise </span>
+                <span className="text-ethos-purple">AI Methodologies</span>
               </h2>
               
               <p className="text-ethos-gray text-xs sm:text-sm md:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-2xl text-left">
-                Think of a Large Language Model (LLM) like a super-smart student who has read every book in the world's biggest library. Just like how a student learns by reading books, an LLM learns by processing vast amounts of text from the internet.
+                Strategic AI implementation requires mastering core methodologies that ensure consistent, high-quality outputs. These enterprise-grade techniques form the foundation for reliable business AI applications that deliver measurable value and operational excellence.
               </p>
             </header>
 
@@ -90,52 +90,52 @@ export const Techniques = () => {
               {/* Role Setting */}
               <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Role Setting
+                  Strategic Role Definition
                 </h3>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Give the AI a specific role to guide its responses.
+                  Establish AI expertise domain and communication style aligned with business objectives.
                 </p>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  Roles help set expectations and context for the interaction.
+                  Clear role definition ensures consistent, professional outputs that meet organizational standards.
                 </p>
               </article>
 
               {/* Context Providing */}
               <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Context Providing
+                  Business Context Framework
                 </h3>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Set the background and requirements clearly.
+                  Provide comprehensive business context, stakeholder requirements, and operational parameters.
                 </p>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  More context leads to more relevant responses.
+                  Rich contextual information enables precise, business-relevant AI responses that drive value.
                 </p>
               </article>
 
               {/* Task Breakdown */}
               <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Task Breakdown
+                  Structured Task Architecture
                 </h3>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Split complex requests into clear steps.
+                  Decompose complex business requirements into manageable, sequential components.
                 </p>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  Breaking down tasks improves clarity and quality.
+                  Systematic task structuring ensures comprehensive coverage and optimal output quality.
                 </p>
               </article>
 
               {/* Output Formatting */}
               <article style={{ width: '100%', height: '100%', background: 'linear-gradient(319deg, white 0%, #EDEDED 100%)', boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)', borderRadius: 30, position: 'relative' }} className="p-4 sm:p-6 lg:p-8 xl:p-10 flex flex-col w-full max-w-[320px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto" role="listitem">
                 <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight bg-gradient-to-r from-[#7471E0] to-[#EA73D4] bg-clip-text text-transparent mb-2 sm:mb-3">
-                  Output Formatting
+                  Enterprise Output Standards
                 </h3>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight mb-1 sm:mb-2">
-                  Specify how you want the response structured.
+                  Define precise output formats, quality standards, and deliverable specifications.
                 </p>
                 <p className="text-ethos-gray text-[0.65rem] sm:text-xs md:text-sm font-normal leading-normal tracking-tight">
-                  Clear formats make responses more useful and actionable.
+                  Standardized formatting ensures consistent, professional deliverables that integrate seamlessly with business workflows.
                 </p>
               </article>
             </div>
@@ -148,21 +148,21 @@ export const Techniques = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-6 lg:mb-8">
-                <span className="text-ethos-gray">Chain of Thoughts </span>
-                <span className="text-ethos-purple">Prompting</span>
+                <span className="text-ethos-gray">Strategic Reasoning </span>
+                <span className="text-ethos-purple">Architecture</span>
               </h2>
               
               <div className="space-y-4 lg:space-y-5">
                 <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
-                  Chain of Thought (CoT) is a powerful prompting technique used in artificial intelligence—particularly in large language models like ChatGPT—that encourages the model to generate step-by-step reasoning before reaching a final answer. Rather than responding immediately with a single, direct answer, the AI is prompted to "think out loud", breaking down the problem or question into logical steps. This method closely mirrors how humans solve complex problems by working through their thoughts in stages.
+                  Strategic Reasoning Architecture (SRA) is an advanced enterprise AI methodology that guides systems through structured, multi-step analysis before delivering final recommendations. This approach ensures transparent decision-making processes, enabling stakeholders to understand the logic behind AI-generated insights and building trust in automated business intelligence systems.
                 </p>
                 
                 <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
-                  CoT is especially useful in scenarios that require multi-step thinking, such as solving math equations, analyzing cause-and-effect relationships, making decisions based on multiple conditions, or answering questions that involve abstract or layered reasoning. By guiding the model to articulate its thought process, CoT significantly improves the accuracy, clarity, and reliability of responses.
+                  SRA proves invaluable for complex business scenarios including strategic analysis, risk assessment, multi-criteria decision-making, and comprehensive market evaluation. By requiring AI systems to demonstrate their analytical process, this methodology significantly enhances accuracy, transparency, and stakeholder confidence in AI-driven business recommendations.
                 </p>
                 
                 <p className="text-ethos-gray text-sm sm:text-base md:text-base lg:text-base font-normal leading-normal tracking-tight">
-                  In essence, Chain of Thought transforms AI from a tool that simply provides answers into a system that can demonstrate reasoning, justify conclusions, and reveal the logic behind its outputs—making it not only more effective but also more trustworthy and interpretable in fields like education, research, customer service, and beyond.
+                  Strategic Reasoning Architecture elevates AI from basic response generation to sophisticated analytical partnership, providing transparent, justifiable insights that support critical business decisions. This methodology ensures AI systems deliver not just answers, but comprehensive reasoning that builds organizational confidence and enables informed strategic action.
                 </p>
               </div>
             </div>
@@ -183,8 +183,8 @@ export const Techniques = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight">
-              <span className="text-ethos-gray">Best Practices and </span>
-              <span className="text-ethos-purple">Common Pitfalls</span>
+              <span className="text-ethos-gray">Enterprise Standards and </span>
+              <span className="text-ethos-purple">Implementation Guidelines</span>
             </h2>
           </div>
 
@@ -203,7 +203,7 @@ export const Techniques = () => {
                 {/* Content */}
                 <div className="relative z-10 p-6 sm:p-6 lg:p-8 xl:p-10 min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] flex flex-col justify-center">
                   <h3 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight mb-4 sm:mb-6 lg:mb-8 text-center">
-                    Best Practices
+                    Enterprise Standards
                   </h3>
                   
                   <div className="space-y-4 sm:space-y-5 lg:space-y-6">
@@ -215,7 +215,7 @@ export const Techniques = () => {
                         aria-hidden="true"
                       />
                       <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                        Instead of "make it better," say "improve the performance by reducing database calls"
+                        "Optimize quarterly revenue analysis by implementing predictive modeling with 95% accuracy threshold"
                       </p>
                     </div>
                     
@@ -229,7 +229,7 @@ export const Techniques = () => {
                         aria-hidden="true"
                       />
                       <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                        Include relevant background information and constraints
+                        Provide comprehensive business context, stakeholder requirements, and compliance parameters
                       </p>
                     </div>
                     
@@ -243,7 +243,7 @@ export const Techniques = () => {
                         aria-hidden="true"
                       />
                       <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                        Show what good output looks like with concrete examples
+                        Define success criteria with specific KPIs, format requirements, and quality benchmarks
                       </p>
                     </div>
                   </div>
@@ -272,7 +272,7 @@ export const Techniques = () => {
                 {/* Content */}
                 <div className="relative z-10 p-6 sm:p-6 lg:p-8 xl:p-10 min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] flex flex-col justify-center">
                   <h3 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight mb-4 sm:mb-6 lg:mb-8 text-center">
-                    Common Pitfalls
+                    Implementation Risks
                   </h3>
                   
                   <div className="space-y-4 sm:space-y-5 lg:space-y-6">
@@ -284,7 +284,7 @@ export const Techniques = () => {
                         aria-hidden="true"
                       />
                       <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                        "Make it good" vs "Optimize the function for readability and performance"
+                        Vague requests: "Analyze market trends" vs "Generate Q4 SaaS market analysis with competitor pricing, growth metrics, and strategic recommendations"
                       </p>
                     </div>
                     
@@ -298,7 +298,7 @@ export const Techniques = () => {
                         aria-hidden="true"
                       />
                       <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                        Break complex tasks into smaller, manageable prompts
+                        Structure complex business requirements into sequential, manageable components with clear dependencies
                       </p>
                     </div>
                     
@@ -312,7 +312,7 @@ export const Techniques = () => {
                         aria-hidden="true"
                       />
                       <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                        Always provide necessary background, even if it seems obvious
+                        Include comprehensive business context, industry standards, and organizational constraints for optimal results
                       </p>
                     </div>
                   </div>
@@ -323,11 +323,11 @@ export const Techniques = () => {
 
           <div className="text-center">
             <p className="text-ethos-gray text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal leading-tight tracking-tight mb-6 lg:mb-8">
-              Keen to learn more?
+              Ready to implement enterprise AI solutions?
             </p>
 
             <Button className="bg-ethos-purple-light hover:bg-ethos-purple text-white px-8 sm:px-10 md:px-12 lg:px-16 py-3 lg:py-4 rounded-[32px] sm:rounded-[40px] lg:rounded-[53px] text-sm sm:text-base md:text-lg lg:text-xl font-normal h-12 sm:h-14 md:h-16 lg:h-18">
-              Download Material
+              Access Advanced Resources
             </Button>
           </div>
         </div>
@@ -339,12 +339,12 @@ export const Techniques = () => {
           {/* Header Content */}
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mb-4 lg:mb-6">
-              <span className="text-ethos-gray">Evaluation and </span>
-              <span className="text-ethos-purple">Testing</span>
+              <span className="text-ethos-gray">Quality Assurance and </span>
+              <span className="text-ethos-purple">Performance Validation</span>
             </h2>
 
             <p className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed tracking-tight max-w-5xl mx-auto">
-              Just like software testing, prompt engineering requires systematic evaluation to ensure reliability and effectiveness.
+              Enterprise AI implementations demand rigorous quality assurance protocols to ensure consistent performance, reliability, and business value delivery across diverse operational scenarios.
             </p>
           </div>
 
@@ -362,7 +362,7 @@ export const Techniques = () => {
             {/* Subtitle */}
             <div className="mb-8">
               <h3 className="text-ethos-gray text-2xl font-semibold leading-[1.2] tracking-[-0.72px] text-left">
-                Things to keep in mind..
+                Enterprise validation framework:
               </h3>
             </div>
 
@@ -371,7 +371,7 @@ export const Techniques = () => {
               {/* Testing Strategies Card */}
               <div className="bg-white rounded-[50px] p-8 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[431px] flex flex-col">
                 <h4 className="text-ethos-gray text-xl font-medium leading-[1.1] tracking-[-0.6px] text-center mb-6">
-                  Testing Strategies
+                  Validation Methodologies
                 </h4>
 
                 <div className="space-y-6 flex-1">
@@ -389,10 +389,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.1] tracking-[-0.54px] mb-1">
-                        Edge Cases
+                        Boundary Testing
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.1] tracking-[-0.54px]">
-                        Test with unusual or extreme inputs
+                        Validate performance with edge cases and exceptional business scenarios
                       </p>
                     </div>
                   </div>
@@ -411,10 +411,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.1] tracking-[-0.54px] mb-1">
-                        Variations
+                        Consistency Validation
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.1] tracking-[-0.54px]">
-                        Try different phrasings of the same prompt
+                        Test multiple formulations to ensure consistent, reliable outputs
                       </p>
                     </div>
                   </div>
@@ -433,10 +433,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.1] tracking-[-0.54px] mb-1">
-                        Cross-Validation
+                        Multi-Model Testing
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.1] tracking-[-0.54px]">
-                        Test across different AI models if possible
+                        Validate across multiple AI systems to ensure robust performance
                       </p>
                     </div>
                   </div>
@@ -446,7 +446,7 @@ export const Techniques = () => {
               {/* Iteration Process Card */}
               <div className="bg-white rounded-[50px] p-8 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[431px] flex flex-col">
                 <h4 className="text-ethos-gray text-xl font-medium leading-[1.1] tracking-[-0.6px] text-center mb-6">
-                  Iteration Process
+                  Optimization Workflow
                 </h4>
 
                 <div className="space-y-6 flex-1">
@@ -464,10 +464,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-1">
-                        Initial Testing
+                        Baseline Assessment
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                        Start with the simple test cases
+                        Establish performance baselines with standard business scenarios
                       </p>
                     </div>
                   </div>
@@ -486,10 +486,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-1">
-                        Analyze Results
+                        Performance Analysis
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                        Identify patterns in response
+                        Evaluate output quality, consistency, and business relevance
                       </p>
                     </div>
                   </div>
@@ -508,10 +508,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-1">
-                        Refine Prompt
+                        Strategic Optimization
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                        Adjust based on findings
+                        Enhance prompts based on performance data and business requirements
                       </p>
                     </div>
                   </div>
@@ -530,10 +530,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-1">
-                        Validate Changes
+                        Impact Assessment
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                        Re-test the refined prompt
+                        Verify improvements deliver measurable business value
                       </p>
                     </div>
                   </div>
@@ -543,7 +543,7 @@ export const Techniques = () => {
               {/* Success Matrix Card */}
               <div className="bg-white rounded-[50px] p-8 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[431px] flex flex-col">
                 <h4 className="text-ethos-gray text-xl font-medium leading-[1.1] tracking-[-0.6px] text-center mb-6">
-                  Success Matrix
+                  Performance Metrics
                 </h4>
 
                 <div className="space-y-6 flex-1">
@@ -561,10 +561,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-1">
-                        Accuracy
+                        Business Accuracy
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                        Are the responses correct and relevant?
+                        Do outputs meet business requirements and quality standards?
                       </p>
                     </div>
                   </div>
@@ -583,10 +583,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-1">
-                        Consistency
+                        Operational Consistency
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                        Do similar prompts get similar responses?
+                        Do equivalent business scenarios generate consistent, reliable outputs?
                       </p>
                     </div>
                   </div>
@@ -605,10 +605,10 @@ export const Techniques = () => {
                     </div>
                     <div>
                       <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-1">
-                        Usability
+                        Business Value
                       </h5>
                       <p className="text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                        Is the output format practical and useful?
+                        Do deliverables integrate effectively with business workflows and decision-making?
                       </p>
                     </div>
                   </div>
@@ -618,19 +618,19 @@ export const Techniques = () => {
               {/* Documentation Card */}
               <div className="bg-white rounded-[50px] p-8 shadow-[0_4px_4px_0_rgba(0,0,0,0.25),30px_30px_50px_0_rgba(0,39,80,0.05)_inset,-30px_-30px_50px_0_rgba(255,255,255,0.70)_inset] min-h-[431px] flex flex-col">
                 <h4 className="text-ethos-gray text-xl font-medium leading-[1.1] tracking-[-0.6px] text-center mb-6">
-                  Documentation
+                  Knowledge Management
                 </h4>
 
                 <div className="flex-1">
                   <div className="mb-6">
                     <h5 className="text-ethos-purple text-lg font-normal leading-[1.45] tracking-[-0.54px] mb-4">
-                      Keep track of your prompt engineering process
+                      Maintain comprehensive documentation of enterprise AI implementations
                     </h5>
                     <div className="space-y-2 text-ethos-gray text-lg font-normal leading-[1.45] tracking-[-0.54px]">
-                      <p>• Record successful patterns</p>
-                      <p>• Document edge cases</p>
-                      <p>• Note model-specific behaviors</p>
-                      <p>• Share learnings with team</p>
+                      <p>• Document proven methodologies and best practices</p>
+                      <p>• Catalog business scenarios and performance outcomes</p>
+                      <p>• Track AI system capabilities and limitations</p>
+                      <p>• Enable organizational knowledge sharing and continuous improvement</p>
                     </div>
                   </div>
                 </div>

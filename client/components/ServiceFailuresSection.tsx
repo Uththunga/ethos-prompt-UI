@@ -21,11 +21,11 @@ export const ServiceFailuresSection = () => {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-[1.13] tracking-[-0.03em] max-w-7xl"
           >
             <span style={{ color: '#0F1345' }}>
-              Stop losing your Clients and Money
+              Eliminate Client Loss and Revenue Decline
             </span>
             <br />
-            <span style={{ color: '#0F1345' }}>due to </span>
-            <span style={{ color: '#7409C5' }}>service failures</span>
+            <span style={{ color: '#0F1345' }}>caused by </span>
+            <span style={{ color: '#7409C5' }}>operational inefficiencies</span>
           </h2>
         </div>
 
@@ -44,7 +44,7 @@ export const ServiceFailuresSection = () => {
               {/* Content */}
               <div className="relative z-10 p-6 sm:p-6 lg:p-8 xl:p-10 min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] flex flex-col justify-center">
                 <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-tight tracking-tight mb-4 sm:mb-6 lg:mb-8 text-center">
-                  Our AI agents are ideal for
+                  Our AI solutions excel when you face
                 </h3>
                 
                 <div className="space-y-4 sm:space-y-5 lg:space-y-6">
@@ -56,7 +56,7 @@ export const ServiceFailuresSection = () => {
                       aria-hidden="true"
                     />
                     <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                      High employee turnover & low commitment issues
+                      High employee turnover and engagement challenges
                     </p>
                   </div>
                   
@@ -70,7 +70,7 @@ export const ServiceFailuresSection = () => {
                       aria-hidden="true"
                     />
                     <p className="text-white text-xs sm:text-sm lg:text-base leading-relaxed tracking-[-0.03em] transition-opacity duration-200 group-hover/item:opacity-90">
-                      Want to scale sales without extra workload
+                      Need to scale operations without increasing overhead
                     </p>
                   </div>
                   
@@ -114,7 +114,7 @@ export const ServiceFailuresSection = () => {
               <div className="relative z-10 p-4 sm:p-6 lg:p-8 xl:p-10 flex items-center justify-center min-h-[200px] sm:min-h-[240px] lg:min-h-[280px]">
                 <div className="w-full text-center">
                   <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-normal leading-[1.46] tracking-[-0.03em] transition-opacity duration-300 group-hover:opacity-95">
-                    Our AI agents serve 24/7, responding quickly, professionally and accurately and ensure no client is forgotten
+                    Our AI solutions provide 24/7 availability, delivering fast, professional, and accurate responses while ensuring every client receives exceptional service
                   </p>
                   
                   {/* Subtle accent line */}
@@ -133,7 +133,7 @@ export const ServiceFailuresSection = () => {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.13] tracking-[-0.03em] mb-8 sm:mb-10 lg:mb-12" 
             style={{ color: '#484848' }}
           >
-            See how it works in the real world
+            Experience our solutions in action
           </h2>
           <div className="flex justify-center">
             <Button
@@ -141,7 +141,7 @@ export const ServiceFailuresSection = () => {
               size="cta"
               aria-label="Schedule a demonstration of our AI agent services"
             >
-              Schedule your Demo
+              Schedule a Demonstration
             </Button>
           </div>
         </footer>

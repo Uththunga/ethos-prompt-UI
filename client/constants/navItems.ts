@@ -24,7 +24,7 @@ export const NAV_ITEMS: NavItem[] = [
   },
   { 
     path: '/contact', 
-    label: 'Contact us',
+    label: 'Contact Us',
     ariaLabel: 'Contact Us'
   },
 ];

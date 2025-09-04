@@ -30,20 +30,20 @@ export const Contact = () => {
               {/* Main Heading */}
               <header className="space-y-6">
                 <h1 id="contact-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold font-poppins leading-tight tracking-tight">
-                  <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Contact our </span>
-                  <span className="text-ethos-purple">Sales Team </span>
+                  <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Connect with our </span>
+                  <span className="text-ethos-purple">Solutions Experts </span>
                   <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Today</span>
                 </h1>
                 
                 <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight max-w-4xl">
-                  Experience how EthosPrompt's powerful AI automation platform helps businesses streamline operations, integrate tools, and unlock smarter workflows—seamlessly and securely.
+                  Discover how EthosPrompt's enterprise AI platform transforms organizational efficiency through intelligent automation, seamless integrations, and strategic workflow optimization—delivered with enterprise-grade security.
                 </p>
               </header>
 
               {/* Discussion Points */}
               <section className="space-y-6" aria-labelledby="discussion-heading">
                 <h2 id="discussion-heading" className="text-ethos-gray text-base md:text-lg lg:text-xl font-medium leading-relaxed tracking-tight">
-                  Lets connect to discuss;
+                  Let's schedule a consultation to discuss:
                 </h2>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8" role="list">
@@ -60,7 +60,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        Maximizing ROI with EthosPrompt Agents
+                        Maximizing ROI with enterprise AI solutions
                       </p>
                     </div>
                     
@@ -75,7 +75,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        Tailored solutions for your specific industry
+                        Industry-specific AI implementation strategies
                       </p>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        Finding the best plan for your business
+                        Optimal deployment plans for your organization
                       </p>
                     </div>
                     
@@ -108,7 +108,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        A live demo to see EthosPrompt in action
+                        Live demonstration of our enterprise platform
                       </p>
                     </div>
                   </div>
@@ -119,10 +119,10 @@ export const Contact = () => {
               <section className="space-y-4" aria-labelledby="contact-info-heading">
                 <h3 id="contact-info-heading" className="sr-only">Contact Information</h3>
                 <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                  Talk to an EthosPrompt expert today: <span className="font-medium">+1 (877) XXX-XXXX</span>
+                  Speak with an EthosPrompt solutions specialist: <span className="font-medium">+1 (877) XXX-XXXX</span>
                 </p>
                 <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                  Need help? For technical or billing support, visit our <span className="font-medium">Help Center</span> for FAQs and troubleshooting resources.
+                  Need assistance? For technical support or billing inquiries, visit our <span className="font-medium">Support Center</span> for comprehensive resources and expert guidance.
                 </p>
               </section>
             </section>
@@ -327,7 +327,7 @@ export const Contact = () => {
                   {/* Marketing Consent */}
                   <div className="space-y-4 md:space-y-6">
                     <p className="text-ethos-gray text-sm sm:text-base font-normal leading-relaxed tracking-tight">
-                      By selecting yes, you authorize EthosPrompt to contact you about product offerings, services, events, webinars, and other marketing materials. You may adjust your marketing preferences at any time by visiting <span className="underline">here</span>.
+                      By proceeding, you authorize EthosPrompt to contact you regarding our enterprise solutions, services, industry events, educational webinars, and relevant business communications. You may update your communication preferences at any time by visiting <span className="underline">our preference center</span>.
                     </p>
                   </div>
 
@@ -345,7 +345,7 @@ export const Contact = () => {
                       />
                       <label htmlFor="terms-agreement" className="text-ethos-gray text-sm sm:text-base font-normal leading-relaxed tracking-tight cursor-pointer">
                         <span id="terms-description">
-                          By checking this box, you agree to EthosPrompt's <span className="underline">Terms of Service</span> and confirm you have read EthosPrompt's <span className="underline">Privacy Policy</span>. You understand that the personal information you submit through this website may be stored and processed by EthosPrompt and its third party service providers in Australia and elsewhere to provide the services you requested and submission of this form indicates your consent to such transfer.
+                          By selecting this option, you acknowledge agreement to EthosPrompt's <span className="underline">Terms of Service</span> and confirm you have reviewed our <span className="underline">Privacy Policy</span>. You understand that information submitted may be processed by EthosPrompt and authorized service providers globally to deliver requested services, and form submission constitutes consent to such processing.
                         </span>
                       </label>
                     </div>
@@ -358,7 +358,7 @@ export const Contact = () => {
                       className="bg-ethos-purple hover:bg-ethos-purple-dark text-white px-8 py-3 rounded-full text-base font-medium h-12 w-full sm:w-auto min-w-[200px] transition-colors duration-200 focus:ring-2 focus:ring-offset-2 focus:ring-ethos-purple"
                       aria-label="Submit contact form to reach our sales team"
                     >
-                      Contact Us
+                      Request Consultation
                     </Button>
                   </div>
                 </form>
