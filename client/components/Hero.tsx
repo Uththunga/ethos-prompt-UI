@@ -104,7 +104,7 @@ export const Hero = () => {
             className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
             role="article"
             style={{
-              boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)'
+              boxShadow: '2px 8px 40px rgba(128, 128, 128, 0.2)'
             }}
           >
             <div className="mb-4 flex justify-start w-full">
@@ -129,7 +129,7 @@ export const Hero = () => {
             className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
             role="article"
             style={{
-              boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)'
+              boxShadow: '2px 8px 40px rgba(128, 128, 128, 0.2)'
             }}
           >
             <div className="mb-4 flex justify-start w-full">
@@ -154,7 +154,7 @@ export const Hero = () => {
             className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
             role="article"
             style={{
-              boxShadow: '4px 14px 50.400001525878906px rgba(139, 113, 221, 0.26)'
+              boxShadow: '2px 8px 40px rgba(128, 128, 128, 0.2)'
             }}
           >
             <div className="mb-4 flex justify-start w-full">

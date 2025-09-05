@@ -17,7 +17,7 @@ export const WaysWeCanHelp = () => {
   
   // For assets in the public directory, we should use the Vite base URL
   const baseUrl = import.meta.env.BASE_URL || '/';
-  const moleImagePath = `${baseUrl}assets/images/Mole.png`;
+  const moleImagePath = `${baseUrl}assets/images/mole1.png`;
   
   const services = [
     [
@@ -66,48 +66,50 @@ export const WaysWeCanHelp = () => {
   ];
 
   return (
-    <section className="w-full pt-12 md:pt-16 lg:pt-20 pb-8 md:pb-12 lg:pb-16" style={{ background: 'linear-gradient(180deg, #FFF 37.11%, #E8E8E8 100%)' }} aria-labelledby="ai-agent-heading">
+    <section className="w-full pt-8 md:pt-12 lg:pt-16 pb-6 md:pb-10 lg:pb-12" style={{ background: 'linear-gradient(180deg, #FFF 37.11%, #E8E8E8 100%)' }} aria-labelledby="ai-agent-heading">
       <style dangerouslySetInnerHTML={{ __html: animationStyle }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Area */}
-        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-8 lg:gap-12 mb-16 md:mb-20 lg:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16 lg:mb-20">
           {/* Left Side - AI Agent Image - Hidden on mobile and tablet */}
           <div className="hidden lg:flex justify-start items-start relative">
-            <div className="relative -mt-16 sm:-mt-20 md:-mt-24 lg:-mt-32 -ml-8 sm:-ml-12 md:-ml-16 lg:-ml-20">
+            <div className="relative -mt-12 sm:-mt-16 md:-mt-20 lg:-mt-24 -ml-6 sm:-ml-10 md:-ml-14 lg:-ml-16">
               <img
                 src={moleImagePath}
                 alt="AI Agent"
-                className="w-full max-w-[360px] sm:max-w-[440px] md:max-w-[520px] lg:max-w-[600px] xl:max-w-[650px] h-auto object-contain animate-float-mole"
+                className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px] lg:max-w-[560px] xl:max-w-[600px] h-auto object-contain animate-float-mole"
                 loading="lazy"
               />
             </div>
           </div>
 
           {/* Right Side - Content */}
-          <div className="flex flex-col justify-center w-full space-y-4 sm:space-y-6 lg:space-y-8">
+          <div className="flex flex-col justify-center w-full space-y-3 sm:space-y-4 lg:space-y-6">
             {/* Main Heading */}
             <header>
-              <h2 id="ai-agent-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight tracking-tight mt-4 lg:mt-8 mb-3 lg:mb-4">
+              <h2 id="ai-agent-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mt-2 lg:mt-6 mb-2 lg:mb-3">
                 <span style={{ color: '#0F1345' }}>Enterprise AI Solutions for </span>
                 <span style={{ color: '#7409C5' }}>Modern Business</span>
               </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight text-ethos-gray">
+              <p className="text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight text-ethos-gray">
                 Deploy intelligent AI systems that work continuously for your organization. Our enterprise-grade solutions understand customer needs, automate complex workflows, and deliver consistent, high-quality service around the clock — ensuring operational excellence without human limitations.
               </p>
             </header>
 
             {/* Features List */}
-            <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+            <div className="space-y-4 sm:space-y-5 lg:space-y-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white font-medium text-sm lg:text-base bg-ethos-purple">
-                    {feature.number}
+                <div key={index} className="flex items-start space-x-4 sm:space-x-5">
+                  <div className="flex-shrink-0 mt-0.5 sm:mt-1">
+                    <div className="flex items-center justify-center w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-ethos-purple text-white text-xs sm:text-sm font-medium">
+                      {feature.number}
+                    </div>
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-ethos-navy mb-2">
+                    <h3 className="text-base sm:text-lg md:text-xl font-medium text-gray-900">
                       {feature.title}
                     </h3>
-                    <p className="text-sm sm:text-base md:text-lg text-ethos-gray leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-600 mt-1.5">
                       {feature.description}
                     </p>
                   </div>
@@ -143,7 +145,7 @@ export const WaysWeCanHelp = () => {
                   >
                     <h4 
                       id={`service-${rowIndex}-${index}`}
-                      className="text-base sm:text-lg font-medium mb-2 sm:mb-3 bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center justify-center"
+                      className="text-lg sm:text-xl font-medium mb-2 sm:mb-3 bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center justify-center"
                     >
                       {service.title}
                     </h4>

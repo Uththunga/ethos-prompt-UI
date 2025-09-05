@@ -26,16 +26,16 @@ export const Solutions = () => {
           </header>
 
           {/* AI Workflow Illustration */}
-          <div className="relative -mt-8 sm:-mt-10 lg:-mt-12">
+          <div className="relative -mt-12 sm:-mt-16 lg:-mt-20">
             <img
               src={`${baseUrl}assets/images/ai-workflow-illustration.jpg`}
               alt="AI Workflow Illustration showing various AI tools and integrations"
-              className="w-full h-auto mx-auto"
+              className="w-full max-w-5xl h-auto mx-auto"
             />
           </div>
 
           {/* Bottom Text */}
-          <div className="text-center">
+          <div className="text-center -mt-6 sm:-mt-8">
             <p className="text-ethos-gray text-sm sm:text-base lg:text-lg font-normal leading-relaxed tracking-tight max-w-4xl mx-auto">
               Transform your organization with intelligent AI systems designed to drive operational excellence, reduce costs, and accelerate business growth through strategic automation.
             </p>
@@ -120,7 +120,7 @@ export const Solutions = () => {
             </div>
 
             {/* Right Column - AI Workflow Diagram */}
-            <div className="relative flex justify-center items-start pt-4 sm:pt-6 lg:pt-8">
+            <div className="relative flex justify-center items-center w-full py-8 sm:py-12 lg:py-16">
               <img
                 src={`${baseUrl}assets/images/ai-workflow-diagram.svg`}
                 alt="AI Agent workflow diagram showing connections and integrations with productivity, financial, and communication tools"
