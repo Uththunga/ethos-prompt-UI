@@ -34,7 +34,7 @@ export const PromptingGuide = () => {
                 src={`${baseUrl}assets/images/ai-communication-illustration.jpg`}
                 alt=""
                 className="w-full h-auto object-contain"
-                style={{ maxHeight: '80vh', width: '100%' }}
+                style={{ maxHeight: '70vh', width: '100%' }}
                 aria-hidden="true"
               />
             </div>
@@ -149,12 +149,13 @@ export const PromptingGuide = () => {
                 </div>
 
                 {/* Image Column */}
-                <div className="order-1 lg:order-2 relative">
-                  <div className="flex justify-center">
+                <div className="order-1 lg:order-2 relative w-full">
+                  <div className="flex justify-center w-full">
                     <img
                       src={`${baseUrl}assets/images/prompting-illustration.jpg`}
                       alt="Interactive prompting illustration demonstrating AI conversation principles"
-                      className="w-full max-w-[500px] md:max-w-[600px] lg:max-w-[750px] xl:max-w-[900px] 2xl:max-w-[1000px] h-auto object-contain"
+                      className="w-full max-w-none h-auto object-contain"
+                      style={{ maxHeight: '56vh', width: 'auto' }}
                     />
                   </div>
                 </div>
