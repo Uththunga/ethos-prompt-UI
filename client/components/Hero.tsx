@@ -16,6 +16,54 @@ export const Hero = () => {
     .animate-float-slow {
       animation: float 4s ease-in-out infinite;
     }
+
+    @keyframes hero-star-border {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    /* Specific to Hero section cards */
+    .animate-star-border {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+    }
+    [role="list"][aria-label="Business results statistics"] .animate-star-border::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: -10px;
+      background: conic-gradient(
+        from 0deg,
+        rgba(139, 92, 246, 0.1),
+        rgba(139, 92, 246, 0.4),
+        rgba(168, 85, 247, 0.6),
+        rgba(192, 132, 252, 0.7),
+        rgba(216, 180, 254, 0.6),
+        rgba(139, 92, 246, 0.1) 180deg,
+        rgba(139, 92, 246, 0.4),
+        rgba(168, 85, 247, 0.6),
+        rgba(192, 132, 252, 0.7),
+        rgba(216, 180, 254, 0.6),
+        rgba(139, 92, 246, 0.1) 360deg
+      );
+      border-radius: inherit;
+      animation: hero-star-border 12s linear infinite;
+      opacity: 0.8;
+      filter: blur(2.5px);
+    }
+    [role="list"][aria-label="Business results statistics"] .animate-star-border::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 1.5px;
+      background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+      border-radius: inherit;
+      box-shadow: inset 0 0 25px rgba(139, 92, 246, 0.08);
+    }
   `;
   
   // For assets in the public directory, we should use the Vite base URL
@@ -101,10 +149,10 @@ export const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-3 lg:gap-4" role="list" aria-label="Business results statistics">
           {/* Card 1 - 30% */}
           <div 
-            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
+            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300 animate-star-border"
             role="article"
             style={{
-              boxShadow: '2px 8px 40px rgba(128, 128, 128, 0.2)'
+              boxShadow: '0 15px 35px -5px rgba(128, 128, 128, 0.25)'
             }}
           >
             <div className="mb-4 flex justify-start w-full">
@@ -126,10 +174,10 @@ export const Hero = () => {
 
           {/* Card 2 - 80% */}
           <div 
-            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
+            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300 animate-star-border"
             role="article"
             style={{
-              boxShadow: '2px 8px 40px rgba(128, 128, 128, 0.2)'
+              boxShadow: '0 15px 35px -5px rgba(128, 128, 128, 0.25)'
             }}
           >
             <div className="mb-4 flex justify-start w-full">
@@ -151,10 +199,10 @@ export const Hero = () => {
 
           {/* Card 3 - 40% */}
           <div 
-            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300"
+            className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition-all duration-300 animate-star-border"
             role="article"
             style={{
-              boxShadow: '2px 8px 40px rgba(128, 128, 128, 0.2)'
+              boxShadow: '0 15px 35px -5px rgba(128, 128, 128, 0.25)'
             }}
           >
             <div className="mb-4 flex justify-start w-full">

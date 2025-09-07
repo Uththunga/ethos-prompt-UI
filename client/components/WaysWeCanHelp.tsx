@@ -13,6 +13,54 @@ export const WaysWeCanHelp = () => {
     .animate-float-mole {
       animation: floatMole 4s ease-in-out infinite;
     }
+
+    @keyframes star-border {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .animate-star-border {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .animate-star-border::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: -12px;
+      background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(116, 9, 197, 0.4),
+        rgba(116, 9, 197, 0.6),
+        rgba(116, 9, 197, 0.6),
+        transparent 180deg,
+        rgba(116, 9, 197, 0.4),
+        rgba(116, 9, 197, 0.6),
+        rgba(116, 9, 197, 0.6),
+        transparent 360deg
+      );
+      border-radius: inherit;
+      opacity: 0;
+      transform: rotate(0deg);
+      transition: opacity 0.3s ease;
+    }
+    .animate-star-border:hover::before {
+      opacity: 0.25;
+      animation: star-border 12s linear infinite;
+    }
+    .animate-star-border::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      inset: 1px;
+      background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+      border-radius: inherit;
+    }
   `;
   
   // For assets in the public directory, we should use the Vite base URL
@@ -136,20 +184,38 @@ export const WaysWeCanHelp = () => {
                 {row.map((service, index) => (
                   <div
                     key={`${rowIndex}-${index}`}
-                    className="w-full h-full flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 text-center hover:shadow-xl transition-all duration-300"
+                    className="group w-full h-full flex flex-col bg-gradient-to-b from-white to-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 text-center transition-all duration-500 animate-star-border cursor-pointer"
                     role="article"
                     aria-labelledby={`service-${rowIndex}-${index}`}
                     style={{
-                      boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25), inset -30px -30px 50px rgba(255, 255, 255, 0.7), inset 30px 30px 50px rgba(0, 39, 80, 0.05)"
+                      boxShadow: "0 4px 4px rgba(116, 9, 197, 0.1), inset -30px -30px 50px rgba(255, 255, 255, 0.9), inset 30px 30px 50px rgba(116, 9, 197, 0.05)",
+                      transform: "perspective(1000px) rotateX(0deg) rotateY(0deg)",
+                      transformStyle: "preserve-3d",
+                      transition: "all 0.5s cubic-bezier(0.23, 1, 0.32, 1)"
+                    }}
+                    onMouseMove={(e) => {
+                      const card = e.currentTarget;
+                      const rect = card.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+                      const rotateX = (y - centerY) / 20;
+                      const rotateY = (centerX - x) / 20;
+                      
+                      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
                     }}
                   >
                     <h4 
                       id={`service-${rowIndex}-${index}`}
-                      className="text-lg sm:text-xl font-medium mb-2 sm:mb-3 bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center justify-center"
+                      className="text-lg sm:text-xl font-medium mb-2 sm:mb-3 bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center justify-center transform transition-transform duration-500 group-hover:scale-105"
                     >
                       {service.title}
                     </h4>
-                    <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed tracking-tight flex-grow flex items-center">
+                    <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed tracking-tight flex-grow flex items-center transform transition-all duration-500 group-hover:text-gray-800">
                       {service.subtitle}
                     </p>
                   </div>
