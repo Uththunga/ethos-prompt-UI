@@ -149,7 +149,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
         Skip to main content
       </a>
 
-      <div className="w-full bg-white/95 backdrop-blur-sm flex justify-between items-center py-4 md:py-5 border-b border-gray-100 sticky top-0 z-40">
+      <div className="w-full bg-white/95 backdrop-blur-sm flex justify-between items-center py-4 md:py-5 sticky top-0 z-40">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0 z-10">
@@ -271,7 +271,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
           onClick={(e) => e.stopPropagation()}
         >
           <div className="h-full flex flex-col overflow-y-auto">
-            <div className="px-6 py-4 border-b border-gray-100">
+            <div className="fixed w-full bg-white z-50 shadow-sm">
               <h2 className="text-base sm:text-lg font-medium text-ethos-navy">Menu</h2>
             </div>
             

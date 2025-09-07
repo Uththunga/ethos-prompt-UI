@@ -84,7 +84,7 @@ export const Hero = () => {
       {/* Main Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20">
         {/* Hero Banner */}
-       <section className="relative z-10 text-center mb-4 -mt-2" aria-labelledby="hero-heading">
+       <section className="relative z-10 text-center mb-12 -mt-2" aria-labelledby="hero-heading">
           <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-tight">
             <span className="bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
             Accelerate Your Business Growth
