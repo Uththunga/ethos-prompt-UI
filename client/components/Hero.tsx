@@ -113,7 +113,7 @@ export const Hero = () => {
                 src={group287Path}
                 alt="Decorative SVG graphic"
                 className="hidden lg:block absolute top-[54%] left-[54%] transform -translate-x-1/2 -translate-y-1/2 w-[67%] h-auto"
-                style={{ zIndex: 2 }}
+                style={{ zIndex: 25 }}
               />
             {/* Mobile/Tablet Image - shown on screens smaller than lg */}
             <img
@@ -158,7 +158,7 @@ export const Hero = () => {
             <div className="mb-4 flex justify-start w-full">
               <div className="bg-white rounded-full px-3 py-1 sm:px-4 sm:py-1.5">
                 <span
-                  className="block text-3xl md:text-4xl lg:text-5xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
+                  className="block text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
                 >
                   30%
                 </span>
@@ -183,7 +183,7 @@ export const Hero = () => {
             <div className="mb-4 flex justify-start w-full">
               <div className="bg-white rounded-full px-3 py-1 sm:px-4 sm:py-1.5">
                 <span
-                  className="block text-3xl md:text-4xl lg:text-5xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
+                  className="block text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
                 >
                   80%
                 </span>
@@ -208,7 +208,7 @@ export const Hero = () => {
             <div className="mb-4 flex justify-start w-full">
               <div className="bg-white rounded-full px-3 py-1 sm:px-4 sm:py-1.5">
                 <span
-                  className="block text-3xl md:text-4xl lg:text-5xl font-medium bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
+                  className="block text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent"
                 >
                   40%
                 </span>
