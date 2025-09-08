@@ -85,7 +85,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <div style={{ position: 'fixed', bottom: '2rem', right: '2rem', width: '80px', height: '80px', zIndex: 1000 }}>
+        <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-16 h-16 sm:w-20 sm:h-20 z-50">
           <Orb hoverIntensity={0.8} rotateOnHover={false} />
         </div>
 

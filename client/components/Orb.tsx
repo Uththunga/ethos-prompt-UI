@@ -291,7 +291,7 @@ export default function Orb({
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full h-full">
       <div ref={ctnDom} className="w-full h-full" />
       <MessageBox isVisible={isHovered} />
     </div>
