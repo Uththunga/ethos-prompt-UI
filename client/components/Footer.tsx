@@ -108,24 +108,23 @@ export const Footer = () => {
             <p className="text-gray-400 text-xs sm:text-sm md:text-base">
               &copy; {currentYear} EthosPrompt. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-white text-xs sm:text-sm md:text-base">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-400 hover:text-white text-xs sm:text-sm md:text-base">Terms of Service</Link>
               <Link to="/cookies" className="text-gray-400 hover:text-white text-xs sm:text-sm md:text-base">Cookie Policy</Link>
+              {/* Back to top button - now part of footer */}
+              <Button
+                onClick={scrollToTop}
+                className="ml-4 p-2 rounded-full shadow transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+                variant="outline"
+                size="sm"
+                aria-label="Back to top"
+              >
+                <FaArrowUp className="w-4 h-4" />
+              </Button>
             </div>
           </div>
         </div>
-
-        {/* Back to top button */}
-        <Button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 z-50"
-          variant="default"
-          size="icon"
-          aria-label="Back to top"
-        >
-          <FaArrowUp className="w-5 h-5" />
-        </Button>
       </div>
     </footer>
   );

@@ -16,6 +16,7 @@ import { PromptingGuide } from "./pages/PromptingGuide";
 import { Basics } from "./pages/Basics";
 import { Techniques } from "./pages/Techniques";
 import { Contact } from "./pages/Contact";
+import Orb from '@/components/Orb';
 
 const queryClient = new QueryClient();
 
@@ -84,6 +85,10 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <div style={{ position: 'fixed', bottom: '2rem', right: '2rem', width: '80px', height: '80px', zIndex: 1000 }}>
+          <Orb hoverIntensity={0.8} rotateOnHover={false} />
+        </div>
+
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
