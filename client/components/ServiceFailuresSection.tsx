@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { Button } from '@/components/ui/button';
+import ShinyText from './ShinyText';
 
 export const ServiceFailuresSection = () => {
   // For assets in the public directory, we should use the Vite base URL
@@ -25,7 +26,7 @@ export const ServiceFailuresSection = () => {
             </span>
             <br />
             <span style={{ color: '#0F1345' }}>caused by </span>
-            <span style={{ color: '#7409C5' }}>operational inefficiencies</span>
+            <ShinyText className="bg-gradient-to-r from-ethos-purple to-ethos-purple" speedInMs={10000}>operational inefficiencies</ShinyText>
           </h2>
         </div>
 

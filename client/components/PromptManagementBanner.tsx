@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import ShinyText from './ShinyText';
 
 export const PromptManagementBanner = () => {
   // For assets in the public directory, we should use the Vite base URL
@@ -31,7 +32,7 @@ export const PromptManagementBanner = () => {
 
               {/* Main Header */}
               <h2 id="prompt-management-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-tight tracking-tight bg-gradient-to-r from-white to-[#717493] bg-clip-text text-transparent mb-6 sm:mb-8 lg:mb-10">
-                AI-powered system for managing prompts
+                <ShinyText className="bg-gradient-to-r from-gray-500 via-gray-200 to-gray-500" speedInMs={10000}>AI-powered system for managing prompts</ShinyText>
               </h2>
 
               {/* Description */}

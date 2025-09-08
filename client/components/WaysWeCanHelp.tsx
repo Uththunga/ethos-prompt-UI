@@ -90,6 +90,7 @@ export const WaysWeCanHelp = () => {
     ]
   ];
 
+
   const features = [
     {
       number: 1,
@@ -114,7 +115,13 @@ export const WaysWeCanHelp = () => {
   ];
 
   return (
-    <section className="w-full pt-8 md:pt-12 lg:pt-16 pb-6 md:pb-10 lg:pb-12" style={{ background: 'linear-gradient(180deg, #FFF 37.11%, #E8E8E8 100%)' }} aria-labelledby="ai-agent-heading">
+    <section 
+      className="w-full pt-8 md:pt-12 lg:pt-16 pb-6 md:pb-10 lg:pb-12" 
+      style={{ background: 'linear-gradient(180deg, #FFF 37.11%, #E8E8E8 100%)' }} 
+      aria-labelledby="ai-agent-heading"
+    >
+      {/* Mobile-only spacer */}
+      <div className="block md:hidden h-8" />
       <style dangerouslySetInnerHTML={{ __html: animationStyle }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content Area */}
@@ -135,12 +142,18 @@ export const WaysWeCanHelp = () => {
           <div className="flex flex-col justify-center w-full space-y-3 sm:space-y-4 lg:space-y-6">
             {/* Main Heading */}
             <header>
-              <h2 id="ai-agent-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mt-2 lg:mt-6 mb-2 lg:mb-3">
+              <h2 
+                id="ai-agent-heading" 
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight tracking-tight mt-2 lg:mt-6 mb-2 lg:mb-3"
+              >
                 <span style={{ color: '#0F1345' }}>Enterprise AI Solutions for </span>
                 <span style={{ color: '#7409C5' }}>Modern Business</span>
               </h2>
               <p className="text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight text-ethos-gray">
-                Deploy intelligent AI systems that work continuously for your organization. Our enterprise-grade solutions understand customer needs, automate complex workflows, and deliver consistent, high-quality service around the clock — ensuring operational excellence without human limitations.
+                Deploy intelligent AI systems that work continuously for your organization. 
+                Our enterprise-grade solutions understand customer needs, automate complex workflows, 
+                and deliver consistent, high-quality service around the clock — ensuring operational 
+                excellence without human limitations.
               </p>
             </header>
 

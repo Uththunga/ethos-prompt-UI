@@ -95,7 +95,7 @@ const StarIcon = () => (
 
 const TestimonialCard = ({ testimonial }: TestimonialCardProps) => (
   <div
-    className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl min-h-[200px] sm:min-h-[220px] md:min-h-[240px] lg:min-h-[260px] xl:min-h-[280px] bg-gradient-to-b from-gray-50 to-gray-100 rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-4 sm:p-5 md:p-6 lg:p-7 mx-2 sm:mx-3 lg:mx-4 flex-shrink-0 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] focus-within:scale-[1.02]"
+    className="w-full max-w-[280px] sm:max-w-xs md:max-w-sm lg:max-w-md min-h-[180px] sm:min-h-[200px] md:min-h-[220px] lg:min-h-[240px] bg-gradient-to-b from-gray-50 to-gray-100 rounded-[20px] sm:rounded-[24px] md:rounded-[28px] lg:rounded-[32px] p-4 sm:p-5 md:p-6 lg:p-7 mx-2 sm:mx-3 lg:mx-4 flex-shrink-0 transition-all duration-300 hover:shadow-xl hover:scale-[1.02] focus-within:scale-[1.02]"
     style={{
       boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25), inset -30px -30px 50px rgba(255, 255, 255, 0.7), inset 30px 30px 50px rgba(0, 39, 80, 0.05)",
       transform: 'translate3d(0, 0, 0)', // Hardware acceleration
@@ -106,7 +106,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => (
     tabIndex={0}
   >
     <div className="w-full h-full relative flex flex-col">
-      <blockquote className="text-xs sm:text-sm md:text-base lg:text-lg bg-gradient-to-r from-ethos-gray to-ethos-gray-lighter bg-clip-text text-transparent leading-relaxed flex-1 mb-3 sm:mb-4 md:mb-6 font-normal">
+      <blockquote className="text-xs sm:text-sm md:text-base lg:text-lg bg-gradient-to-r from-ethos-gray to-ethos-gray-lighter bg-clip-text text-transparent leading-relaxed flex-1 mb-3 sm:mb-4 md:mb-5 font-normal">
         "{testimonial.text}"
       </blockquote>
       <footer className="flex items-center justify-between pt-2 sm:pt-3 border-t border-gray-100">
@@ -177,10 +177,10 @@ const ScrollingRow = ({ testimonials, direction = 'left' }: ScrollingRowProps) =
     const animationPromise = controls.start({
       x: to,
       transition: {
-        duration: 40,
+        duration: 80, // Slower speed
         ease: 'linear',
         repeat: Infinity,
-        repeatType: 'loop',
+        repeatType: 'loop', // Changed to loop for continuous motion in one direction
       },
     });
 

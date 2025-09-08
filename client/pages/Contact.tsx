@@ -271,7 +271,6 @@ export const Contact = () => {
                             <SelectItem value="fr">France</SelectItem>
                             <SelectItem value="it">Italy</SelectItem>
                             <SelectItem value="es">Spain</SelectItem>
-                            <SelectItem value="nz">New Zealand</SelectItem>
                             <SelectItem value="ae">United Arab Emirates</SelectItem>
                             <SelectItem value="sa">Saudi Arabia</SelectItem>
                             <SelectItem value="za">South Africa</SelectItem>
