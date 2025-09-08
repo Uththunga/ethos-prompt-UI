@@ -51,7 +51,7 @@ export const PromptManagementBanner = () => {
               </div>
 
               {/* Image - Right Side */}
-              <div className="lg:w-[50%] flex items-end justify-end mt-8 lg:mt-0 relative z-[9999] pt-48 pr-0 ml-auto">
+              <div className="hidden lg:flex items-end justify-end mt-8 lg:mt-0 relative z-[9999] pt-48 pr-0 ml-auto lg:w-[50%]">
                 <div className="relative w-full max-w-[1000px] h-full flex justify-end mr-[-100px]">
                   <img
                     src={`${baseUrl}assets/images/promptmole.png`}
