@@ -210,7 +210,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
           <div className="md:hidden z-20">
             <button
               ref={menuButtonRef}
-              className="p-2 -mr-2 rounded-md text-ethos-navy hover:text-ethos-purple focus:outline-none focus:ring-2 focus:ring-ethos-purple focus:ring-offset-2 transition-colors"
+              className="p-2.5 -mr-2 rounded-full text-ethos-navy hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 transition-all duration-200"
               onClick={() => {
                 const newState = !isMobileMenuOpen;
                 setIsMobileMenuOpen(newState);
@@ -223,22 +223,22 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
               <span className="sr-only">{isMobileMenuOpen ? 'Close menu' : 'Open menu'}</span>
-              <div className="w-6 h-6 relative">
+              <div className="w-5 h-5 flex flex-col justify-between items-center relative">
                 <span 
-                  className={`block absolute left-1/2 top-1/2 w-6 h-0.5 bg-current transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${
-                    isMobileMenuOpen ? 'rotate-45' : '-translate-y-2'
+                  className={`block w-5 h-0.5 bg-current rounded-full transform transition-all duration-300 ease-out ${
+                    isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''
                   }`}
                   aria-hidden="true"
                 />
                 <span 
-                  className={`block absolute left-1/2 top-1/2 w-6 h-0.5 bg-current transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-200 ${
-                    isMobileMenuOpen ? 'opacity-0' : 'opacity-100'
+                  className={`block w-5 h-0.5 bg-current rounded-full transform transition-all duration-300 ease-out ${
+                    isMobileMenuOpen ? 'opacity-0 -translate-x-4' : 'opacity-100'
                   }`}
                   aria-hidden="true"
                 />
                 <span 
-                  className={`block absolute left-1/2 top-1/2 w-6 h-0.5 bg-current transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${
-                    isMobileMenuOpen ? '-rotate-45' : 'translate-y-2'
+                  className={`block w-5 h-0.5 bg-current rounded-full transform transition-all duration-300 ease-out ${
+                    isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
                   }`}
                   aria-hidden="true"
                 />
