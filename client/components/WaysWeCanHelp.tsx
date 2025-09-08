@@ -239,7 +239,7 @@ export const WaysWeCanHelp = () => {
         </section>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-12 md:mt-16 lg:mt-20">
+        <div className="text-center mt-12 md:mt-16 lg:mt-20 mb-12 md:mb-16 lg:mb-20">
           <Link to="/solutions">
             <Button variant="cta" size="cta">
               Read more

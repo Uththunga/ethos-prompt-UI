@@ -30,20 +30,20 @@ export const Contact = () => {
               {/* Main Heading */}
               <header className="space-y-6">
                 <h1 id="contact-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold font-poppins leading-tight tracking-tight">
-                  <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Contact our </span>
-                  <span className="text-ethos-purple">Sales Team </span>
-                  <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Today</span>
+                  <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Connect with Our </span>
+                  <span className="text-ethos-purple">Enterprise Solutions </span>
+                  <span className="bg-gradient-to-b from-[#262A57] to-[#717493] bg-clip-text text-transparent">Team</span>
                 </h1>
                 
                 <p className="text-ethos-gray text-sm sm:text-base md:text-lg font-normal leading-relaxed tracking-tight max-w-4xl">
-                  Experience how EthosPrompt's powerful AI automation platform helps businesses streamline operations, integrate tools, and unlock smarter workflows—seamlessly and securely.
+                  Discover how EthosPrompt's AI-driven automation platform empowers organizations to optimize operations, integrate enterprise systems, and implement intelligent workflows with enterprise-grade security and scalability.
                 </p>
               </header>
 
               {/* Discussion Points */}
               <section className="space-y-6" aria-labelledby="discussion-heading">
                 <h2 id="discussion-heading" className="text-ethos-gray text-base md:text-lg lg:text-xl font-medium leading-relaxed tracking-tight">
-                  Lets connect to discuss;
+                  Schedule a Consultation to Discuss:
                 </h2>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8" role="list">
@@ -60,7 +60,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        Maximizing ROI with EthosPrompt Agents
+                        ROI Optimization Strategies with EthosPrompt Enterprise Solutions
                       </p>
                     </div>
                     
@@ -75,7 +75,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        Tailored solutions for your specific industry
+                        Industry-Specific Implementation Strategies
                       </p>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        Finding the best plan for your business
+                        Custom Enterprise Licensing and Support Plans
                       </p>
                     </div>
                     
@@ -108,7 +108,7 @@ export const Contact = () => {
                         />
                       </div>
                       <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                        A live demo to see EthosPrompt in action
+                        Interactive Platform Demonstration and Use Case Analysis
                       </p>
                     </div>
                   </div>
@@ -118,19 +118,24 @@ export const Contact = () => {
               {/* Contact Information */}
               <section className="space-y-4" aria-labelledby="contact-info-heading">
                 <h3 id="contact-info-heading" className="sr-only">Contact Information</h3>
-                <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                  Talk to an EthosPrompt expert today: <span className="font-medium">+1 (877) XXX-XXXX</span>
-                </p>
-                <p className="text-ethos-gray text-xs sm:text-sm md:text-base font-normal leading-relaxed tracking-tight">
-                  Need help? For technical or billing support, visit our <span className="font-medium">Help Center</span> for FAQs and troubleshooting resources.
-                </p>
+                <div className="space-y-3">
+                  <p className="text-ethos-gray text-sm sm:text-base font-normal leading-relaxed tracking-tight">
+                    <span className="font-medium">Enterprise Inquiries:</span> +1 (877) XXX-XXXX
+                  </p>
+                  <p className="text-ethos-gray text-sm sm:text-base font-normal leading-relaxed tracking-tight">
+                    <span className="font-medium">Business Hours:</span> Monday-Friday, 9:00 AM - 6:00 PM EST
+                  </p>
+                  <p className="text-ethos-gray text-xs sm:text-sm font-normal leading-relaxed tracking-tight">
+                    For immediate technical support, please visit our <a href="/support" className="font-medium text-ethos-purple hover:underline">Support Portal</a> or review our <a href="/faq" className="font-medium text-ethos-purple hover:underline">Knowledge Base</a>.
+                  </p>
+                </div>
               </section>
             </section>
 
             {/* Right Column - Contact Form */}
             <section className="w-full max-w-2xl xl:max-w-none" aria-labelledby="contact-form-heading">
               <div className="bg-gradient-to-b from-[#FBF9F9] to-[#F3F3F3] rounded-2xl md:rounded-3xl lg:rounded-[33px] p-4 sm:p-6 md:p-8 lg:p-12">
-                <h2 id="contact-form-heading" className="sr-only">Contact Form</h2>
+                <h2 id="contact-form-heading" className="text-xl font-semibold text-ethos-gray-dark mb-6">Request a Consultation</h2>
                 <form className="space-y-6" aria-label="Contact sales team form" noValidate>
                   {/* Form Grid */}
                   <fieldset className="grid grid-cols-1 sm:grid-cols-2 gap-6">
