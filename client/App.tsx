@@ -16,7 +16,7 @@ import { PromptingGuide } from "./pages/PromptingGuide";
 import { Basics } from "./pages/Basics";
 import { Techniques } from "./pages/Techniques";
 import { Contact } from "./pages/Contact";
-import Orb from '@/components/Orb';
+import Moleicon from '@/components/Moleicon';
 
 const queryClient = new QueryClient();
 
@@ -85,8 +85,8 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-16 h-16 sm:w-20 sm:h-20 z-50">
-          <Orb hoverIntensity={0.8} rotateOnHover={false} />
+        <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-20 h-20 z-50">
+          <Moleicon hoverIntensity={0.8} rotateOnHover={false} />
         </div>
 
       </BrowserRouter>
