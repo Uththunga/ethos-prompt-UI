@@ -3,30 +3,75 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import ServiceCard from '@/components/ui/service-card';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 const services = [
   {
-    title: 'Enterprise AI Solutions',
-    description: 'Tailored AI systems for customer service, sales optimization, and operational automation across your organization.'
+    title: 'Smart Business Assistant',
+    description: '• 24/7 AI-powered support for customer service and sales operations\n• Handles daily business operations like a skilled team member\n• Continuously learns and adapts to help your business grow'
   },
   {
-    title: 'System Integration & Automation',
-    description: 'Seamlessly connect AI with your enterprise apps—CRMs, calendars, and databases—for comprehensive workflow automation.'
+    title: 'Connect Everything',
+    description: '• Seamlessly integrates all your business tools and platforms\n• Automates data flow between email, calendar, and CRM systems\n• Ensures information reaches the right place at the right time'
   },
   {
     title: 'AI Prompt Optimization',
-    description: 'Advanced systems for organizing and optimizing AI interactions to ensure consistent, high-quality results every time.'
+    description: '• Advanced systems for refining AI interactions\n• Ensures consistent, high-quality AI responses\n• Optimizes prompts for better performance and accuracy'
   },
   {
     title: 'Intelligent Applications',
-    description: 'Dynamic web and mobile applications that intelligently adapt to user behavior for superior personalized experiences.'
+    description: '• Web and mobile apps that adapt to user behavior\n• Delivers personalized user experiences\n• Uses AI to continuously improve functionality'
   },
   {
-    title: 'Digital Transformation',
-    description: 'Complete modernization including enhanced UX, intelligent automation, and optimized customer engagement strategies.'
+    title: 'Modern Business Upgrade',
+    description: '• Transforms traditional operations with smart automation\n• Creates engaging digital experiences for customers\n• Future-proofs your business with cutting-edge technology'
   },
   {
     title: 'Continuous Support',
-    description: 'Dedicated ongoing optimization and support services to ensure your AI solutions continuously evolve with your needs.'
+    description: '• Dedicated team for ongoing system optimization\n• Regular updates to keep AI solutions current\n• Adapts to evolving business needs and challenges'
+  }
+];
+
+const integrationCapabilities = [
+  'Connect with 600+ business applications',
+  'Create unified workflows',
+  'Eliminate silos',
+  'Maximize efficiency',
+  'Orchestrate complex processes with precision',
+  'Enable reliable automation'
+];
+
+const keyBenefits = [
+  {
+    category: 'Operational Excellence',
+    items: [
+      'Streamlined workflows',
+      'Reduced manual tasks',
+      'Improved efficiency'
+    ]
+  },
+  {
+    category: 'Cost Reduction',
+    items: [
+      'Automated processes',
+      'Optimized resource usage',
+      'Reduced operational overhead'
+    ]
+  },
+  {
+    category: 'Strategic Growth',
+    items: [
+      'Data-driven decisions',
+      'Scalable solutions',
+      'Future-ready infrastructure'
+    ]
+  },
+  {
+    category: 'Customer Experience',
+    items: [
+      'Personalized interactions',
+      'Faster response times'
+    ]
   }
 ];
 
@@ -36,7 +81,7 @@ export const Solutions = memo(function Solutions() {
     const base = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
     return `${base}${path.replace(/^\/+/, '')}`;
   };
-  
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -67,7 +112,7 @@ export const Solutions = memo(function Solutions() {
                 fetchPriority="high"
               />
             </div>
-            
+
             {/* Bottom Text */}
             <div className="relative mt-0.5">
               <p className="text-ethos-gray text-base sm:text-lg lg:text-xl font-light leading-relaxed tracking-normal max-w-3xl mx-auto">
@@ -78,7 +123,7 @@ export const Solutions = memo(function Solutions() {
         </div>
       </section>
 
-      <section className="w-full pt-6 sm:pt-8 md:pt-12 lg:pt-16 pb-4 sm:pb-6 md:pb-10 lg:pb-12" style={{ background: 'linear-gradient(180deg, #FFF 37.11%, #E8E8E8 100%)' }} aria-labelledby="ethosprompt-help-heading">
+      <section className="w-full pt-0 -mt-12 sm:-mt-16 md:-mt-20 lg:-mt-24 pb-4 sm:pb-6 md:pb-10 lg:pb-12" style={{ background: 'linear-gradient(180deg, #FFF 37.11%, #E8E8E8 100%)' }} aria-labelledby="ethosprompt-help-heading">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           {/* Main Content Area */}
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-10 sm:mb-14 md:mb-16 lg:mb-20">
@@ -96,11 +141,11 @@ export const Solutions = memo(function Solutions() {
             </div>
 
             {/* Right Side - AI Workflow Diagram */}
-            <div className="relative flex justify-center items-center w-full py-6 sm:py-8 md:py-10 lg:py-12 order-1 lg:order-2">
+            <div className="relative flex justify-center items-center w-full max-w-4xl mx-auto -mt-8 sm:mt-0 pt-0 pb-1 sm:py-10 md:py-12 lg:py-16 order-1 lg:order-2">
               <img
-                src={withBase("assets/images/ai-workflow-diagram.svg")}
+                src="/assets/images/botsolution.png"
                 alt="AI Agent workflow diagram showing connections and integrations with productivity, financial, and communication tools"
-                className="w-full h-auto"
+                className="w-full h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-contain transition-all duration-300"
                 loading="lazy"
                 decoding="async"
               />
@@ -108,34 +153,142 @@ export const Solutions = memo(function Solutions() {
           </div>
 
           {/* Services Section */}
-          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 px-2 sm:px-4" aria-labelledby="services-heading">
-            <header className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+          <section className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 px-2 sm:px-4 relative" aria-labelledby="services-heading">
+            {/* Background Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-transparent pointer-events-none" />
+            
+            <motion.header 
+              className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               <h3 id="services-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-5.5xl xl:text-6xl font-medium leading-tight tracking-tight">
-                <span className="text-ethos-navy">Our</span>{' '}
-                <span className="text-ethos-purple">Services</span>
+                <span className="text-ethos-navy inline-block">
+                  Our
+                </span>{' '}
+                <span className="text-ethos-purple inline-block">
+                  Services
+                </span>
               </h3>
-            </header>
+            </motion.header>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8 max-w-7xl mx-auto relative">
               {services.map((service, index) => (
-                <div key={index} className="w-full">
-                  <ServiceCard {...service} />
-                </div>
+                <motion.div 
+                  key={index}
+                  className="w-full"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ 
+                    duration: 0.5,
+                    delay: 0.1 * index,
+                    ease: "easeOut"
+                  }}
+                >
+                  <div className="group h-full">
+                    <ServiceCard 
+                      {...service}
+                      className="transition-all duration-300 hover:scale-[1.02] hover:shadow-lg h-full"
+                    />
+                  </div>
+                </motion.div>
               ))}
             </div>
+
+            {/* Integration Capabilities Section */}
+            <motion.section 
+              className="mt-16 sm:mt-20 md:mt-24 max-w-5xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h4 className="text-2xl sm:text-3xl md:text-4xl font-medium text-ethos-navy text-center mb-6 sm:mb-8">
+                Integration Capabilities
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {integrationCapabilities.map((capability, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-4 shadow-sm border border-gray-100"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                  >
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 h-6 w-6 text-ethos-purple mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <p className="text-gray-700">{capability}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.section>
+
+            {/* Key Benefits Section */}
+            <motion.section 
+              className="mt-20 sm:mt-24 md:mt-28 max-w-7xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h4 className="text-2xl sm:text-3xl md:text-4xl font-medium text-ethos-navy text-center mb-8 sm:mb-12">
+                Key Benefits
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {keyBenefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                  >
+                    <h5 className="text-xl font-semibold text-ethos-purple mb-4">{benefit.category}</h5>
+                    <ul className="space-y-2">
+                      {benefit.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start">
+                          <span className="text-ethos-purple mr-2">•</span>
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.section>
             
             {/* CTA Button */}
-            <div className="col-span-full flex justify-center mt-8 sm:mt-10 md:mt-12 px-4">
+            <motion.div 
+              className="col-span-full flex justify-center mt-16 sm:mt-20 md:mt-24 px-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
               <Button 
                 variant="cta" 
                 size="cta" 
                 type="button" 
-                className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base"
+                className="group relative overflow-hidden w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
                 aria-label="Start your transformation with EthosPrompt"
               >
-                Start Your Transformation
+                <span className="relative z-10 flex items-center">
+                  Start Your Transformation
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-ethos-purple to-ethos-purple-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </Button>
-            </div>
+            </motion.div>
           </section>
         </div>
       </section>
@@ -143,9 +296,20 @@ export const Solutions = memo(function Solutions() {
       {/* Integration Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-white relative overflow-hidden" aria-labelledby="integration-heading">
         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-          {/* Background Image */}
-          <div className="absolute inset-0 flex justify-center items-center">
-            <img
+          {/* Background Image with Floating Animation */}
+          <motion.div 
+            className="absolute inset-0 flex justify-center items-center"
+            initial={{ y: 0 }}
+            animate={{
+              y: [0, -15, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <motion.img
               src={withBase("assets/images/integration-background.png")}
               alt=""
               role="presentation"
@@ -153,8 +317,17 @@ export const Solutions = memo(function Solutions() {
               className="w-full h-auto object-contain"
               loading="lazy"
               decoding="async"
+              initial={{ scale: 1 }}
+              animate={{
+                scale: [1, 1.02, 1],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
             />
-          </div>
+          </motion.div>
 
           {/* Content */}
           <div className="relative z-10 px-4 sm:px-6 lg:px-8">

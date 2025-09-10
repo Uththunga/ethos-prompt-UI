@@ -5,9 +5,10 @@ interface ServiceCardProps {
   icon?: React.ReactNode;
   title: string;
   description: string;
+  className?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, className = '' }) => {
   const styles = {
     '@keyframes floatMole': {
       '0%': { transform: 'translateY(0)' },
@@ -63,14 +64,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) =
     <div className="relative group">
       <style dangerouslySetInnerHTML={{ __html: styleContent }} />
       
-      <div className="animate-star-border bg-white rounded-xl p-6 md:p-7 lg:p-8 h-full flex flex-col">
+      <div className={`animate-star-border bg-white rounded-xl p-6 md:p-7 lg:p-8 h-full flex flex-col ${className}`}>
         {icon && (
           <div className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mb-4 md:mb-5 lg:mb-6 flex items-center justify-center bg-white rounded-2xl shadow-sm border border-gray-100">
             {icon}
           </div>
         )}
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-        <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+        <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+        <ul className="text-sm text-gray-600 space-y-2 list-disc pl-5">
+          {description.split('\n').map((point, index) => (
+            <li key={index} className="leading-relaxed">
+              {point.replace('• ', '')}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
