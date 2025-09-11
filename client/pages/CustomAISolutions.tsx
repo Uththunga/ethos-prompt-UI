@@ -172,12 +172,12 @@ export default function CustomAISolutions() {
         </div>
       }
       heroImage={
-        <div className="w-full lg:w-2/3 xl:w-1/2 ml-auto">
+        <div className="w-full lg:w-4/5 xl:w-2/3 ml-auto mr-8">
           <div className="relative w-full h-full flex items-center justify-center">
             <img 
               src="/assets/images/CAS.png" 
               alt="Smart Business Assistant in action" 
-              className="w-full max-w-md h-auto border-0 outline-none"
+              className="w-full max-w-6xl h-auto border-0 outline-none"
               style={{ background: 'transparent' }}
             />
           </div>
