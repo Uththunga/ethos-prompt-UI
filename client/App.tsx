@@ -16,6 +16,10 @@ import { PromptingGuide } from "./pages/PromptingGuide";
 import { Basics } from "./pages/Basics";
 import { Techniques } from "./pages/Techniques";
 import { Contact } from "./pages/Contact";
+import CustomAISolutions from "./pages/CustomAISolutions";
+import SystemIntegration from "./pages/SystemIntegration";
+import IntelligentApplications from "./pages/IntelligentApplications";
+import DigitalTransformation from "./pages/DigitalTransformation";
 import Moleicon from '@/components/Moleicon';
 
 const queryClient = new QueryClient();
@@ -46,6 +50,10 @@ const App = () => (
           <Route path="/basics" element={<Basics />} />
           <Route path="/techniques" element={<Techniques />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/custom-ai-solutions" element={<CustomAISolutions />} />
+          <Route path="/services/system-integration" element={<SystemIntegration />} />
+          <Route path="/services/intelligent-applications" element={<IntelligentApplications />} />
+          <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
           <Route
             path="/help-center"
             element={

@@ -71,21 +71,25 @@ export const WaysWeCanHelp = () => {
     [
       {
         title: "Custom AI Solutions",
-        subtitle: "Tailored AI systems for customer support, sales optimization, and operational automation."
+        subtitle: "Tailored AI systems for customer support, sales optimization, and operational automation.",
+        link: "/services/custom-ai-solutions"
       },
       {
         title: "System Integration & Automation",
-        subtitle: "Seamlessly connect AI to your existing applications for automated workflow management."
+        subtitle: "Seamlessly connect AI to your existing applications for automated workflow management.",
+        link: "/services/system-integration"
       }
     ],
     [
       {
         title: "Intelligent Applications",
-        subtitle: "Dynamic web and mobile applications that adapt intelligently to user behavior and preferences."
+        subtitle: "Dynamic web and mobile applications that adapt intelligently to user behavior and preferences.",
+        link: "/services/intelligent-applications"
       },
       {
         title: "Digital Transformation",
-        subtitle: "Modernize your digital presence with intelligent automation and enhanced user experiences."
+        subtitle: "Modernize your digital presence with intelligent automation and enhanced user experiences.",
+        link: "/services/digital-transformation"
       }
     ]
   ];
@@ -195,9 +199,10 @@ export const WaysWeCanHelp = () => {
             {services.map((row, rowIndex) => (
               <div key={rowIndex} className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
                 {row.map((service, index) => (
-                  <div
+                  <Link
                     key={`${rowIndex}-${index}`}
-                    className="group w-full h-full flex flex-col bg-gradient-to-b from-white to-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 text-center transition-all duration-500 animate-star-border cursor-pointer"
+                    to={service.link}
+                    className="group w-full h-full flex flex-col bg-gradient-to-b from-white to-gray-50 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 text-center transition-all duration-500 animate-star-border cursor-pointer hover:shadow-lg"
                     role="article"
                     aria-labelledby={`service-${rowIndex}-${index}`}
                     style={{
@@ -215,14 +220,14 @@ export const WaysWeCanHelp = () => {
                       const centerY = rect.height / 2;
                       const rotateX = (y - centerY) / 20;
                       const rotateY = (centerX - x) / 20;
-                      
+
                       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
                     }}
                   >
-                    <h4 
+                    <h4
                       id={`service-${rowIndex}-${index}`}
                       className="text-lg sm:text-xl font-medium mb-2 sm:mb-3 bg-gradient-to-r from-ethos-purple-gradient-start to-ethos-purple-gradient-end bg-clip-text text-transparent tracking-tight leading-snug min-h-[2.5rem] flex items-center justify-center transform transition-transform duration-500 group-hover:scale-105"
                     >
@@ -231,7 +236,7 @@ export const WaysWeCanHelp = () => {
                     <p className="text-sm sm:text-base font-normal text-gray-600 leading-relaxed tracking-tight flex-grow flex items-center transform transition-all duration-500 group-hover:text-gray-800">
                       {service.subtitle}
                     </p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             ))}

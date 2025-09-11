@@ -5,30 +5,34 @@ import { Button } from '@/components/ui/button';
 import ServiceCard from '@/components/ui/service-card';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-const services = [
+const mainServices = [
   {
     title: 'Smart Business Assistant',
-    description: '• 24/7 AI-powered support for customer service and sales operations\n• Handles daily business operations like a skilled team member\n• Continuously learns and adapts to help your business grow'
+    description: '• 24/7 AI-powered support for customer service and sales operations\n• Handles daily business operations like a skilled team member\n• Continuously learns and adapts to help your business grow',
+    href: '/custom-ai-solutions'
   },
   {
     title: 'Connect Everything',
-    description: '• Seamlessly integrates all your business tools and platforms\n• Automates data flow between email, calendar, and CRM systems\n• Ensures information reaches the right place at the right time'
-  },
-  {
-    title: 'AI Prompt Optimization',
-    description: '• Advanced systems for refining AI interactions\n• Ensures consistent, high-quality AI responses\n• Optimizes prompts for better performance and accuracy'
+    description: '• Seamlessly integrates all your business tools and platforms\n• Automates data flow between email, calendar, and CRM systems\n• Ensures information reaches the right place at the right time',
+    href: '/system-integration'
   },
   {
     title: 'Intelligent Applications',
-    description: '• Web and mobile apps that adapt to user behavior\n• Delivers personalized user experiences\n• Uses AI to continuously improve functionality'
+    description: '• AI-powered web and mobile apps that learn from user interactions\n• Personalized experiences through machine learning\n• Continuously improves with real-time data and analytics',
+    href: '/intelligent-applications'
   },
   {
     title: 'Modern Business Upgrade',
-    description: '• Transforms traditional operations with smart automation\n• Creates engaging digital experiences for customers\n• Future-proofs your business with cutting-edge technology'
-  },
+    description: '• Transforms traditional operations with smart automation\n• Creates engaging digital experiences for customers\n• Future-proofs your business with cutting-edge technology',
+    href: '/digital-transformation'
+  }
+];
+
+const featuredServices = [
   {
-    title: 'Continuous Support',
-    description: '• Dedicated team for ongoing system optimization\n• Regular updates to keep AI solutions current\n• Adapts to evolving business needs and challenges'
+    title: 'AI Prompt Optimization',
+    description: '• Advanced systems for refining AI interactions\n• Ensures consistent, high-quality AI responses\n• Optimizes prompts for better performance and accuracy',
+    className: 'bg-gradient-to-br from-ethos-purple/10 to-ethos-navy/10'
   }
 ];
 
@@ -166,7 +170,7 @@ export const Solutions = memo(function Solutions() {
             >
               <h3 id="services-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-5.5xl xl:text-6xl font-medium leading-tight tracking-tight">
                 <span className="text-ethos-navy inline-block">
-                  Our
+                  Our Core
                 </span>{' '}
                 <span className="text-ethos-purple inline-block">
                   Services
@@ -174,8 +178,9 @@ export const Solutions = memo(function Solutions() {
               </h3>
             </motion.header>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-8 max-w-7xl mx-auto relative">
-              {services.map((service, index) => (
+            {/* Main Services Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6 lg:gap-8 max-w-5xl mx-auto relative mb-12 sm:mb-16">
+              {mainServices.map((service, index) => (
                 <motion.div 
                   key={index}
                   className="w-full"
@@ -196,6 +201,33 @@ export const Solutions = memo(function Solutions() {
                   </div>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Featured Services - AI Prompt Optimization & Continuous Support */}
+            <div className="mb-8 sm:mb-12 md:mb-16">
+              <div className="flex justify-center items-center w-full px-4">
+                {featuredServices.map((service, index) => (
+                  <motion.div 
+                    key={index}
+                    className="w-full"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.5,
+                      delay: 0.1 * index,
+                      ease: "easeOut"
+                    }}
+                  >
+                    <div className={`group rounded-2xl p-6 sm:p-8 ${service.className} border border-ethos-purple/20 shadow-md hover:shadow-lg transition-all duration-300 w-full max-w-2xl mx-auto`}>
+                      <h4 className="text-xl sm:text-2xl font-semibold mb-3 text-ethos-navy">{service.title}</h4>
+                      <p className="text-ethos-gray text-sm sm:text-base whitespace-pre-line">
+                        {service.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
 
             {/* Integration Capabilities Section */}
