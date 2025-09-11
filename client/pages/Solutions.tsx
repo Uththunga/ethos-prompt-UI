@@ -9,22 +9,22 @@ const mainServices = [
   {
     title: 'Smart Business Assistant',
     description: '• 24/7 AI-powered support for customer service and sales operations\n• Handles daily business operations like a skilled team member\n• Continuously learns and adapts to help your business grow',
-    href: '/custom-ai-solutions'
+    href: '/services/custom-ai-solutions'
   },
   {
     title: 'Connect Everything',
     description: '• Seamlessly integrates all your business tools and platforms\n• Automates data flow between email, calendar, and CRM systems\n• Ensures information reaches the right place at the right time',
-    href: '/system-integration'
+    href: '/services/system-integration'
   },
   {
     title: 'Intelligent Applications',
     description: '• AI-powered web and mobile apps that learn from user interactions\n• Personalized experiences through machine learning\n• Continuously improves with real-time data and analytics',
-    href: '/intelligent-applications'
+    href: '/services/intelligent-applications'
   },
   {
     title: 'Modern Business Upgrade',
     description: '• Transforms traditional operations with smart automation\n• Creates engaging digital experiences for customers\n• Future-proofs your business with cutting-edge technology',
-    href: '/digital-transformation'
+    href: '/services/digital-transformation'
   }
 ];
 

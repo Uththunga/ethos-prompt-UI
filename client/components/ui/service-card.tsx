@@ -1,14 +1,16 @@
 import React from 'react';
 import { CSSProperties } from 'react';
+import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
   icon?: React.ReactNode;
   title: string;
   description: string;
   className?: string;
+  href?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, className = '' }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, className = '', href }) => {
   const styles = {
     '@keyframes floatMole': {
       '0%': { transform: 'translateY(0)' },
@@ -60,11 +62,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, cla
     return `${selector} {\n${ruleContent}\n}`;
   }).join('\n\n');
 
-  return (
+  const content = (
     <div className="relative group">
       <style dangerouslySetInnerHTML={{ __html: styleContent }} />
       
-      <div className={`animate-star-border bg-white rounded-xl p-6 md:p-7 lg:p-8 h-full flex flex-col ${className}`}>
+      <div className={`animate-star-border bg-white rounded-xl p-6 md:p-7 lg:p-8 h-full flex flex-col ${className} ${href ? 'cursor-pointer' : ''}`}>
         {icon && (
           <div className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 mb-4 md:mb-5 lg:mb-6 flex items-center justify-center bg-white rounded-2xl shadow-sm border border-gray-100">
             {icon}
@@ -81,6 +83,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, cla
       </div>
     </div>
   );
+
+  if (href) {
+    return (
+      <Link to={href} className="block h-full">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 };
 
 export default ServiceCard;
