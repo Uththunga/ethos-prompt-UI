@@ -50,7 +50,7 @@ export default function IntelligentApplications() {
         <div className="w-full lg:w-3/4 xl:w-2/3 ml-auto -mr-8">
           <div className="relative w-full h-full flex items-center justify-end pr-0">
             <img 
-              src="/assets/images/integrationapp.png" 
+              src={`${process.env.PUBLIC_URL || ''}/assets/images/integrationapp.png`} 
               alt="Intelligent Applications in action" 
               className="w-full max-w-4xl h-auto border-0 outline-none"
               style={{ background: 'transparent', maxHeight: '700px', objectFit: 'contain' }}

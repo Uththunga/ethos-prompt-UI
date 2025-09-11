@@ -177,7 +177,7 @@ export default function DigitalTransformation() {
         <div className="w-full lg:w-3/4 xl:w-2/3 ml-auto">
           <div className="relative w-full h-full flex items-center justify-center">
             <img 
-              src="/assets/images/digitaltransformation.png" 
+              src={`${process.env.PUBLIC_URL || ''}/assets/images/digitaltransformation.png`} 
               alt="Business technology modernization" 
               className="w-full max-w-3xl h-auto border-0 outline-none"
               style={{ background: 'transparent' }}
