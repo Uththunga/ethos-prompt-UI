@@ -35,6 +35,10 @@ import { ExitIntentPopup } from '@/components/ui/exit-intent-popup';
 import { useServiceExitIntent } from '@/hooks/useServiceExitIntent';
 import { StickyMobileCTA, getServiceCTAConfig } from '@/components/ui/sticky-mobile-cta';
 import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/components/ui/cross-service-navigation';
+import {
+  ServiceShowcaseTabs,
+  HorizontalScroll
+} from '@/components/ui/service-layout-components';
 
 // Extend the problem point type to include icon
 type ProblemPoint = {
@@ -414,30 +418,21 @@ export default function SystemIntegration() {
       logos={clientLogos}
     />
 
-    {/* Phase 3: Value Demonstration & Desire */}
-    {/* Client Testimonials - Detailed social proof with metrics */}
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Transformational Results from System Integration
-          </h2>
-          <p className="text-xl text-ethos-gray max-w-3xl mx-auto">
-            See how businesses eliminated manual work and recovered thousands in operational costs with our Connect Everything service.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <ClientTestimonial key={index} {...testimonial} />
-          ))}
-        </div>
-      </div>
-    </section>
-
     {/* Client Logos */}
     <ClientLogos
       title="Trusted by 150+ Data-Driven Organizations"
       logos={clientLogos}
+    />
+
+    {/* Phase 3: Value Demonstration & Desire - Tabbed Section */}
+    <ServiceShowcaseTabs
+      testimonials={testimonials}
+      pricing={pricingPlans}
+      trustSignals={{
+        certifications: ["Enterprise Integration Certified", "API Security Certified", "Data Protection Compliant"],
+        awards: ["Integration Excellence 2024", "Automation Leader Award"],
+        securityBadges: ["End-to-End Encryption", "Zero Data Loss Guarantee", "24/7 Monitoring"]
+      }}
     />
 
     {/* ROI Calculator */}
@@ -465,35 +460,7 @@ export default function SystemIntegration() {
       </div>
     </section>
 
-    {/* Pricing Section */}
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Integration Plans That Scale With You
-          </h2>
-          <p className="text-xl text-ethos-gray mb-8">
-            From simple automations to enterprise-wide integrations. All plans include setup, training, and ongoing support.
-          </p>
-          <div className="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full">
-            <CheckCircle className="w-5 h-5" />
-            <span className="font-medium">Free integration audit included</span>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingPlans.map((plan, index) => (
-            <PricingCard key={index} {...plan} />
-          ))}
-        </div>
-      </div>
-    </section>
 
-    {/* Trust Signals */}
-    <TrustSignals
-      certifications={["SOC 2 Type II", "ISO 27001", "GDPR Compliant"]}
-      awards={["Best Integration Platform 2024", "Enterprise Choice Award"]}
-      securityBadges={["Enterprise Security", "Data Encryption", "Compliance Ready"]}
-    />
 
     {/* Service Bundle Recommendation */}
     <section className="py-8 bg-white">

@@ -84,7 +84,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
       <div className="fixed bottom-4 right-4 z-50 md:hidden">
         <Button
           onClick={() => setIsMinimized(false)}
-          className="w-12 h-12 rounded-full bg-ethos-purple hover:bg-ethos-purple/90 text-white shadow-lg"
+          className="w-14 h-14 rounded-full bg-ethos-purple hover:bg-ethos-purple/90 text-white shadow-lg touch-manipulation"
           aria-label="Show contact options"
         >
           <ChevronUp className="w-5 h-5" />
@@ -113,7 +113,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
               <a
                 href={`tel:${phoneNumber}`}
                 onClick={handlePhoneClick}
-                className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="flex items-center space-x-3 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors min-h-[48px] touch-manipulation"
               >
                 <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                   <Phone className="w-5 h-5 text-green-600" />
@@ -129,7 +129,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
                 <Link
                   to={secondaryLink}
                   onClick={handleSecondaryClick}
-                  className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="flex items-center space-x-3 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors min-h-[48px] touch-manipulation"
                 >
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
                     <MessageCircle className="w-5 h-5 text-blue-600" />
@@ -156,8 +156,8 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
         <div className="flex items-center p-3">
           {/* Primary CTA Button */}
           <Link to={primaryLink} className="flex-1 mr-3" onClick={handlePrimaryClick}>
-            <Button 
-              className={`w-full h-12 text-white font-semibold text-base ${serviceColors[service]} shadow-lg`}
+            <Button
+              className={`w-full h-14 text-white font-semibold text-base ${serviceColors[service]} shadow-lg touch-manipulation`}
               size="lg"
             >
               {primaryText}
@@ -168,7 +168,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
           <Button
             onClick={() => setIsExpanded(!isExpanded)}
             variant="outline"
-            className="w-12 h-12 border-2 border-gray-300 hover:border-ethos-purple hover:bg-ethos-purple/5"
+            className="w-14 h-14 border-2 border-gray-300 hover:border-ethos-purple hover:bg-ethos-purple/5 touch-manipulation"
             aria-label="More contact options"
           >
             {isExpanded ? (

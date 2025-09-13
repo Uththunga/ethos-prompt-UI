@@ -29,7 +29,7 @@ export const ServiceCTA: React.FC<ServiceCTAProps> = ({
 
   return (
     <section 
-      className="bg-ethos-navy relative overflow-hidden py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32" 
+      className="bg-ethos-navy relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28"
       aria-labelledby="service-cta-heading"
     >
       {/* Background with gradient overlay */}
@@ -55,7 +55,7 @@ export const ServiceCTA: React.FC<ServiceCTAProps> = ({
         >
           <h2 
             id="service-cta-heading" 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 md:mb-8 lg:mb-10"
           >
             <motion.span 
               className="text-white block"
@@ -83,7 +83,7 @@ export const ServiceCTA: React.FC<ServiceCTAProps> = ({
           </h2>
           
           <motion.p 
-            className="text-white/90 text-base sm:text-lg lg:text-xl font-light leading-relaxed mb-10 sm:mb-12 md:mb-14 lg:mb-16 max-w-4xl mx-auto"
+            className="text-white/90 text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed mb-8 sm:mb-10 md:mb-12 lg:mb-14 max-w-4xl mx-auto px-4 sm:px-0"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -103,7 +103,7 @@ export const ServiceCTA: React.FC<ServiceCTAProps> = ({
           >
             <Link to={buttonLink}>
               <Button
-                className="group relative bg-gradient-to-r from-ethos-purple to-ethos-purple-dark hover:from-ethos-purple-dark hover:to-ethos-purple-darker text-white px-8 py-6 text-base sm:text-lg font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-ethos-purple/20 border-0"
+                className="group relative bg-gradient-to-r from-ethos-purple to-ethos-purple-dark hover:from-ethos-purple-dark hover:to-ethos-purple-darker text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-ethos-purple/20 border-0 min-h-[48px] min-w-[200px] touch-manipulation"
                 size="lg"
               >
                 <span className="relative z-10 flex items-center">

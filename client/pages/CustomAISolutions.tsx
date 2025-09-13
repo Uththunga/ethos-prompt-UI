@@ -19,11 +19,8 @@ import {
 } from 'lucide-react';
 import { ServiceCTA } from '@/components/services/ServiceCTA';
 import {
-  ClientTestimonial,
   ClientLogos,
-  PricingCard,
-  UrgencyBanner,
-  TrustSignals
+  UrgencyBanner
 } from '@/components/ui/service-enhancements';
 import { GatedROICalculator } from '@/components/ui/gated-roi-calculator';
 import { ExitIntentPopup } from '@/components/ui/exit-intent-popup';
@@ -36,6 +33,10 @@ import { useAnalytics, useScrollDepthTracking, useTimeOnPageTracking } from '@/h
 import { usePerformanceOptimization } from '@/hooks/usePerformanceOptimization';
 import { useABTest } from '@/hooks/useABTesting';
 import { useColorSystem } from '@/utils/colorSystemAudit';
+import {
+  ServiceShowcaseTabs,
+  CompactFAQ
+} from '@/components/ui/service-layout-components';
 
 // Extend the problem point type to include icon
 type ProblemPoint = {
@@ -325,14 +326,14 @@ export default function CustomAISolutions() {
       heroTitle={
         <>
           <div className="space-y-3 sm:space-y-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-ethos-navy leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-ethos-navy leading-tight">
               Smart Business Assistant
             </h2>
             <div className="space-y-3 sm:space-y-4">
-              <p className="text-xl md:text-2xl lg:text-3xl font-normal text-ethos-purple/90 leading-tight">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-ethos-purple/90 leading-tight">
                 Your 24/7 AI-Powered Team Member
               </p>
-              <p className="text-xl md:text-2xl lg:text-3xl font-normal text-ethos-navy/80 leading-tight">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-ethos-navy/80 leading-tight">
                 Never Miss an Opportunity Again
               </p>
             </div>
@@ -425,39 +426,22 @@ export default function CustomAISolutions() {
       limitedSlots={5}
     />
 
-    {/* Phase 2: Solution Understanding & Trust Building */}
-    {/* Trust Signals - Establish credibility early */}
-    <TrustSignals
-      certifications={["SOC 2 Type II", "GDPR Compliant", "ISO 27001"]}
-      awards={["Best AI Customer Service 2024", "Innovation Award 2024"]}
-      securityBadges={["256-bit SSL Encryption", "PCI DSS Compliant", "Regular Security Audits"]}
-    />
-
     {/* Client Logos - Social proof foundation */}
     <ClientLogos
       title="Trusted by 200+ Growing Businesses"
       logos={clientLogos}
     />
 
-    {/* Phase 3: Value Demonstration & Desire */}
-    {/* Client Testimonials - Detailed social proof with metrics */}
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Real Results from Real Businesses
-          </h2>
-          <p className="text-xl text-ethos-gray max-w-3xl mx-auto">
-            See how businesses like yours are recovering lost revenue and improving customer satisfaction with our Smart Business Assistant.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <ClientTestimonial key={index} {...testimonial} />
-          ))}
-        </div>
-      </div>
-    </section>
+    {/* Phase 3: Value Demonstration & Desire - Compact Tabbed Section */}
+    <ServiceShowcaseTabs
+      testimonials={testimonials}
+      pricing={pricingPlans}
+      trustSignals={{
+        certifications: ["SOC 2 Type II", "GDPR Compliant", "ISO 27001"],
+        awards: ["Best AI Customer Service 2024", "Innovation Award 2024"],
+        securityBadges: ["256-bit SSL Encryption", "PCI DSS Compliant", "Regular Security Audits"]
+      }}
+    />
 
     {/* Industry-Specific Examples - Technical proof and examples */}
     <section className="py-16 bg-gray-50">
@@ -470,7 +454,7 @@ export default function CustomAISolutions() {
             See how our Smart Business Assistant adapts to different business needs and delivers measurable results across industries.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {[
             {
               industry: "E-commerce",
@@ -544,35 +528,27 @@ export default function CustomAISolutions() {
       </div>
     </section>
 
-    {/* Phase 5: Objection Handling & Trust Building */}
-    {/* FAQ Section - Address common objections */}
-    <section className="py-16 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Frequently Asked Questions
-          </h2>
-        </div>
-        <div className="space-y-6">
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-ethos-navy mb-2">How quickly can we get started?</h3>
-            <p className="text-ethos-gray">With our Fast-Track Implementation, your Smart Business Assistant can be live and handling customer inquiries within 48 hours. Full customization and training typically takes 1-2 weeks.</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-ethos-navy mb-2">What if our team isn't technical?</h3>
-            <p className="text-ethos-gray">No technical expertise required! We handle all the setup, training, and integration. Your team just needs to review and approve the AI responses during the training phase.</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-ethos-navy mb-2">How do you ensure data security?</h3>
-            <p className="text-ethos-gray">We use bank-level 256-bit SSL encryption, are SOC 2 Type II certified, and undergo regular security audits. Your customer data is never shared or used for training other AI models.</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-lg font-semibold text-ethos-navy mb-2">What's the real ROI timeline?</h3>
-            <p className="text-ethos-gray">Most businesses see positive ROI within 30-60 days. Our clients typically recover their investment through increased after-hours conversions and reduced staffing costs within the first quarter.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    {/* Phase 5: Objection Handling & Trust Building - Compact FAQ */}
+    <CompactFAQ
+      faqs={[
+        {
+          question: "How quickly can we get started?",
+          answer: "With our Fast-Track Implementation, your Smart Business Assistant can be live and handling customer inquiries within 48 hours. Full customization and training typically takes 1-2 weeks."
+        },
+        {
+          question: "What if our team isn't technical?",
+          answer: "No technical expertise required! We handle all the setup, training, and integration. Your team just needs to review and approve the AI responses during the training phase."
+        },
+        {
+          question: "How do you ensure data security?",
+          answer: "We use bank-level 256-bit SSL encryption, are SOC 2 Type II certified, and undergo regular security audits. Your customer data is never shared or used for training other AI models."
+        },
+        {
+          question: "What's the real ROI timeline?",
+          answer: "Most businesses see positive ROI within 30-60 days. Our clients typically recover their investment through increased after-hours conversions and reduced staffing costs within the first quarter."
+        }
+      ]}
+    />
 
     {/* Dynamic Pricing Display - Pricing after value established */}
     <DynamicPricingDisplay

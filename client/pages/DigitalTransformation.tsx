@@ -38,6 +38,11 @@ import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/componen
 import { SecurityScanner } from '@/components/ui/security-scanner';
 import { InteractiveFAQ } from '@/components/ui/interactive-faq';
 import { SocialProofNotifications } from '@/components/ui/social-proof-notifications';
+import {
+  ServiceShowcaseTabs,
+  CompactFAQ,
+  HorizontalMetrics
+} from '@/components/ui/service-layout-components';
 
 // Extend the problem point type to include icon
 type ProblemPoint = {
@@ -413,29 +418,21 @@ export default function DigitalTransformation() {
       limitedSlots={5}
     />
 
-    {/* Client Testimonials */}
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Successful Digital Transformations
-          </h2>
-          <p className="text-xl text-ethos-gray max-w-3xl mx-auto">
-            See how businesses eliminated technical debt, reduced costs, and accelerated growth with our transformation services.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <ClientTestimonial key={index} {...testimonial} />
-          ))}
-        </div>
-      </div>
-    </section>
-
     {/* Client Logos */}
     <ClientLogos
       title="Trusted by 100+ Forward-Thinking Organizations"
       logos={clientLogos}
+    />
+
+    {/* Testimonials and Pricing Tabbed Section */}
+    <ServiceShowcaseTabs
+      testimonials={testimonials}
+      pricing={pricingPlans}
+      trustSignals={{
+        certifications: ["AWS Advanced Partner", "Microsoft Gold Partner", "Google Cloud Partner"],
+        awards: ["Digital Transformation Leader 2024", "Migration Excellence Award"],
+        securityBadges: ["Enterprise Security", "Zero Downtime Guarantee", "Data Protection Certified"]
+      }}
     />
 
     {/* ROI Calculator */}
@@ -463,35 +460,7 @@ export default function DigitalTransformation() {
       </div>
     </section>
 
-    {/* Pricing Section */}
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Transformation Investment Options
-          </h2>
-          <p className="text-xl text-ethos-gray mb-8">
-            From simple migrations to complete digital transformations. All projects include planning, execution, and post-launch support.
-          </p>
-          <div className="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full">
-            <CheckCircle className="w-5 h-5" />
-            <span className="font-medium">Free transformation assessment included</span>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingPlans.map((plan, index) => (
-            <PricingCard key={index} {...plan} />
-          ))}
-        </div>
-      </div>
-    </section>
 
-    {/* Trust Signals */}
-    <TrustSignals
-      certifications={["AWS Advanced Partner", "Microsoft Gold Partner", "Google Cloud Partner"]}
-      awards={["Digital Transformation Leader 2024", "Migration Excellence Award"]}
-      securityBadges={["Enterprise Security", "Zero Downtime Guarantee", "Data Protection Certified"]}
-    />
 
     {/* Service Bundle Recommendation */}
     <section className="py-8 bg-white">

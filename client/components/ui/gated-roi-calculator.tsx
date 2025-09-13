@@ -139,7 +139,7 @@ export const GatedROICalculator: React.FC<GatedROICalculatorProps> = ({
   const results = showResults ? calculation(inputValues) : null;
 
   return (
-    <Card className="p-6 md:p-8 bg-gradient-to-br from-ethos-purple/5 to-ethos-navy/5 border border-ethos-purple/20">
+    <Card className="p-4 sm:p-6 md:p-8 bg-gradient-to-br from-ethos-purple/5 to-ethos-navy/5 border border-ethos-purple/20">
       <div className="flex items-center space-x-3 mb-6">
         <Calculator className="w-8 h-8 text-ethos-purple" />
         <h3 className="text-2xl font-semibold text-ethos-navy">{title}</h3>
@@ -147,7 +147,7 @@ export const GatedROICalculator: React.FC<GatedROICalculatorProps> = ({
 
       <p className="text-ethos-gray mb-8">{description}</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
         {inputs.map((input, index) => (
           <div key={index}>
             <label className="block text-sm font-medium text-ethos-navy mb-2">
@@ -204,16 +204,16 @@ export const GatedROICalculator: React.FC<GatedROICalculatorProps> = ({
       {/* Email Gate Modal */}
       {showEmailGate && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-          <Card className="relative w-full max-w-md mx-auto bg-white shadow-2xl">
+          <Card className="relative w-full max-w-sm sm:max-w-md mx-auto bg-white shadow-2xl max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setShowEmailGate(false)}
-              className="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-100 transition-colors"
+              className="absolute top-4 right-4 p-3 rounded-full hover:bg-gray-100 transition-colors min-h-[48px] min-w-[48px] touch-manipulation"
               aria-label="Close"
             >
               <X className="w-5 h-5 text-gray-600" />
             </button>
 
-            <div className="p-6 sm:p-8">
+            <div className="p-4 sm:p-6 md:p-8">
               {isSubmitted ? (
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
@@ -290,7 +290,7 @@ export const GatedROICalculator: React.FC<GatedROICalculatorProps> = ({
       {/* Results Display */}
       {results && (
         <div className="space-y-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-white rounded-lg border border-ethos-purple/20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 sm:p-6 bg-white rounded-lg border border-ethos-purple/20">
             <div className="text-center">
               <div className="text-3xl font-bold text-green-600 mb-1">
                 ${results.monthlySavings.toLocaleString()}

@@ -17,6 +17,10 @@ import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/componen
 import { PortfolioFilter } from '@/components/ui/portfolio-filter';
 import { InteractiveFAQ } from '@/components/ui/interactive-faq';
 import { SocialProofNotifications } from '@/components/ui/social-proof-notifications';
+import {
+  ServiceShowcaseTabs,
+  HorizontalScroll
+} from '@/components/ui/service-layout-components';
 
 export default function IntelligentApplications() {
   // Exit intent popup functionality
@@ -355,29 +359,21 @@ export default function IntelligentApplications() {
       limitedSlots={8}
     />
 
-    {/* Client Testimonials */}
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Real Results from Modern Applications
-          </h2>
-          <p className="text-xl text-ethos-gray max-w-3xl mx-auto">
-            See how businesses transformed their operations and increased revenue with our web and mobile solutions.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <ClientTestimonial key={index} {...testimonial} />
-          ))}
-        </div>
-      </div>
-    </section>
-
     {/* Client Logos */}
     <ClientLogos
       title="Powering 300+ Modern Businesses"
       logos={clientLogos}
+    />
+
+    {/* Testimonials and Pricing Tabbed Section */}
+    <ServiceShowcaseTabs
+      testimonials={testimonials}
+      pricing={pricingPlans}
+      trustSignals={{
+        certifications: ["Google Partner", "AWS Certified", "React Certified"],
+        awards: ["Best Web Development 2024", "Mobile Excellence Award"],
+        securityBadges: ["SSL Secured", "GDPR Compliant", "PCI DSS Ready"]
+      }}
     />
 
     {/* ROI Calculator */}
@@ -405,35 +401,7 @@ export default function IntelligentApplications() {
       </div>
     </section>
 
-    {/* Pricing Section */}
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
-            Investment Options for Every Business
-          </h2>
-          <p className="text-xl text-ethos-gray mb-8">
-            From simple websites to complex applications. All projects include design, development, testing, and launch support.
-          </p>
-          <div className="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-4 py-2 rounded-full">
-            <CheckCircle className="w-5 h-5" />
-            <span className="font-medium">Free consultation and project audit included</span>
-          </div>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {pricingPlans.map((plan, index) => (
-            <PricingCard key={index} {...plan} />
-          ))}
-        </div>
-      </div>
-    </section>
 
-    {/* Trust Signals */}
-    <TrustSignals
-      certifications={["Google Partner", "AWS Certified", "React Certified"]}
-      awards={["Best Web Development 2024", "Mobile Excellence Award"]}
-      securityBadges={["SSL Secured", "GDPR Compliant", "PCI DSS Ready"]}
-    />
 
     {/* Service Bundle Recommendation */}
     <section className="py-8 bg-white">
@@ -509,55 +477,34 @@ export default function IntelligentApplications() {
       itemsPerPage={6}
     />
 
-    {/* Technology Stack */}
-    <section className="py-16 bg-gray-50">
+    {/* Technology Stack - Compact Horizontal */}
+    <section className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-ethos-navy mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-ethos-navy mb-4">
             Built with Modern Technology
           </h2>
-          <p className="text-xl text-ethos-gray">
-            We use the latest, most reliable technologies to ensure your applications are fast, secure, and scalable
+          <p className="text-lg text-ethos-gray">
+            Latest, reliable technologies for fast, secure, and scalable applications
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-blue-600 font-bold text-lg">React</span>
+        <HorizontalScroll itemWidth="140px" gap="1rem" className="py-4">
+          {[
+            { name: "React", color: "blue", category: "Frontend" },
+            { name: "Node", color: "green", category: "Backend" },
+            { name: "AWS", color: "purple", category: "Cloud" },
+            { name: "Swift", color: "orange", category: "iOS" },
+            { name: "Kotlin", color: "green", category: "Android" },
+            { name: "SQL", color: "blue", category: "Database" }
+          ].map((tech, index) => (
+            <div key={index} className="text-center bg-white rounded-lg p-4 shadow-sm">
+              <div className={`w-12 h-12 bg-${tech.color}-100 rounded-lg flex items-center justify-center mx-auto mb-2`}>
+                <span className={`text-${tech.color}-600 font-bold text-sm`}>{tech.name}</span>
+              </div>
+              <span className="text-xs text-ethos-gray">{tech.category}</span>
             </div>
-            <span className="text-sm text-ethos-gray">Frontend Framework</span>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-green-600 font-bold text-lg">Node</span>
-            </div>
-            <span className="text-sm text-ethos-gray">Backend Runtime</span>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-purple-600 font-bold text-lg">AWS</span>
-            </div>
-            <span className="text-sm text-ethos-gray">Cloud Platform</span>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-orange-600 font-bold text-lg">Swift</span>
-            </div>
-            <span className="text-sm text-ethos-gray">iOS Development</span>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-green-600 font-bold text-lg">Kotlin</span>
-            </div>
-            <span className="text-sm text-ethos-gray">Android Development</span>
-          </div>
-          <div className="text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
-              <span className="text-blue-600 font-bold text-lg">SQL</span>
-            </div>
-            <span className="text-sm text-ethos-gray">Database</span>
-          </div>
-        </div>
+          ))}
+        </HorizontalScroll>
       </div>
     </section>
 

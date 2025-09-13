@@ -262,7 +262,7 @@ export const Navigation = ({ className = '', onNavigate }: { className?: string;
         <div 
           ref={navRef}
           id="mobile-menu"
-          className={`absolute right-0 top-0 h-full w-full max-w-[280px] sm:max-w-[320px] md:max-w-sm bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
+          className={`absolute right-0 top-0 h-full w-full max-w-[300px] sm:max-w-[350px] md:max-w-sm bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
           role="dialog"

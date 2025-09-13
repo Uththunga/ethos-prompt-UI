@@ -101,13 +101,13 @@ export const ServicePageTemplate = memo(function ServicePageTemplate({
                       {heroSubtitle}
                     </span>
                   </div>
-                  <h1 id="service-hero-heading" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7.5xl font-semibold font-poppins leading-tight tracking-[-0.02em] space-y-2 sm:space-y-4">
+                  <h1 id="service-hero-heading" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold font-poppins leading-tight tracking-[-0.02em] space-y-2 sm:space-y-4">
                     <span className="block bg-gradient-to-r from-ethos-navy-light to-ethos-gray-light bg-clip-text text-transparent">
                       {heroTitle}
                     </span>
                   </h1>
                 </header>
-                <div className="text-ethos-gray text-base sm:text-lg lg:text-xl font-light leading-relaxed tracking-normal max-w-2xl px-2 sm:px-0 pt-2 sm:pt-0">
+                <div className="text-ethos-gray text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed tracking-normal max-w-2xl px-2 sm:px-0 pt-2 sm:pt-0">
                   {typeof heroDescription === 'string' ? (
                     <div dangerouslySetInnerHTML={{ __html: heroDescription }} className="space-y-4" />
                   ) : (
@@ -119,7 +119,7 @@ export const ServicePageTemplate = memo(function ServicePageTemplate({
                     <Button
                       variant="cta"
                       size="cta"
-                      className="group relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl min-h-[48px] min-w-[180px] px-6 py-3 text-base sm:text-lg"
+                      className="group relative overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-xl min-h-[48px] min-w-[200px] px-6 py-4 text-base sm:text-lg touch-manipulation"
                     >
                       <span className="relative z-10 flex items-center">
                         Get Started Today
@@ -137,7 +137,7 @@ export const ServicePageTemplate = memo(function ServicePageTemplate({
                     <img
                       src={withBase(heroImage)}
                       alt={heroImageAlt || "Service illustration"}
-                      className={`${heroImageClassName || 'w-full h-auto max-h-[300px] sm:max-h-[400px] md:max-h-[500px] max-w-md lg:max-w-2xl xl:max-w-3xl mx-auto lg:ml-auto lg:mr-0 object-contain'} mix-blend-multiply`}
+                      className={`${heroImageClassName || 'w-full h-auto max-h-[250px] sm:max-h-[350px] md:max-h-[450px] lg:max-h-[500px] max-w-sm sm:max-w-md lg:max-w-2xl xl:max-w-3xl mx-auto lg:ml-auto lg:mr-0 object-contain'} mix-blend-multiply`}
                       loading="eager"
                       decoding="async"
                       style={{ background: 'transparent' }}
@@ -151,34 +151,36 @@ export const ServicePageTemplate = memo(function ServicePageTemplate({
           </div>
         </section>
 
-        {/* Problem Statement Section */}
-        <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50" aria-labelledby="problem-heading">
+        {/* Problem Statement Section - Compact Layout */}
+        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50" aria-labelledby="problem-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
-              <header className="mb-12">
-                <div className="mb-8">
+              <header className="mb-10">
+                <div className="mb-6">
                   {problemTitle}
                 </div>
                 {problemDescription && (
-                  <p className="text-ethos-gray text-lg sm:text-xl lg:text-2xl font-light leading-relaxed">
+                  <p className="text-ethos-gray text-base sm:text-lg md:text-xl font-light leading-relaxed">
                     {problemDescription}
                   </p>
                 )}
               </header>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 {problemPoints.map((point, index) => (
                   <motion.div
                     key={index}
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                    className="bg-white rounded-lg p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="flex items-start">
-                      {point.icon}
-                      <p className="text-gray-700 text-sm leading-relaxed ml-3">{point.text}</p>
+                    <div className="flex items-start space-x-3">
+                      <div className="flex-shrink-0 mt-1">
+                        {point.icon}
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">{point.text}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -187,70 +189,70 @@ export const ServicePageTemplate = memo(function ServicePageTemplate({
           </div>
         </section>
 
-        {/* Solution Section */}
-        <section className="py-16 md:py-20 lg:py-24 bg-white" aria-labelledby="solution-heading">
+        {/* Solution Section - Compact 2-Row Layout */}
+        <section className="py-12 md:py-16 lg:py-20 bg-white" aria-labelledby="solution-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center mb-16">
-              <div className="mb-8">
+            <header className="text-center mb-12">
+              <div className="mb-6">
                 {solutionTitle}
               </div>
               {solutionDescription && (
-                <p className="text-ethos-gray text-lg sm:text-xl lg:text-2xl font-light leading-relaxed max-w-4xl mx-auto">
+                <p className="text-ethos-gray text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-4xl mx-auto">
                   {solutionDescription}
                 </p>
               )}
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
               {solutionFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
-                  className={`bg-gradient-to-br ${feature.gradient || 'from-gray-50 to-gray-100'} rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                  className={`bg-gradient-to-br ${feature.gradient || 'from-gray-50 to-gray-100'} rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-4">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Proof/Evidence Section */}
-        <section className="py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50" aria-labelledby="proof-heading">
+        {/* Proof/Evidence Section - Horizontal Layout */}
+        <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50" aria-labelledby="proof-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center mb-16">
-              <div className="mb-8">
+            <header className="text-center mb-10">
+              <div className="mb-6">
                 {proofTitle}
               </div>
               {proofDescription && (
-                <p className="text-ethos-gray text-lg sm:text-xl lg:text-2xl font-light leading-relaxed max-w-4xl mx-auto">
+                <p className="text-ethos-gray text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-4xl mx-auto">
                   {proofDescription}
                 </p>
               )}
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
               {proofItems.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow"
+                  className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow min-w-[240px] flex-1 max-w-[280px]"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <div className={`${item.bgColor || 'bg-ethos-purple/10'} w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6`}>
+                  <div className={`${item.bgColor || 'bg-ethos-purple/10'} w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4`}>
                     {item.icon}
                   </div>
-                  <div className="text-4xl font-bold text-ethos-navy mb-3">{item.metric}</div>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <div className="text-2xl sm:text-3xl font-bold text-ethos-navy mb-2">{item.metric}</div>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
                 </motion.div>
               ))}
             </div>

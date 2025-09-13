@@ -44,7 +44,7 @@ export const ClientTestimonial: React.FC<TestimonialProps> = ({
   rating
 }) => {
   return (
-    <Card className="p-6 md:p-8 bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+    <Card className="p-4 sm:p-6 md:p-8 bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
       <div className="flex items-start space-x-4 mb-6">
         <TestimonialAvatar
           src={image}
@@ -69,7 +69,7 @@ export const ClientTestimonial: React.FC<TestimonialProps> = ({
         "{testimonial}"
       </blockquote>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
         {metrics.map((metric, index) => (
           <div key={index} className="text-center">
             <div className="text-2xl font-bold text-ethos-purple mb-1">{metric.value}</div>
@@ -101,7 +101,7 @@ export const ClientLogos: React.FC<ClientLogosProps> = ({
         <h3 className="text-center text-2xl font-semibold text-ethos-navy mb-8">
           {title}
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8 items-center">
           {logos.map((client, index) => (
             <div key={index} className="flex flex-col items-center space-y-2">
               <ClientLogo
@@ -168,7 +168,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({
   const results = showResults ? calculateROI() : null;
 
   return (
-    <Card className="p-6 md:p-8 bg-gradient-to-br from-ethos-purple/5 to-ethos-navy/5 border border-ethos-purple/20">
+    <Card className="p-4 sm:p-6 md:p-8 bg-gradient-to-br from-ethos-purple/5 to-ethos-navy/5 border border-ethos-purple/20">
       <div className="flex items-center space-x-3 mb-6">
         <Calculator className="w-8 h-8 text-ethos-purple" />
         <h3 className="text-2xl font-semibold text-ethos-navy">{title}</h3>
@@ -176,7 +176,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({
 
       <p className="text-ethos-gray mb-8">{description}</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
         {inputs.map((input, index) => (
           <div key={index}>
             <label className="block text-sm font-medium text-ethos-navy mb-2">
@@ -229,7 +229,7 @@ export const ROICalculator: React.FC<ROICalculatorProps> = ({
       </Button>
 
       {results && (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-white rounded-lg border border-ethos-purple/20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 sm:p-6 bg-white rounded-lg border border-ethos-purple/20">
           <div className="text-center">
             <div className="text-3xl font-bold text-green-600 mb-1">
               ${results.monthlySavings.toLocaleString()}
@@ -281,9 +281,9 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   ctaLink = "/contact"
 }) => {
   return (
-    <Card className={`p-6 md:p-8 relative ${
+    <Card className={`p-4 sm:p-6 md:p-8 relative ${
       popular
-        ? 'border-2 border-ethos-purple shadow-xl scale-105'
+        ? 'border-2 border-ethos-purple shadow-xl sm:scale-105'
         : 'border border-gray-200 shadow-lg'
     }`}>
       {popular && (
@@ -302,8 +302,8 @@ export const PricingCard: React.FC<PricingCardProps> = ({
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start space-x-3">
-            <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-            <span className="text-ethos-gray-dark">{feature}</span>
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-1 flex-shrink-0" />
+            <span className="text-sm sm:text-base text-ethos-gray-dark">{feature}</span>
           </li>
         ))}
       </ul>
@@ -338,7 +338,7 @@ export const UrgencyBanner: React.FC<UrgencyBannerProps> = ({
 }) => {
   return (
     <div className="bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0">
         <div className="flex items-center space-x-3">
           <AlertCircle className="w-5 h-5" />
           <span className="font-medium">{message}</span>
@@ -377,7 +377,7 @@ export const TrustSignals: React.FC<TrustSignalsProps> = ({
   return (
     <div className="py-8 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="text-center">
             <Shield className="w-8 h-8 text-ethos-purple mx-auto mb-4" />
             <h4 className="font-semibold text-ethos-navy mb-2">Certifications</h4>
