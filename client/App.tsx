@@ -20,6 +20,11 @@ import CustomAISolutions from "./pages/CustomAISolutions";
 import SystemIntegration from "./pages/SystemIntegration";
 import IntelligentApplications from "./pages/IntelligentApplications";
 import DigitalTransformation from "./pages/DigitalTransformation";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
+import HelpCenter from "./pages/HelpCenter";
+import FAQ from "./pages/FAQ";
 import Moleicon from '@/components/Moleicon';
 
 const queryClient = new QueryClient();
@@ -54,24 +59,8 @@ const App = () => (
           <Route path="/services/system-integration" element={<SystemIntegration />} />
           <Route path="/services/intelligent-applications" element={<IntelligentApplications />} />
           <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-          <Route
-            path="/help-center"
-            element={
-              <PlaceholderPage
-                title="Help Center"
-                description="Find answers to your questions and get support."
-              />
-            }
-          />
-          <Route
-            path="/faq"
-            element={
-              <PlaceholderPage
-                title="FAQ"
-                description="Frequently asked questions about our AI services."
-              />
-            }
-          />
+          <Route path="/help-center" element={<HelpCenter />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route
             path="/tutorials"
             element={
@@ -90,6 +79,9 @@ const App = () => (
               />
             }
           />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

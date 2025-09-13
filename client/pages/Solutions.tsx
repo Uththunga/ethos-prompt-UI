@@ -113,7 +113,6 @@ export const Solutions = memo(function Solutions() {
                 alt="AI Workflow Illustration showing various AI tools and integrations"
                 className="w-full max-w-5xl h-auto mx-auto"
                 decoding="async"
-                fetchPriority="high"
               />
             </div>
 
@@ -147,7 +146,7 @@ export const Solutions = memo(function Solutions() {
             {/* Right Side - AI Workflow Diagram */}
             <div className="relative flex justify-center items-center w-full max-w-4xl mx-auto -mt-8 sm:mt-0 pt-0 pb-1 sm:py-10 md:py-12 lg:py-16 order-1 lg:order-2">
               <img
-                src="/assets/images/botsolution.png"
+                src={withBase("assets/images/botsolution.png")}
                 alt="AI Agent workflow diagram showing connections and integrations with productivity, financial, and communication tools"
                 className="w-full h-auto max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-contain transition-all duration-300"
                 loading="lazy"
