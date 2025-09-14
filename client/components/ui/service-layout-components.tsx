@@ -107,12 +107,20 @@ export function ServiceAccordion({ items, type = 'single', className, variant = 
 
   const defaultOpenItems = items.filter(item => item.defaultOpen).map(item => item.id);
 
+  const accordionProps = type === 'single'
+    ? {
+        type: 'single' as const,
+        value: defaultOpenItems[0] as string,
+        className: cn(getAccordionStyles(), className),
+      }
+    : {
+        type: 'multiple' as const,
+        value: defaultOpenItems as string[],
+        className: cn(getAccordionStyles(), className),
+      };
+
   return (
-    <Accordion
-      type={type}
-      defaultValue={type === 'single' ? defaultOpenItems[0] : defaultOpenItems}
-      className={cn(getAccordionStyles(), className)}
-    >
+    <Accordion {...accordionProps}>
       {items.map((item) => (
         <AccordionItem key={item.id} value={item.id} className={getItemStyles()}>
           <AccordionTrigger className="text-left text-lg font-semibold text-ethos-navy hover:text-ethos-purple">
@@ -367,56 +375,32 @@ interface ServiceShowcaseTabsProps {
   className?: string;
 }
 
-export function ServiceShowcaseTabs({ testimonials, pricing, trustSignals, className }: ServiceShowcaseTabsProps) {
-  const tabs = [
-    {
-      id: 'testimonials',
-      label: 'Success Stories',
-      badge: testimonials.length.toString(),
-      content: (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-              <div className="flex items-start space-x-4 mb-4">
-                {testimonial.image && (
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
-                )}
-                <div>
-                  <h4 className="font-semibold text-ethos-navy">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  <p className="text-sm text-ethos-purple">{testimonial.company}</p>
-                </div>
-              </div>
-              <p className="text-gray-700 mb-4 leading-relaxed">{testimonial.testimonial}</p>
-              {testimonial.metrics && (
-                <div className="grid grid-cols-3 gap-2">
-                  {testimonial.metrics.map((metric, idx) => (
-                    <div key={idx} className="text-center p-2 bg-gray-50 rounded">
-                      <div className="font-semibold text-ethos-purple text-sm">{metric.value}</div>
-                      <div className="text-xs text-gray-600">{metric.label}</div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      )
-    },
-    {
-      id: 'pricing',
-      label: 'Investment',
-      content: (
+interface InvestmentSectionProps {
+  pricing: Array<{
+    title: string;
+    description: string;
+    startingPrice: string;
+    features: string[];
+    popular?: boolean;
+  }>;
+  className?: string;
+}
+
+export function InvestmentSection({ pricing, className }: InvestmentSectionProps) {
+  return (
+    <section className={cn('py-12 bg-gray-50', className)}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-ethos-navy text-center mb-8">Investment</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {pricing.map((plan, index) => (
-            <div key={index} className={cn(
-              'bg-white rounded-xl p-6 shadow-sm border',
-              plan.popular ? 'border-ethos-purple ring-2 ring-ethos-purple/20' : 'border-gray-100'
-            )}>
+            <div 
+              key={index} 
+              className={cn(
+                'bg-white rounded-xl p-6 shadow-sm border',
+                plan.popular ? 'border-ethos-purple ring-2 ring-ethos-purple/20' : 'border-gray-100',
+                'h-full flex flex-col'
+              )}
+            >
               {plan.popular && (
                 <div className="bg-ethos-purple text-white text-sm font-medium px-3 py-1 rounded-full inline-block mb-4">
                   Most Popular
@@ -425,7 +409,7 @@ export function ServiceShowcaseTabs({ testimonials, pricing, trustSignals, class
               <h3 className="text-xl font-semibold text-ethos-navy mb-2">{plan.title}</h3>
               <p className="text-gray-600 mb-4">{plan.description}</p>
               <div className="text-2xl font-bold text-ethos-purple mb-4">{plan.startingPrice}</div>
-              <ul className="space-y-2">
+              <ul className="space-y-2 flex-grow">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-green-500 mr-2">✓</span>
@@ -433,58 +417,12 @@ export function ServiceShowcaseTabs({ testimonials, pricing, trustSignals, class
                   </li>
                 ))}
               </ul>
+              <button className="mt-6 w-full bg-ethos-purple text-white py-2 px-4 rounded-lg hover:bg-ethos-purple/90 transition-colors">
+                Get Started
+              </button>
             </div>
           ))}
         </div>
-      )
-    }
-  ];
-
-  if (trustSignals) {
-    tabs.push({
-      id: 'trust',
-      label: 'Security & Trust',
-      content: (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h4 className="font-semibold text-ethos-navy mb-4">Certifications</h4>
-            <div className="space-y-2">
-              {trustSignals.certifications.map((cert, idx) => (
-                <div key={idx} className="bg-white p-3 rounded-lg border border-gray-100 text-sm">
-                  {cert}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="font-semibold text-ethos-navy mb-4">Awards</h4>
-            <div className="space-y-2">
-              {trustSignals.awards.map((award, idx) => (
-                <div key={idx} className="bg-white p-3 rounded-lg border border-gray-100 text-sm">
-                  {award}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <h4 className="font-semibold text-ethos-navy mb-4">Security</h4>
-            <div className="space-y-2">
-              {trustSignals.securityBadges.map((badge, idx) => (
-                <div key={idx} className="bg-white p-3 rounded-lg border border-gray-100 text-sm">
-                  {badge}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )
-    });
-  }
-
-  return (
-    <section className={cn('py-12 bg-gray-50', className)}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ServiceTabs tabs={tabs} variant="underline" />
       </div>
     </section>
   );

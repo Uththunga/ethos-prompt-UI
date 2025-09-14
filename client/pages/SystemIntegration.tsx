@@ -34,7 +34,7 @@ import { useServiceExitIntent } from '@/hooks/useServiceExitIntent';
 import { StickyMobileCTA, getServiceCTAConfig } from '@/components/ui/sticky-mobile-cta';
 import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/components/ui/cross-service-navigation';
 import {
-  ServiceShowcaseTabs,
+  InvestmentSection,
   HorizontalScroll
 } from '@/components/ui/service-layout-components';
 
@@ -401,14 +401,8 @@ export default function SystemIntegration() {
     />
 
 {/* Phase 3: Value Demonstration & Desire - Tabbed Section */}
-    <ServiceShowcaseTabs
-      testimonials={testimonials}
+    <InvestmentSection
       pricing={pricingPlans}
-      trustSignals={{
-        certifications: ["Enterprise Integration Certified", "API Security Certified", "Data Protection Compliant"],
-        awards: ["Integration Excellence 2024", "Automation Leader Award"],
-        securityBadges: ["End-to-End Encryption", "Zero Data Loss Guarantee", "24/7 Monitoring"]
-      }}
     />
 
     {/* ROI Calculator */}

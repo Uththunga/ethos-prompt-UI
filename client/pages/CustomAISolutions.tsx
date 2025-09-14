@@ -29,7 +29,7 @@ import { usePerformanceOptimization } from '@/hooks/usePerformanceOptimization';
 import { useABTest } from '@/hooks/useABTesting';
 import { useColorSystem } from '@/utils/colorSystemAudit';
 import {
-  ServiceShowcaseTabs,
+  InvestmentSection,
   CompactFAQ
 } from '@/components/ui/service-layout-components';
 
@@ -413,15 +413,9 @@ export default function CustomAISolutions() {
 
     {/* Phase 1: Attention & Problem Recognition */}
 
-{/* Phase 3: Value Demonstration & Desire - Compact Tabbed Section */}
-    <ServiceShowcaseTabs
-      testimonials={testimonials}
+{/* Phase 3: Value Demonstration & Desire - Investment Section */}
+    <InvestmentSection
       pricing={pricingPlans}
-      trustSignals={{
-        certifications: ["SOC 2 Type II", "GDPR Compliant", "ISO 27001"],
-        awards: ["Best AI Customer Service 2024", "Innovation Award 2024"],
-        securityBadges: ["256-bit SSL Encryption", "PCI DSS Compliant", "Regular Security Audits"]
-      }}
     />
 
     {/* Industry-Specific Examples - Technical proof and examples */}

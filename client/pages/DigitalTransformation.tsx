@@ -36,7 +36,7 @@ import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/componen
 import { SecurityScanner } from '@/components/ui/security-scanner';
 import { InteractiveFAQ } from '@/components/ui/interactive-faq';
 import {
-  ServiceShowcaseTabs,
+  InvestmentSection,
   CompactFAQ,
   HorizontalMetrics
 } from '@/components/ui/service-layout-components';
@@ -408,14 +408,8 @@ export default function DigitalTransformation() {
 
 
     {/* Testimonials and Pricing Tabbed Section */}
-    <ServiceShowcaseTabs
-      testimonials={testimonials}
+    <InvestmentSection
       pricing={pricingPlans}
-      trustSignals={{
-        certifications: ["AWS Advanced Partner", "Microsoft Gold Partner", "Google Cloud Partner"],
-        awards: ["Digital Transformation Leader 2024", "Migration Excellence Award"],
-        securityBadges: ["Enterprise Security", "Zero Downtime Guarantee", "Data Protection Certified"]
-      }}
     />
 
     {/* ROI Calculator */}

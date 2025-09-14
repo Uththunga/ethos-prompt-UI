@@ -15,7 +15,7 @@ import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/componen
 import { PortfolioFilter } from '@/components/ui/portfolio-filter';
 import { InteractiveFAQ } from '@/components/ui/interactive-faq';
 import {
-  ServiceShowcaseTabs,
+  InvestmentSection,
   HorizontalScroll
 } from '@/components/ui/service-layout-components';
 
@@ -348,14 +348,8 @@ export default function IntelligentApplications() {
           {/* Enhanced Sections */}
 
 {/* Testimonials and Pricing Tabbed Section */}
-    <ServiceShowcaseTabs
-      testimonials={testimonials}
+    <InvestmentSection
       pricing={pricingPlans}
-      trustSignals={{
-        certifications: ["Google Partner", "AWS Certified", "React Certified"],
-        awards: ["Best Web Development 2024", "Mobile Excellence Award"],
-        securityBadges: ["SSL Secured", "GDPR Compliant", "PCI DSS Ready"]
-      }}
     />
 
     {/* ROI Calculator */}

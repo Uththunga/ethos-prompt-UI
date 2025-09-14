@@ -18,19 +18,42 @@ export const Hero = () => {
     }
 
     @keyframes hero-star-border {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
+    
+    /* Sequential animation with staggered delays */
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.2; }
+      33% { opacity: 0.8; }
+      66% { opacity: 0.2; }
+    }
+    
+    [role="list"][aria-label="Business results statistics"] .animate-star-border:nth-child(1)::before {
+      animation: 
+        hero-star-border 4s linear 0s infinite,
+        fadeInOut 9s ease-in-out 0s infinite;
+    }
+    
+    [role="list"][aria-label="Business results statistics"] .animate-star-border:nth-child(2)::before {
+      animation: 
+        hero-star-border 4s linear 0s infinite,
+        fadeInOut 9s ease-in-out -3s infinite;
+    }
+    
+    [role="list"][aria-label="Business results statistics"] .animate-star-border:nth-child(3)::before {
+      animation: 
+        hero-star-border 4s linear 0s infinite,
+        fadeInOut 9s ease-in-out -6s infinite;
+    }
+    
     /* Specific to Hero section cards */
     .animate-star-border {
       position: relative;
       z-index: 0;
       overflow: hidden;
     }
+    
     [role="list"][aria-label="Business results statistics"] .animate-star-border::before {
       content: '';
       position: absolute;
@@ -51,9 +74,12 @@ export const Hero = () => {
         rgba(139, 92, 246, 0.1) 360deg
       );
       border-radius: inherit;
-      animation: hero-star-border 12s linear infinite;
-      opacity: 0.8;
+      opacity: 0.2;
       filter: blur(2.5px);
+    }
+    
+    [role="list"][aria-label="Business results statistics"] .animate-star-border.animate::before {
+      opacity: 0.8;
     }
     [role="list"][aria-label="Business results statistics"] .animate-star-border::after {
       content: '';
