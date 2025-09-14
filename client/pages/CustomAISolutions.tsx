@@ -18,17 +18,12 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import { ServiceCTA } from '@/components/services/ServiceCTA';
-import {
-  ClientLogos,
-  UrgencyBanner
-} from '@/components/ui/service-enhancements';
 import { GatedROICalculator } from '@/components/ui/gated-roi-calculator';
 import { ExitIntentPopup } from '@/components/ui/exit-intent-popup';
 import { useServiceExitIntent } from '@/hooks/useServiceExitIntent';
 import { StickyMobileCTA, getServiceCTAConfig } from '@/components/ui/sticky-mobile-cta';
 import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/components/ui/cross-service-navigation';
 import { DynamicPricingDisplay } from '@/components/ui/dynamic-pricing-display';
-import { SocialProofNotifications } from '@/components/ui/social-proof-notifications';
 import { useAnalytics, useScrollDepthTracking, useTimeOnPageTracking } from '@/hooks/useAnalytics';
 import { usePerformanceOptimization } from '@/hooks/usePerformanceOptimization';
 import { useABTest } from '@/hooks/useABTesting';
@@ -417,22 +412,8 @@ export default function CustomAISolutions() {
           {/* Enhanced Sections - Optimized Conversion Flow */}
 
     {/* Phase 1: Attention & Problem Recognition */}
-    {/* Urgency Banner - Create immediate scarcity */}
-    <UrgencyBanner
-      message="🔥 Limited Time: Get your Smart Business Assistant set up in 48 hours with our Fast-Track Implementation"
-      ctaText="Claim Fast-Track Setup"
-      ctaLink="/contact?source=ai-solutions-urgent"
-      expiryDate="December 31, 2024"
-      limitedSlots={5}
-    />
 
-    {/* Client Logos - Social proof foundation */}
-    <ClientLogos
-      title="Trusted by 200+ Growing Businesses"
-      logos={clientLogos}
-    />
-
-    {/* Phase 3: Value Demonstration & Desire - Compact Tabbed Section */}
+{/* Phase 3: Value Demonstration & Desire - Compact Tabbed Section */}
     <ServiceShowcaseTabs
       testimonials={testimonials}
       pricing={pricingPlans}
@@ -617,40 +598,6 @@ export default function CustomAISolutions() {
 
 
 
-
-    {/* Social Proof Notifications */}
-    <SocialProofNotifications
-      notifications={[
-        {
-          id: '1',
-          type: 'signup',
-          name: 'Sarah Chen',
-          location: 'San Francisco, CA',
-          service: 'Smart Business Assistant',
-          timeAgo: '2 minutes ago'
-        },
-        {
-          id: '2',
-          type: 'consultation',
-          name: 'Marcus Rodriguez',
-          location: 'Austin, TX',
-          service: 'AI Solutions Consultation',
-          timeAgo: '5 minutes ago'
-        },
-        {
-          id: '3',
-          type: 'download',
-          name: 'Jennifer Kim',
-          location: 'Seattle, WA',
-          service: 'AI ROI Calculator',
-          timeAgo: '8 minutes ago'
-        }
-      ]}
-      showInterval={8000}
-      displayDuration={5000}
-      position="bottom-right"
-      enabled={true}
-    />
 
     {/* Exit Intent Popup */}
     <ExitIntentPopup

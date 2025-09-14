@@ -25,9 +25,7 @@ import {
 } from 'lucide-react';
 import {
   ClientTestimonial,
-  ClientLogos,
   PricingCard,
-  UrgencyBanner,
   TrustSignals
 } from '@/components/ui/service-enhancements';
 import { GatedROICalculator } from '@/components/ui/gated-roi-calculator';
@@ -394,16 +392,6 @@ export default function SystemIntegration() {
         <>
           {/* Enhanced Sections - Optimized Conversion Flow */}
 
-    {/* Phase 1: Attention & Problem Recognition */}
-    {/* Urgency Banner - Create immediate scarcity */}
-    <UrgencyBanner
-      message="⚡ Limited Time: Free Integration Audit + 50% Off First Month Implementation"
-      ctaText="Claim Free Audit"
-      ctaLink="/contact?source=integration-urgent"
-      expiryDate="December 31, 2024"
-      limitedSlots={3}
-    />
-
     {/* Phase 2: Solution Understanding & Trust Building */}
     {/* Trust Signals - Establish credibility early */}
     <TrustSignals
@@ -412,19 +400,7 @@ export default function SystemIntegration() {
       securityBadges={["End-to-End Encryption", "Zero-Trust Architecture", "24/7 Security Monitoring"]}
     />
 
-    {/* Client Logos - Social proof foundation */}
-    <ClientLogos
-      title="Trusted by Enterprise Leaders"
-      logos={clientLogos}
-    />
-
-    {/* Client Logos */}
-    <ClientLogos
-      title="Trusted by 150+ Data-Driven Organizations"
-      logos={clientLogos}
-    />
-
-    {/* Phase 3: Value Demonstration & Desire - Tabbed Section */}
+{/* Phase 3: Value Demonstration & Desire - Tabbed Section */}
     <ServiceShowcaseTabs
       testimonials={testimonials}
       pricing={pricingPlans}

@@ -49,8 +49,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
       window.gtag('event', 'sticky_cta_click', {
         event_category: 'conversion',
         event_label: service,
-        service_type: service,
-        cta_type: 'primary'
+        service_type: service
       });
     }
   };
@@ -61,8 +60,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
       window.gtag('event', 'sticky_cta_secondary_click', {
         event_category: 'engagement',
         event_label: service,
-        service_type: service,
-        cta_type: 'secondary'
+        service_type: service
       });
     }
   };
@@ -73,8 +71,7 @@ export const StickyMobileCTA: React.FC<StickyMobileCTAProps> = ({
       window.gtag('event', 'phone_click', {
         event_category: 'conversion',
         event_label: service,
-        service_type: service,
-        cta_type: 'phone'
+        service_type: service
       });
     }
   };

@@ -80,6 +80,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'ethos-purple': {
+          DEFAULT: 'hsl(262, 83%, 58%)',
+          light: 'hsl(262, 83%, 68%)',
+          dark: 'hsl(262, 83%, 48%)',
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

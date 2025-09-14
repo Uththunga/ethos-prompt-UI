@@ -25,9 +25,7 @@ import {
 import { ServiceCTA } from '@/components/services/ServiceCTA';
 import {
   ClientTestimonial,
-  ClientLogos,
   PricingCard,
-  UrgencyBanner,
   TrustSignals
 } from '@/components/ui/service-enhancements';
 import { GatedROICalculator } from '@/components/ui/gated-roi-calculator';
@@ -37,7 +35,6 @@ import { StickyMobileCTA, getServiceCTAConfig } from '@/components/ui/sticky-mob
 import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/components/ui/cross-service-navigation';
 import { SecurityScanner } from '@/components/ui/security-scanner';
 import { InteractiveFAQ } from '@/components/ui/interactive-faq';
-import { SocialProofNotifications } from '@/components/ui/social-proof-notifications';
 import {
   ServiceShowcaseTabs,
   CompactFAQ,
@@ -409,20 +406,6 @@ export default function DigitalTransformation() {
         <>
           {/* Enhanced Sections */}
 
-    {/* Urgency Banner */}
-    <UrgencyBanner
-      message="⚠️ Critical: WordPress 6.4 End-of-Life Approaching - Free Migration Assessment Available"
-      ctaText="Get Free Assessment"
-      ctaLink="/contact?source=transformation-urgent"
-      expiryDate="December 31, 2024"
-      limitedSlots={5}
-    />
-
-    {/* Client Logos */}
-    <ClientLogos
-      title="Trusted by 100+ Forward-Thinking Organizations"
-      logos={clientLogos}
-    />
 
     {/* Testimonials and Pricing Tabbed Section */}
     <ServiceShowcaseTabs

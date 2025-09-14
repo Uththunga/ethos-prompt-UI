@@ -4,9 +4,7 @@ import { Smartphone, Monitor, Brain, Users, Zap, BarChart3, Sparkles, Layers, Cl
 import { ServiceCTA } from '@/components/services/ServiceCTA';
 import {
   ClientTestimonial,
-  ClientLogos,
   PricingCard,
-  UrgencyBanner,
   TrustSignals
 } from '@/components/ui/service-enhancements';
 import { GatedROICalculator } from '@/components/ui/gated-roi-calculator';
@@ -16,7 +14,6 @@ import { StickyMobileCTA, getServiceCTAConfig } from '@/components/ui/sticky-mob
 import { CrossServiceNavigation, ServiceBundleRecommendations } from '@/components/ui/cross-service-navigation';
 import { PortfolioFilter } from '@/components/ui/portfolio-filter';
 import { InteractiveFAQ } from '@/components/ui/interactive-faq';
-import { SocialProofNotifications } from '@/components/ui/social-proof-notifications';
 import {
   ServiceShowcaseTabs,
   HorizontalScroll
@@ -350,22 +347,7 @@ export default function IntelligentApplications() {
         <>
           {/* Enhanced Sections */}
 
-    {/* Urgency Banner */}
-    <UrgencyBanner
-      message="🚀 Limited Time: Free Mobile Audit + 25% Off Your First Project"
-      ctaText="Claim Free Audit"
-      ctaLink="/contact?source=mobile-urgent"
-      expiryDate="December 31, 2024"
-      limitedSlots={8}
-    />
-
-    {/* Client Logos */}
-    <ClientLogos
-      title="Powering 300+ Modern Businesses"
-      logos={clientLogos}
-    />
-
-    {/* Testimonials and Pricing Tabbed Section */}
+{/* Testimonials and Pricing Tabbed Section */}
     <ServiceShowcaseTabs
       testimonials={testimonials}
       pricing={pricingPlans}
@@ -563,40 +545,6 @@ export default function IntelligentApplications() {
         text: 'Get Free Consultation',
         link: '/contact?source=web-mobile-faq'
       }}
-    />
-
-    {/* Social Proof Notifications */}
-    <SocialProofNotifications
-      notifications={[
-        {
-          id: '1',
-          type: 'signup',
-          name: 'Sarah Chen',
-          location: 'San Francisco, CA',
-          service: 'Mobile App Development',
-          timeAgo: '2 minutes ago'
-        },
-        {
-          id: '2',
-          type: 'consultation',
-          name: 'Marcus Rodriguez',
-          location: 'Austin, TX',
-          service: 'Web Application',
-          timeAgo: '5 minutes ago'
-        },
-        {
-          id: '3',
-          type: 'download',
-          name: 'Jennifer Kim',
-          location: 'Seattle, WA',
-          service: 'Development Guide',
-          timeAgo: '8 minutes ago'
-        }
-      ]}
-      showInterval={10000}
-      displayDuration={6000}
-      position="bottom-left"
-      enabled={true}
     />
 
     {/* Exit Intent Popup */}

@@ -98,9 +98,7 @@ export const CrossServiceNavigation: React.FC<CrossServiceNavigationProps> = ({
       window.gtag('event', 'cross_service_navigation', {
         event_category: 'engagement',
         event_label: `${currentService}_to_${serviceId}`,
-        service_from: currentService,
-        service_to: serviceId,
-        navigation_type: type
+        service_type: type
       });
     }
   };
